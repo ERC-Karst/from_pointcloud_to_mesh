@@ -2,6 +2,7 @@ import unittest
 import numpy as np
 
 from helpers import pairwise_registration as pr
+from helpers import utils
 
 np.random.seed(10000)
 
@@ -9,14 +10,6 @@ class Test(unittest.TestCase):
     """
     Basic tests for  pairwise registration
     """
-    
-
-
-
-
-
-
-
 
 
     def test_1_register(self):
@@ -136,6 +129,14 @@ class Test(unittest.TestCase):
         self.assertTrue(np.allclose(R,R1, atol=1e-2))
         self.assertTrue(np.allclose(t,t1, atol=1e-2))
 
+    def test_7_read_matrix(self):
+        print("Start test 7 loading a transformation matrix")
+
+        fp = "./sample_data/sample_transformation_matrix.txt"
+
+        matrix_data = utils.load_matrix_from_file(fp)
+        print(matrix_data)
+        self.assertIsNotNone(matrix_data)
 
 if __name__ == '__main__':
     # begin the unittest.main()

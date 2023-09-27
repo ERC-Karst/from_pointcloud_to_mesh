@@ -1,0 +1,37 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-09-04
+
+#... Cave attributes
+cave:
+  caveName: "GrotteDesFauxMonnayeurs"
+  fullCaveName: "Grotte des Faux Monnayeurs"
+  country: "France"
+  region: "Franche-Comté"
+  locality: "Mouthiers-Haute-Pierre"
+  entrance: 
+      latitude: 
+        value: 47.028958
+        format: "decimal degrees"
+      longitude: 
+        value: 6.288207
+        format: "decimal degrees"
+      elevation: 
+        value: 443
+        format: "metres"
+      datum: "WGS84"
+   geology: 
+      lithology: "j8-9, Gorges de Nouailles limestone, Kimmeridgian"
+      tectonics:
+    speleogenesis: "epiphreatic conduit acting as overflow of the Pontet source, may have acted as resurgence to the Loue river."
+  hydrology: "watershed of 4.2km2 NE of the cavity."
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine", "Robin Voland", "Philippe Renard", "[Ana Paula] [Burgoa Tanaka]", "Jérémie Chappuis"]
+scanDate: 2023.09.01
+remarks: "Scan begun at lake before terminal chamber, then proceeded westward to the lower entrance. Branch heading up to Grotte de Vielle Roche not surveyed."
+literature: null
+links: null

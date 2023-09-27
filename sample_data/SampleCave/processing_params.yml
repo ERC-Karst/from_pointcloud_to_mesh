@@ -1,0 +1,46 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-09-05
+
+#... Cave attributes
+cave:
+  caveName: "GrotteDesFauxMonnayeurs"
+  fullCaveName: "Grotte des Faux Monnayeurs"
+
+#... Initial CloudCompare processing parameters
+paths:
+  root: "D:\\ScanLeica\\GrotteDesFauxMonnayeurs"
+  rawPointClouds: "raw"
+  outputs: "output"
+  processingFilepath: "process"
+  cropboxes : "CropBoxes"
+  inCloudName: "raw/GrotteDesFauxMonnayeurs.ply"
+  Cut2DOutCloudName: "output/GrotteDesFauxMonnayeurs_Cut2D.ply"
+  subsampledOutCloudName: "output/GrotteDesFauxMonnayeurs_subsampled.ply"
+  subsampledCut2DOutCloudName: "output/GrotteDesFauxMonnayeurs_subsampled_Cut2D.ply"
+  globalShift: "output/GrotteDesFauxMonnayeurs_GlobalShift.txt"
+  transformMatrix: "output/GrotteDesFauxMonnayeurs_TransMatrix.txt"
+  centreline: "output/GrotteDesFauxMonnayeurs_CentrelineSimple.poly"
+  entranceCrop : "process/GrotteDesFauxMonnayeurs_CropEntrance.poly"
+  scanTargets: "raw/GrotteDesFauxMonnayeurs_Targets.txt"
+  therionTargets: "raw/GrotteDesFauxMonnayeurs_StationCoords.txt"
+  log: "log.txt"
+  rasterZ: "RasterZ"
+
+entranceCropping: 
+  direction: 2 # remove trees in the side view directed north (Z direction)
+  leaveInside: False # retain everything but the trees selected.
+
+alignment: 
+  skip_rows: 1
+  max_rows: 6
+  usecols: [1,2,3]
+  globalShift: [-900300.0, -2233000.0, -400]
+  crs: "epsg:27572"
+
+subsampling: 
+  spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+  globalShift : true 
