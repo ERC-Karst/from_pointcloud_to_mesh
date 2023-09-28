@@ -36,7 +36,7 @@ alignment:
   skip_rows: 1
   max_rows: 6
   usecols: [1,2,3]
-  globalShift: [-900300.0, -2233000.0, -400]
+  globalShift: [-900300.0, -2233000.0, 0.00]
   crs: "epsg:27572"
 
 subsampling: 

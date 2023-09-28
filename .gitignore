@@ -39,3 +39,4 @@ ipython_config.py
 # ignore the processing files. 
 
 sample_data/SampleCave/process/
+sample_data/SampleCave/output/
