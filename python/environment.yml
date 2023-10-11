@@ -28,6 +28,7 @@ dependencies:
   - tbb
   - tbb-devel
   - "xerces-c=3.2"
+  - pip
   - pip:
     - networkx
     - karstnet
