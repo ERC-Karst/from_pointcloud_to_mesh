@@ -40,3 +40,8 @@ ipython_config.py
 
 sample_data/SampleCave/process/
 sample_data/SampleCave/output/
+
+real_data/
+Storage/
+
+*realdata.ipynb
