@@ -1,4 +1,4 @@
- import numpy as np 
+import numpy as np 
 import matplotlib.pyplot as plt
 import os 
 
@@ -118,24 +118,3 @@ def suggest_global_shift(targets):
     globalShift = np.round(centroid/100,0) * 100
 
     return globalShift  
-
-def computePolygonArea(x, y):
-    """
-    calculates the area of a closed polygon whose vertex i coordinates are given by x[i] and y[i]
-    
-
-    ----------
-    
-    arguments:
-
-        x -> np.array: a numpy array with N x coordinates (N x 1 matrix)
-        y -> np.array: a numpy array with N y coordinates (N x 1 matrix)
-
-    ----------
-    
-    returns :
-
-        area -> float : the area in input units squared 
-    
-    """
-    return 0.5*np.abs(np.dot(x,np.roll(y,1))-np.dot(y,np.roll(x,1)))
