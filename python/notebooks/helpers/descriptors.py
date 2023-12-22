@@ -4,13 +4,17 @@ from scipy.spatial import ConvexHull
 
 class Section:
 
-    def __init__(self, points, flag):
+    def __init__(self, points, flag, from3d = True):
         self.points = points
         self.flag = flag
+        self.from3d = from3d
 
     def compute_descriptors(self):
+        if self.from3d == True:
+            self.points2d = self.points[:, [0, 2]]
+        else: 
+            self.points2d = self.points
 
-        self.points2d = self.points[:, [0, 2]]
         self.perimeter = computePolygonPerimeter(self.points2d)
         self.area = computePolygonArea(self.points2d)
         self.convexhull = computeConvexHull(self.points2d)
