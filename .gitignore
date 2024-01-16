@@ -1,3 +1,9 @@
+# PDF and images 
+*.pdf
+*.png 
+*.jpeg 
+*.tif
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

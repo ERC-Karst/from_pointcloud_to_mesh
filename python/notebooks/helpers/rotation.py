@@ -36,6 +36,8 @@ def RotateFromTo(f, t, verbose = False):
             p = np.array([0, 1, 0])
         elif cond_z:
             p = np.array([0, 0, 1])
+        else:
+            p = np.array([1, 0, 0])
 
         
         # Compute reflections using Householder matrices

@@ -114,7 +114,7 @@ def suggest_global_shift(targets):
     
     """
 
-    centroid = np.mean(targets.T, axis = 1).reshape((-1,1))
+    centroid = -np.mean(targets.T, axis = 1).reshape((-1,1))
     globalShift = np.round(centroid/100,0) * 100
 
     return globalShift  
