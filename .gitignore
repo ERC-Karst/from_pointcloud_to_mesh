@@ -57,6 +57,7 @@ real_data/**/GIS/
 real_data/**/potree/
 real_data/**/literature/
 real_data/**/captures/
+*.stl
 
 *.shp
 *.shx
