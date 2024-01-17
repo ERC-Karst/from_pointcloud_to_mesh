@@ -1,0 +1,62 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-08-01
+
+#... Cave attributes
+cave:
+    caveName: "VersChezLeBrandt"
+    fullCaveName: "Grotte de Vers Chez le Brandt"
+
+#... Initial CloudCompare processing parameters
+paths:
+    root: "D:\\ScanLeica\\01_VersChezLeBrandt"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/crop_boxes.geojson"
+    inCloudName: "raw/VersChezLeBrandt.las"
+    Cut2DOutCloudName: "output/VersChezLeBrandt_Cut2D.ply"
+    subsampledOutCloudName: "output/VersChezLeBrandt_subsampled.ply"
+    subsampledCut2DOutCloudName: "output/VersChezLeBrandt_subsampled_Cut2D.las"
+    globalShift: "GlobalShift.txt"
+    transformMatrix: "TransMatrix.txt"
+    centreline: "CentrelineSimple.poly"
+    scanTargets: "raw/VersChezLeBrandt_Targets.txt"
+    therionTargets: "therion/StationCoords.txt"
+    log: "log.txt"
+    rasterZ: "VersChezLeBrandtRasterZ"
+    entranceCrop: "process/CropEntrance.poly"
+
+entranceCropping: 
+    direction: 2 # remove trees in the side view directed north (Z direction)
+    polyLine: "CropEntrance.poly"
+    leaveInside: False # retain everything but the trees selected.
+
+entranceCropping: 
+    direction: 2 # remove trees in the side view directed north (Z direction)
+    polyLine: "CropEntrance.poly"
+    leaveInside: False # retain everything but the trees selected.
+
+alignment: 
+    skip_rows: 1
+    max_rows: 4
+    usecols: [1,2,3]
+    globalShift: [-526500, -198900, -1100]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+#... Cloud Sectioning
+sectionParams:
+    chosenNodes: null
+    sectionSpacing: null
+    sectionLength: null
+    sectionAxis: null
+    epsilon : null
+    grow : null

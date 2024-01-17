@@ -1,0 +1,57 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-10-02
+
+#... Cave attributes
+cave:
+    caveName: "LesCavottes"
+    fullCaveName: "LesCavottes"
+
+#... Initial CloudCompare processing parameters
+paths:
+    root: "F:\\ScanLeica\\from_point_to_mesh\\real_data\\LesCavottes"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    cropboxes : "process/crop_boxes.geojson"
+    inCloudName: "raw/LesCavottes.las"
+    Cut2DOutCloudName: "output/LesCavottes_Cut2D.ply"
+    subsampledOutCloudName: "output/LesCavottes_subsampled.ply"
+    subsampledCut2DOutCloudName: "output/LesCavottes_subsampled_georef.las"
+    globalShift: "output/LesCavottes_GlobalShift.txt"
+    transformMatrix: "output/LesCavottes_TransMatrix.txt"
+    centreline: "output/LesCavottes_CentrelineSimple.poly"
+    entranceCrop : "process/LesCavottes_CropEntrance.poly"
+    scanTargets: "raw/LesCavottes_Targets.txt"
+    therionTargets: "raw/LesCavottes_StationCoords.txt"
+    log: "log.txt"
+    rasterZ: "RasterZ"
+
+entranceCropping: 
+    direction: 2 # remove trees in the side view directed north (Z direction)
+    polyLine: "CropEntrance.poly"
+    leaveInside: False # retain everything but the trees selected.
+
+alignment: 
+    skip_rows: 1
+    max_rows: 6
+    usecols: [1,2,3]
+    globalShift: [-881900.0, -2244100.0, -400]
+    crs: "epsg:27572"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+#... Cloud Sectioning
+sectionParams:
+    chosenNodes: null
+    sectionSpacing: null
+    sectionLength: null
+    sectionAxis: null
+    epsilon : null
+    grow : null
+

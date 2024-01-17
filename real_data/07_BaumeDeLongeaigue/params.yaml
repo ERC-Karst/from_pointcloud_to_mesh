@@ -1,0 +1,44 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-11-13
+
+#... Cave attributes
+cave:
+    caveName: "BaumeDeLongeaigue"
+    fullCaveName: "Baume de Longeaigue"
+
+#... Initial CloudCompare processing parameters
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/07_BaumeDeLongeaigue"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/CropBoxes.geojson"
+    inCloudName: "raw/BaumeDeLongeaigue.las"
+    georefOutCloudName: "output/BaumeDeLongeaigue_georef.las"
+    subsampledOutCloudName: "output/BaumeDeLongeaigue_subsampled.las"
+    subsampledGeorefOutCloudName: "output/BaumeDeLongeaigue_subsampled_georef.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    centreline: "CentrelineSimple.poly"
+    scanTargets: "georef/BaumeDeLongeaigue_Targets.txt"
+    therionTargets: "georef/BaumeDeLongeaigue_StationCoords.txt"
+    log: "log.txt"
+
+
+alignment: 
+    skip_rows: 1
+    max_rows: 4
+    usecols: [1,2,3]
+    globalShift: [-529900, -191700.0, -800]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

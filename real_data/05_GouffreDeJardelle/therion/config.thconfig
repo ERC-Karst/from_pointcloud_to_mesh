@@ -1,0 +1,6 @@
+encoding  utf-8
+source GouffreDeJardelle.th 
+
+cs epsg:27572
+export model -o GouffreDeJardelle.3d -fmt survex
+export database -o GouffreDeJardelle.sql

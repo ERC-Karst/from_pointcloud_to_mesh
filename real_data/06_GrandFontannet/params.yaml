@@ -1,0 +1,48 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-10-18
+
+#... Cave attributes
+cave:
+    caveName: "GrandFontannet"
+    fullCaveName: "Grand Fontannet de la Mothe"
+
+#... Initial CloudCompare processing parameters
+paths:
+    root: "F:\\ScanLeica\\06_GrandFontannet"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/CropBoxes.geojson"
+    inCloudName: "raw/GrandFontannet.las"
+    Cut2DOutCloudName: "output/GrandFontannet_Cut2D.las"
+    subsampledOutCloudName: "output/GrandFontannet_subsampled.las"
+    subsampledCut2DOutCloudName: "output/GrandFontannet_subsampled_Cut2D.las"
+    globalShift: "GlobalShift.txt"
+    transformMatrix: "TransMatrix.txt"
+    centreline: "CentrelineSimple.poly"
+    scanTargets: "raw/GrandFontannet_Targets.txt"
+    therionTargets: "therion/StationCoords.txt"
+    entranceCrop: "process/CropEntrance.poly"
+    log: "log.txt"
+
+entranceCropping: 
+    direction: 2 # remove trees in the side view directed north (Z direction)
+    leaveInside: False # retain everything but the trees selected.
+
+alignment: 
+    skip_rows: 1
+    max_rows: 7
+    usecols: [1,2,3]
+    globalShift: [-533300.0, -185800.0, -600]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

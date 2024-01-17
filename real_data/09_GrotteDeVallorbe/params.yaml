@@ -1,0 +1,44 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-11-22
+
+#... Cave attributes
+cave:
+    caveName: "GrotteDeVallorbe"
+    fullCaveName: "Grotte de Vallorbe"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/09_GrotteDeVallorbe"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/CropBoxes.geojson"
+    inCloudName: "raw/GrotteDeVallorbe.las"
+    georefOutCloudName: "output/GrotteDeVallorbe_georef.las"
+    subsampledOutCloudName: "output/GrotteDeVallorbe_subsampled.las"
+    subsampledGeorefOutCloudName: "output/GrotteDeVallorbe_subsampled_georef.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    centrelines: "process/centrelines"
+    scanTargets: "georef/GrotteDeVallorbe_Targets.txt"
+    therionTargets: "georef/GrotteDeVallorbe_StationCoords.txt"
+    log: "log.txt"
+
+#... Initial CloudCompare processing parameters
+alignment: 
+    skip_rows: 1
+    max_rows: 8
+    usecols: [1,2,3]
+    globalShift: [-516300, -172100, -800 ]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

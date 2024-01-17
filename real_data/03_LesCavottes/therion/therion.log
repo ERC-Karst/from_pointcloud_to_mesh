@@ -1,0 +1,104 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:27572
+meridian convergence (deg): -2.7072
+geomag declinations (deg):
+  2023.1.1  2.6259
+  2024.1.1  2.7949
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 3.95%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 36 stations, connect‚es par 62 vis‚es.
+ 5> Il y a 27 bouclages.
+ 6> Longueur totale de la topographie =  291.75m ( 291.77m ajust‚)
+ 7> Longueur totale en projection horizontale =  285.29m
+ 8> Longueur totale verticale =   46.46m
+ 9> Intervalle vertical = 15.11m (de 30 … 443.49m jusqu'… 6 … 428.38m)
+10> Intervalle Nord-Sud = 146.37m (de 2 … 2244209.37m jusqu'… 35 … 2244063.00m)
+11> Intervalle Est-Ouest = 46.11m (de 11 … 881925.68m jusqu'… 25 … 881879.56m)
+12>    8 1-noeuds.
+13>    2 3-noeuds.
+14>   20 4-noeuds.
+15>    6 5-noeuds.
+16> 
+######################### transcription ########################
+ 4> 36 : c1@LesCavottes
+ 5> 27 : 21@LesCavottes
+ 9> 30 : 24@LesCavottes -- 6 : 4@LesCavottes
+10> 2 : c3@LesCavottes -- 35 : 27@LesCavottes
+11> 11 : 8@LesCavottes -- 25 : c5@LesCavottes
+12> 8 : c8@LesCavottes
+13> 2 : c3@LesCavottes
+14> 20 : 15@LesCavottes
+15> 6 : 4@LesCavottes
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing LesCavottes.3d ... done
+writing LesCavottes.kml ... done
+writing LesCavottes.sql ... done
+writing xtherion file ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  8.15%    1.6m   19.6m   2   -1.2m   -1.0m   -0.0m [16@LesCavottes - 15 - 16]
+  7.87%    1.7m   21.0m   2   -1.5m   -0.7m   -0.1m [20@LesCavottes - 19 - 20]
+  7.50%    1.4m   18.5m   2   -1.3m   -0.6m   -0.0m [13@LesCavottes - 12 - 13]
+  7.24%    2.1m   28.6m   2   -1.8m   -1.0m   -0.1m [4@LesCavottes - 3 - 4]
+  6.84%    1.5m   21.9m   2   -1.4m   -0.6m   -0.1m [7@LesCavottes - 6 - 7]
+  6.74%    0.2m    2.3m   2   -0.1m    0.1m   -0.0m [22@LesCavottes - 21 - 22]
+  6.68%    0.9m   14.1m   2   -0.9m    0.3m   -0.0m [2@LesCavottes - 1 - 2]
+  6.21%    1.3m   20.7m   2   -1.1m    0.6m   -0.0m [16@LesCavottes - 17 - 16]
+  6.21%    1.3m   20.7m   2   -1.2m    0.6m   -0.0m [17@LesCavottes - 16 - 17]
+  6.11%    0.6m    9.4m   2   -0.6m    0.2m    0.0m [10@LesCavottes - 9 - 10]
+  5.81%    1.4m   23.4m   2   -1.3m    0.2m   -0.0m [13@LesCavottes - 14 - 13]
+  5.55%    1.3m   23.5m   2   -1.3m    0.3m   -0.1m [13@LesCavottes - 14 - 13]
+  5.40%    0.6m   11.9m   2   -0.5m   -0.4m    0.0m [22@LesCavottes - 23 - 22]
+  5.36%    0.3m    5.7m   2   -0.2m    0.2m    0.0m [3@LesCavottes - 2 - 3]
+  5.22%    1.0m   19.3m   2   -0.6m   -0.8m   -0.1m [19@LesCavottes - 18 - 19]
+  5.13%    1.0m   18.5m   2   -0.9m    0.4m   -0.0m [26@LesCavottes - 25 - 26]
+  4.80%    1.1m   22.3m   2   -0.9m    0.6m   -0.1m [9@LesCavottes - 8 - 9]
+  4.22%    1.0m   24.8m   2   -0.7m   -0.8m    0.0m [5@LesCavottes - 4 - 5]
+  3.91%    0.6m   15.5m   2   -0.4m   -0.4m   -0.0m [1@LesCavottes - 0 - 1]
+  3.84%    0.8m   20.3m   2   -0.5m    0.6m   -0.0m [12@LesCavottes - 11 - 12]
+  2.67%    0.1m    4.0m   2   -0.1m   -0.1m   -0.0m [21@LesCavottes - 20 - 21]
+  2.13%    0.1m    6.0m   2   -0.0m   -0.1m   -0.0m [27@LesCavottes - 26 - 27]
+  2.10%    0.5m   25.7m   2   -0.2m    0.5m    0.2m [15@LesCavottes - 14 - 15]
+  1.46%    0.4m   30.3m   2   -0.0m   -0.4m   -0.0m [8@LesCavottes - 7 - 8]
+  1.43%    0.0m    1.7m   2   -0.0m    0.0m    0.0m [24@LesCavottes - 23 - 24]
+  1.11%    0.2m   14.6m   2   -0.0m    0.2m   -0.0m [11@LesCavottes - 10 - 11]
+  1.07%    0.3m   27.5m   2   -0.0m   -0.3m   -0.1m [25@LesCavottes - 24 - 25]
+  0.95%    0.2m   25.6m   2   -0.1m    0.2m   -0.1m [14@LesCavottes - 15 - 14]
+  0.71%    0.1m    9.3m   2   -0.1m    0.0m    0.0m [6@LesCavottes - 5 - 6]
+  0.61%    0.2m   25.6m   2    0.0m   -0.1m    0.0m [14@LesCavottes - 15 - 14]
+  0.48%    0.1m   24.8m   2    0.0m   -0.1m   -0.0m [18@LesCavottes - 17 - 18]
+  0.26%    0.1m   23.5m   2   -0.1m    0.0m    0.0m [14@LesCavottes - 13 - 14]
+  0.25%    0.0m   11.9m   2    0.0m    0.0m    0.0m [23@LesCavottes - 22 - 23]
+  0.12%    0.0m   11.9m   2    0.0m    0.0m    0.0m [22@LesCavottes - 23 - 22]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.054, 47.136) (6.054, 47.136)
+  [EPSG:4326 â†’ EPSG:27572] AoU: [yes] transformation: [axis order change (2D) + Inverse of NTF to WGS 84 (1) + Inverse of NTF (Paris) to NTF (1) + Lambert zone II] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=168 y=60 z=-320 step inv proj=cart ellps=clrk80ign step proj=pop v_3 step proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris] accuracy: [2.000 m]
+  [EPSG:27572 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+  [EPSG:27572 â†’ LAT-LONG] AoU: [no] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+  [EPSG:27572 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+  [EPSG:27572 â†’ EPSG:27572] AoU: [yes] transformation: [Inverse of Lambert zone II + Lambert zone II] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+########## end of CRS transformations chosen by PROJ ###########

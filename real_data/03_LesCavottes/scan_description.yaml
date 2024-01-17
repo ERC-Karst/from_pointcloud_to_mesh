@@ -1,0 +1,35 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-09-04
+
+#... Cave attributes
+cave:
+    caveName: "LesCavottes"
+    fullCaveName: "Les Cavottes"
+    country: "France"
+    region: "Franche-Comté"
+    locality: "Montrond-le-Chateau"
+    entrance: 
+        latitude: 
+          value: 47.136177
+          format: "decimal degrees"
+        longitude: 
+          value: 6.056358
+          format: "decimal degrees"
+        elevation: 
+          value: 455
+          format: "metres"
+        datum: "WGS84"
+   geology: 
+      lithology: "j3a"
+      tectonics:
+    speleogenesis:
+  hydrology: ""
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine", "Robin Voland", "Philippe Renard", "[Ana Paula] [Burgoa Tanaka]", "Jérémie Chappuis"]
+scanDate: 2023.08.31
+remarks: "Scan begun in Galerie Nord of the Réseau Supérieur, conducted sequentially northwards. No tie-point to surface"

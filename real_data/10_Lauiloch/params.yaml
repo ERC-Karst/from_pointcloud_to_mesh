@@ -1,0 +1,51 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-01-15
+
+#... Cave attributes
+cave:
+    caveName: "Lauiloch"
+    fullCaveName: "Lauiloch"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/10_Lauiloch"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/cropped_clouds/CropBoxes.geojson"
+    inCloudName: "raw/Lauiloch.las"
+    georefOutCloudName: "output/Lauiloch_georef.las"
+    georefCut2DOutCloudName: "output/Lauiloch_georef_cut2D.las"
+    subsampledOutCloudName: "output/Lauiloch_subsampled.las"
+    subsampledCut2DOutCloudName: "output/Lauiloch_subsampled_cut2D.las"
+    subsampledGeorefOutCloudName: "output/Lauiloch_subsampled_georef.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    centrelines: "process/centrelines"
+    cropEntrance: "process/CropEntrance.poly"
+    scanTargets: "georef/Lauiloch_Targets.txt"
+    therionTargets: "georef/Lauiloch_StationCoords.txt"
+    log: "log.txt"
+
+#... Initial CloudCompare processing parameters
+entranceCropping:
+    leaveInside: False
+    direction: 2 # remove trees in the side view directed north (Z direction)
+
+alignment: 
+    skip_rows: 1
+    max_rows: 8
+    usecols: [1,2,3]
+    globalShift: [-697000, -205300, -700 ]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

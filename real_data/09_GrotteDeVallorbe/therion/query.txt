@@ -1,0 +1,8 @@
+sqlite\sqlite3.exe
+.read F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\09_GrotteDeVallorbe\\therion\\GrotteDeVallorbe.sql
+.out  F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\09_GrotteDeVallorbe\\therion\\StationCoords.txt
+.mode csv
+.headers off
+SELECT s.NAME,s.X,s.Y,s.Z from STATION as s where s.NAME GLOB '*[A-Za-z]*'
+ORDER BY s.NAME;
+.quit

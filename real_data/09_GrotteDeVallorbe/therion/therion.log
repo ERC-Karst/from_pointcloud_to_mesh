@@ -1,0 +1,83 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:21781
+meridian convergence (deg): 0.8038
+geomag declinations (deg):
+  2023.1.1  2.6967
+  2024.1.1  2.8632
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 133 stations, connect‚es par 132 vis‚es.
+ 5> Il y a 1 bouclage.
+ 6> La topographie contient 2 composants connect‚s.
+ 7> Longueur totale de la topographie =  208.68m ( 208.68m ajust‚)
+ 8> Longueur totale en projection horizontale =  205.00m
+ 9> Longueur totale verticale =   30.37m
+10> Intervalle vertical = 29.86m (de 127 … 839.35m jusqu'… 25 … 809.48m)
+11> Intervalle Nord-Sud = 62.07m (de 126 … 172094.64m jusqu'… 3 … 172032.57m)
+12> Intervalle Est-Ouest = 143.26m (de 129 … 516394.91m jusqu'… 5 … 516251.65m)
+13>  121 1-noeuds.
+14>    2 10-noeuds.
+15>    4 11-noeuds.
+16>    3 12-noeuds.
+17>    2 13-noeuds.
+18>    1 17-noeud.
+19> 
+######################### transcription ########################
+ 4> 133 : .@GrotteDeVallorbe -- 132 : .@GrotteDeVallorbe
+ 5> 1 : 0@GrotteDeVallorbe
+ 6> 2 : H@GrotteDeVallorbe
+10> 127 : .@GrotteDeVallorbe -- 25 : .@GrotteDeVallorbe
+11> 126 : .@GrotteDeVallorbe -- 3 : .@GrotteDeVallorbe
+12> 129 : .@GrotteDeVallorbe -- 5 : .@GrotteDeVallorbe
+13> 121 : 11@GrotteDeVallorbe
+14> 2 : H@GrotteDeVallorbe
+15> 4 : .@GrotteDeVallorbe
+16> 3 : .@GrotteDeVallorbe
+17> 2 : H@GrotteDeVallorbe
+18> 1 : 0@GrotteDeVallorbe
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+processing projection plan ... done
+####################### metapost log file ########################
+This is MetaPost, version 2.01 (TeX Live 2021/W32TeX) (kpathsea version 6.3.3)  22 NOV 2023 10:48
+**data.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/mpost.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/plain.mp
+Preloading the plain mem file, version 1.005) ) (./data.mp [1] )
+1 output file written: data.1
+
+
+#################### end of metapost log file ####################
+writing GrotteDeVallorbe ... done
+writing GrotteDeVallorbe ... done
+writing GrotteDeVallorbe.kml ... done
+writing GrotteDeVallorbe.sql ... done
+writing GrotteDeVallorbe.3d ... done
+writing xtherion file ... done
+compilation time: 0 sec
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.346, 46.695) (6.346, 46.695)
+  [EPSG:4326 â†’ EPSG:21781] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903 to WGS 84 (2) + Swiss Oblique Mercator 1903M] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel] accuracy: [1.500 m]
+  [EPSG:21781 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ LAT-LONG] AoU: [no] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ EPSG:21781] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + Swiss Oblique Mercator 1903M] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+########## end of CRS transformations chosen by PROJ ###########

@@ -1,0 +1,6 @@
+encoding  utf-8
+source LesCavottes.th 
+
+export model -o LesCavottes.3d 
+export model -o LesCavottes.kml 
+export database -o LesCavottes.sql

@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-10-11
+
+#... Cave attributes
+cave:
+    caveName: "GrandFontannet"
+    fullCaveName: "Le grand Fontannet de la Mothe"
+    country: "Switzerland"
+    region: "Canton of Vaud"
+    locality: "la Mothe-Vugelles, under Côte de Vugelles"
+    entrance: 
+        latitude: 
+          value:  46.82014 
+          format: "decimal degrees"
+        longitude: 
+          value: 6.56533
+          format: "decimal degrees"
+        elevation: 
+          value: 590
+          format: "metres"
+        datum: "WGS84"
+        comment: "entrance is georeferenced point, named S0 on therion survey."
+    geology:
+      lithology: "At contact between Kimmeridgian and Portlandian/Purbeckian limestone"
+      tectonics: "southern limb of first Jura anticline"
+    hydrology: "Watershed encompasses the SE flank of the Chasseron, bounded SW by Gorges de Covatannaz and NE by Mauborget"
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine", "Philippe Renard", "Ana Paola [Burgoa Tanaka]", "Celia Trunz", "Jérémie Chappuis"]
+scanDate: 2023.10.10
+remarks: "Entire cave scanned from entrance down to final dig."
+links: ""
+  

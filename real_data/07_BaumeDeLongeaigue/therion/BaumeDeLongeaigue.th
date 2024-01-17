@@ -1,0 +1,44 @@
+encoding  utf-8
+# 2023.11.13 created by TopoDroid v 6.1.78
+
+survey BaumeDeLongeaigue -title "longeaigue puits de la perche"
+    # georef longeuaigue scan 
+
+  centerline
+    date 2023.11.03 
+    team "Tanguy Racine"
+    team "Claudio Pastore"
+    
+    cs EPSG:21781
+    fix 2 529918 191719 820
+    units length meters
+    units compass clino degrees
+    data normal from to length compass clino
+    extend ignore
+    0 C1 2.25 238.8 14.2
+    0 1 2.51 160.9 4.3
+    extend right
+    1 0 2.52 340.4 -4.0
+    1 C2 0.59 64.8 4.1
+    extend ignore
+    1 2 2.97 137.9 -29.5
+    extend right
+    2 1 2.97 317.0 29.7
+    extend ignore
+    2 C3 1.35 217.7 12.4
+    extend left
+    2 3 5.07 222.6 11.9
+    extend right
+    3 2 5.06 44.9 -11.4
+    extend left
+    3 C5 1.73 248.1 -59.8
+  endcenterline
+
+  # input "longeaigue_puits_de_la_perche-1p.th2"
+
+  # map m1p -projection plan
+  #   longeaigue_puits_de_la_perche-1p
+  # endmap
+
+endsurvey
+

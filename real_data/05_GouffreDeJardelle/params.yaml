@@ -1,0 +1,45 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-11-14
+
+#... Cave attributes
+cave:
+    caveName: "GouffreDeJardelle"
+    fullCaveName: "Gouffre de Jardelle"
+
+#... Initial CloudCompare processing parameters
+paths:
+    root: "F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\05_GouffreDeJardelle"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/CropBoxes.geojson"
+    inCloudName: "raw/GouffreDeJardelleClassified.las"
+    outCloudName: "raw/GouffreDeJardelleClassifiedGeoref.las"
+    subsampledOutCloudName: "output/GouffreDeJardelle_subsampled.las"
+    globalShift: "GlobalShift.txt"
+    transformMatrix: "TransMatrix.txt"
+    scanTargets: "raw/GouffreDeJardelle_Targets.txt"
+    therionTargets: "therion/StationCoords.txt"
+    log: "log.txt"
+
+entranceCropping: 
+    direction: 2 # remove trees in the side view directed north (Z direction)
+    leaveInside: False # retain everything but the trees selected.
+
+alignment: 
+    skip_rows: 1
+    max_rows: 7
+    usecols: [1,2,3]
+    globalShift: [-897100, -2220300, -800]
+    crs: "epsg:27572"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

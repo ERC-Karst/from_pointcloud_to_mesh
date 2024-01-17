@@ -1,0 +1,7 @@
+encoding  utf-8
+source grandfontannet.th
+cs EPSG:21781
+export model -o GrandFontannet.3d
+export model -o GrandFontannet.kml
+
+export database -o GrandFontannet.sql

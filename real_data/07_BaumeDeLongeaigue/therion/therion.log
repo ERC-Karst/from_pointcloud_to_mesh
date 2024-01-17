@@ -1,0 +1,73 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:21781
+meridian convergence (deg): 0.6769
+geomag declinations (deg):
+  2023.1.1  2.7415
+  2024.1.1  2.9084
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 1.09%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 8 stations, connect‚es par 10 vis‚es.
+ 5> Il y a 3 bouclages.
+ 6> Longueur totale de la topographie =   27.02m (  27.02m ajust‚)
+ 7> Longueur totale en projection horizontale =   25.06m
+ 8> Longueur totale verticale =    7.72m
+ 9> Intervalle vertical = 2.31m (de 2 … 821.84m jusqu'… 8 … 819.53m)
+10> Intervalle Nord-Sud = 8.06m (de 1 … 191723.42m jusqu'… 8 … 191715.36m)
+11> Intervalle Est-Ouest = 4.47m (de 5 … 529918.00m jusqu'… 8 … 529913.53m)
+12>    4 1-noeuds.
+13>    2 3-noeuds.
+14>    2 5-noeuds.
+15> 
+######################### transcription ########################
+ 4> 8 : C5@BaumeDeLongeaigue
+ 5> 3 : 1@BaumeDeLongeaigue
+ 9> 2 : C1@BaumeDeLongeaigue -- 8 : C5@BaumeDeLongeaigue
+10> 1 : 0@BaumeDeLongeaigue -- 8 : C5@BaumeDeLongeaigue
+11> 5 : 2@BaumeDeLongeaigue -- 8 : C5@BaumeDeLongeaigue
+12> 4 : C2@BaumeDeLongeaigue
+13> 2 : C1@BaumeDeLongeaigue
+14> 2 : C1@BaumeDeLongeaigue
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing BaumeDeLongeaigue.3d ... done
+writing BaumeDeLongeaigue.sql ... done
+writing BaumeDeLongeaigue ... 
+processing projection plan ... done
+done
+writing xtherion file ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  2.02%    0.2m   10.1m   2    0.1m   -0.1m    0.0m [2@BaumeDeLongeaigue - 3 - 2]
+  0.70%    0.0m    5.9m   2    0.0m    0.0m   -0.0m [2@BaumeDeLongeaigue - 1 - 2]
+  0.55%    0.0m    5.0m   2    0.0m   -0.0m   -0.0m [1@BaumeDeLongeaigue - 0 - 1]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.519, 46.873) (6.519, 46.873)
+  [EPSG:4326 â†’ EPSG:21781] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903 to WGS 84 (2) + Swiss Oblique Mercator 1903M] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel] accuracy: [1.500 m]
+  [EPSG:21781 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ LAT-LONG] AoU: [no] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ EPSG:21781] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + Swiss Oblique Mercator 1903M] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+########## end of CRS transformations chosen by PROJ ###########

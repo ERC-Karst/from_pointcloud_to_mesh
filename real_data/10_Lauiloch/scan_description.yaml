@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-01-15
+
+#... Cave attributes
+cave:
+    caveName: "Lauiloch"
+    fullCaveName: "Lauiloch"
+    country: "Switzerland"
+    region: "Canton of Schwyz"
+    locality: "Illgau"
+    entrance: 
+        latitude: 
+          value:  46.99169
+          format: "decimal degrees"
+        longitude: 
+          value: 8.71393
+          format: "decimal degrees"
+        elevation: 
+          value: 751
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance from Map Geo Admin (swisstopo service)"
+    geology:
+      lithology: "Schrattenkalk"
+      tectonics: "Drusberg nappe"
+    hydrology: "temporary overflow of the system"
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Jérémie Chappuis", "Markus Flury", "Tanguy Racine", "Philippe Renard", "Marco Filipponi"]
+scanDate: 2024.01.13
+remarks: "Entrance to the beginning of Schlitzgang"
+links: ""
+  

@@ -1,0 +1,9 @@
+encoding  utf-8
+
+source GrotteDeVallorbe.th
+
+export map -o GrotteDeVallorbe -fmt esri
+export model -o GrotteDeVallorbe -fmt esri
+export model -o GrotteDeVallorbe.kml
+export database -o GrotteDeVallorbe.sql
+export model -o GrotteDeVallorbe.3d -fmt survex

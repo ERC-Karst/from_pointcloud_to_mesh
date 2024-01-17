@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-11-13
+
+#... Cave attributes
+cave:
+    caveName: "BaumeDeLongeaigue"
+    fullCaveName: "Baume de Longeaigue"
+    country: "Switzerland"
+    region: "Canton of Neuchatel"
+    locality: "Buttes"
+    entrance: 
+        latitude: 
+          value:  46.87300074
+          format: "decimal degrees"
+        longitude: 
+          value: 6.51925089
+          format: "decimal degrees"
+        elevation: 
+          value: 917
+          format: "metres"
+        datum: "WGS84"
+        comment: "upper entrance, coordinates from Cavernes 2018, P.-Y. Jeannin, p32"
+    geology:
+      lithology: "In the Buttes anticline"
+      tectonics: "northern limb of the Buttes anticline"
+    hydrology: "Areuse ? "
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine", "Claudio Pastore"]
+scanDate: 2023.10.10
+remarks: "Grand toboggan to the bottom of Puits de la Perche"
+links: "https://www.cavernes.ch/images/pdf/cavernes2018.pdf"
+  

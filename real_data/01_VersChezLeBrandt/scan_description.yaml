@@ -1,0 +1,40 @@
+---
+documentTitle : "Cave LiDAR Scan Description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-08-01
+
+#... Cave attributes
+cave:
+    caveName: "VersChezLeBrandt"
+    fullCaveName: "Grotte de Vers Chez le Brandt"
+    country: "Switzerland"
+    region: "Neuchatel"
+    entrance: 
+        latitude: 
+            value: 46.93804
+            format: "decimal degrees"
+        longitude: 
+            value: 6.47303
+            format: "decimal degrees"
+        elevation: 
+            value: 1170
+            format: "metres"
+        datum: "WGS84"
+   geology: 
+      lithology: "Portlandian / Kimmeridgian  limestone and marl sequence"
+      tectonics:
+    speleogenesis: "Single bedding plane development at contact between limestone and underlying marls acting as local aquiclude"
+  hydrology: "Main karst inflitration zone in lower part of the cave (VCB1 station), draining a small catchment northeast of the cave. Tracer test to the Areuse spring in 1971. (130 km2): Meeks & Hunkeler 2015"
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine",  "Philippe Renard", "Marcus Geisel", "Jérémie Chappuis"]
+scanDate: 2023.07.10
+remarks: "Scan begun at deepest point, conducted in loops all the way to the entrance."
+
+links: [
+    https://doi.org/10.1016/j.jhydrol.2015.06.040
+    ]

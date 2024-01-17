@@ -1,0 +1,7 @@
+sqlite\sqlite3.exe
+.read F:\ScanLeica\\from_pointcloud_to_mesh\\real_data\\LesCavottes\\therion\\LesCavottes.sql
+.out  F:\ScanLeica\\from_pointcloud_to_mesh\\real_data\\LesCavottes\\therion\\StationCoords.txt
+.mode csv
+.headers on
+SELECT s.NAME,s.X,s.Y,s.Z from STATION as s where s.NAME like 'c%' and s.NAME != 'C3' and s.NAME != 'C5';
+.quit

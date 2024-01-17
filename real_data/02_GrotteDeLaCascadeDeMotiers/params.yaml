@@ -1,0 +1,58 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-08-02
+
+#... Cave attributes
+cave:
+    caveName: "GrotteDeLaCascadeDeMotiers"
+    fullCaveName: "Grotte de Cascade de Motiers"
+
+#... Folder paths
+paths:
+    root: "F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\02_GrotteDeLaCascadeDeMotiers"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/cropped_clouds/CropBoxes.geojson"
+    inCloudName: "raw/GrotteDeLaCascadeDeMotiers.las"
+    Cut2DOutCloudName: "output/GrotteDeLaCascadeDeMotiers_Cut2D.las"
+    subsampledOutCloudName: "output/GrotteDeLaCascadeDeMotiers_subsampled.las"
+    subsampledCut2DOutCloudName: "output/GrotteDeLaCascadeDeMotiers_subsampled_Cut2D.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    centrelines: "process/centrelines"
+    scanTargets: "georef/GrotteDeLaCascadeDeMotiers_Targets.txt"
+    therionTargets: "georef/GrotteDeLaCascadeDeMotiers_StationCoords.txt"
+    log: "log.txt"
+    rasterZ: "GrotteDeLaCascadeDeMotiersRasterZ"
+
+#... Initial CloudCompare processing parameters
+entranceCropping: 
+    direction: 2 # remove trees in the side view directed north (Z direction)
+    polyLine: "CropEntrance.poly"
+    leaveInside: False # retain everything but the trees selected.
+
+alignment: 
+    skiprows: 1
+    max_rows: 4
+    usecols: [1,2,3]
+    globalShift: [-537700, -195200, -800]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+#... Cloud Sectioning
+sectionParams:
+    chosenNodes: [34,172]
+    sectionSpacing: 10
+    sectionLength: 20
+    sectionAxis: 2
+    epsilon : 6
+    grow : 12
+

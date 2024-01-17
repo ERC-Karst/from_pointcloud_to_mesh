@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>PETITEMINE_CH1903</name>
+  <Placemark id="1">
+    <name>ENTREE_PRINCIP</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>ENTREE_PRINCIP</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'850.30</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>199'005.80</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>751.53</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'849.87</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'199'006.17</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>751.53</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.688050</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939676</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.688050,46.939676,751.53</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="2">
+    <name>ENTREE_EST</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>ENTREE_EST</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'907.05</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>199'044.74</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>750.30</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'906.62</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'199'045.11</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>750.30</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.688790</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.940031</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.688790,46.940031,750.30</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="3">
+    <name>CIBLE_5</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>CIBLE_5</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'856.12</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>198'998.34</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>750.51</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'855.69</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'198'998.71</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>750.51</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.688127</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939610</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.688127,46.939610,750.51</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="4">
+    <name>CIBLE_6</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>CIBLE_6</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'864.29</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>198'990.57</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>748.62</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'863.86</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'198'990.95</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>748.62</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.688235</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939541</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.688235,46.939541,748.62</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="5">
+    <name>CIBLE_7</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>CIBLE_7</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'910.90</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>199'030.48</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>747.24</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'910.47</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'199'030.85</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>747.24</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.688842</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939903</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.688842,46.939903,747.24</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="6">
+    <name>CIBLE_8</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>CIBLE_8</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'889.93</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>199'015.50</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>748.47</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'889.50</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'199'015.87</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>748.47</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.688569</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939767</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.688569,46.939767,748.47</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="7">
+    <name>PME1</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>PME1</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'746.43</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>198'953.70</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>740.63</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'746.00</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'198'954.07</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>740.63</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.686692</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939199</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.686692,46.939199,740.63</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="8">
+    <name>PME2</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>PME2</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'799.95</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>198'921.79</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>752.91</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'799.52</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'198'922.16</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>752.91</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.687399</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.938916</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.687399,46.938916,752.91</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="9">
+    <name>PME2HAUT</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>PME2HAUT</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'804.75</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>198'924.25</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>753.65</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'804.32</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'198'924.62</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>753.65</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.687462</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.938939</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.687462,46.938939,753.65</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark id="10">
+    <name>CADASTRE1</name>
+    <description><![CDATA[<table border="0" cellspacing="0" cellpadding="0"><tr><td>Nom:&nbsp;&nbsp;</td><td>CADASTRE1</td></tr><tr><td>Est MN03 (y) [m]:&nbsp;&nbsp;</td><td>542'751.47</td></tr><tr><td>Nord MN03 (x) [m]:&nbsp;&nbsp;</td><td>198'947.01</td></tr><tr><td>Altitude (h) [m]:&nbsp;&nbsp;</td><td>740.76</td></tr><tr><td>Est MN95 (E) [m]:&nbsp;&nbsp;</td><td>2'542'751.04</td></tr><tr><td>Nord MN95 (N) [m]:&nbsp;&nbsp;</td><td>1'198'947.38</td></tr><tr><td>Altitude (H) [m]:&nbsp;&nbsp;</td><td>740.76</td></tr><tr><td>Longitude [°]:&nbsp;&nbsp;</td><td>6.686759</td></tr><tr><td>Latitude [°]:&nbsp;&nbsp;</td><td>46.939139</td></tr></table>]]></description>
+    <Point>
+      <coordinates>6.686759,46.939139,740.76</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

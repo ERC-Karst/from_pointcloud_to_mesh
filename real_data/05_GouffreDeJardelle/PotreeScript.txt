@@ -1,0 +1,31 @@
+C:\PotreeConverter_2.1.1_windows_x64>PotreeConverter.exe F:ScanLeica\from_pointcloud_to_mesh\real_data\05_GouffreDeJardelle\raw\GouffreDeJardelleClassifiedGeoref.las -o F:ScanLeica\\from_pointcloud_to_mesh\\real_data\05_GouffreDeJardelle\Potree --generate-page GouffreDeJardelle
+
+Potree.loadPointCloud("./pointclouds/GouffreDeJardelle/metadata.json", "Gouffre De Jardelle couleur", e => {
+			let scene = viewer.scene;
+			let pointcloud = e.pointcloud;
+			
+			let material = pointcloud.material;
+			material.size = 1;
+			material.pointSizeType = Potree.PointSizeType.FIXED;
+			material.shape = Potree.PointShape.CIRCLE;
+			material.activeAttributeName = "rgba";
+			
+			scene.addPointCloud(pointcloud);
+			
+			viewer.fitToScreen();
+		});
+
+		Potree.loadPointCloud("./pointclouds/GouffreDeJardelle/metadata.json", "Gouffre De Jardelle classification", e => {
+			let scene = viewer.scene;
+			let pointcloud = e.pointcloud;
+			
+			let material = pointcloud.material;
+			material.size = 1;
+			material.pointSizeType = Potree.PointSizeType.FIXED;
+			material.shape = Potree.PointShape.CIRCLE;
+			material.activeAttributeName = "classification";
+			
+			scene.addPointCloud(pointcloud);
+			
+			viewer.fitToScreen();
+		});

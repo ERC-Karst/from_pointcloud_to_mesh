@@ -1,0 +1,91 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:27572
+meridian convergence (deg): -2.8777
+geomag declinations (deg):
+  2023.1.1  2.6847
+  2024.1.1  2.8528
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 3.84%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 51 stations, connect‚es par 69 vis‚es.
+ 5> Il y a 19 bouclages.
+ 6> Longueur totale de la topographie =  447.47m ( 447.53m ajust‚)
+ 7> Longueur totale en projection horizontale =  442.84m
+ 8> Longueur totale verticale =   50.78m
+ 9> Intervalle vertical = 9.23m (de 2 … 452.23m jusqu'… 28 … 443.00m)
+10> Intervalle Nord-Sud = 90.50m (de 7 … 2233090.99m jusqu'… 35 … 2233000.49m)
+11> Intervalle Est-Ouest = 170.41m (de 2 … 900394.92m jusqu'… 47 … 900224.51m)
+12>   31 1-noeuds.
+13>   14 4-noeuds.
+14>    4 5-noeuds.
+15>    1 6-noeud.
+16>    1 25-noeud.
+17> 
+######################### transcription ########################
+ 4> 51 : .@GrotteDesFauxMonnayeurs
+ 5> 19 : c5@GrotteDesFauxMonnayeurs
+ 9> 2 : c8@GrotteDesFauxMonnayeurs -- 28 : 19@GrotteDesFauxMonnayeurs
+10> 7 : 4@GrotteDesFauxMonnayeurs -- 35 : .@GrotteDesFauxMonnayeurs
+11> 2 : c8@GrotteDesFauxMonnayeurs -- 47 : .@GrotteDesFauxMonnayeurs
+12> 31 : .@GrotteDesFauxMonnayeurs
+13> 14 : 10@GrotteDesFauxMonnayeurs
+14> 4 : 1@GrotteDesFauxMonnayeurs
+15> 1 : 0@GrotteDesFauxMonnayeurs
+16> 1 : 0@GrotteDesFauxMonnayeurs
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing GrotteDesFauxMonnayeurs.3d ... done
+writing GrotteDesFauxMonnayeurs.kml ... done
+writing GrotteDesFauxMonnayeurs.sql ... done
+writing xtherion file ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  6.92%    1.0m   13.8m   2   -0.8m    0.5m    0.0m [19@GrotteDesFauxMonnayeurs - 18 - 19]
+  6.74%    0.5m    7.6m   2   -0.5m   -0.2m    0.0m [4@GrotteDesFauxMonnayeurs - 3 - 4]
+  6.42%    1.2m   18.6m   2   -1.0m    0.7m    0.0m [12@GrotteDesFauxMonnayeurs - 11 - 12]
+  5.67%    2.1m   37.7m   2   -1.6m    1.4m    0.0m [14@GrotteDesFauxMonnayeurs - 13 - 14]
+  5.48%    0.6m   11.5m   2   -0.5m    0.4m    0.0m [7@GrotteDesFauxMonnayeurs - 6 - 7]
+  5.39%    1.7m   30.7m   2   -1.3m    1.1m    0.0m [16@GrotteDesFauxMonnayeurs - 15 - 16]
+  5.28%    1.1m   21.7m   2   -0.8m    0.8m    0.1m [1@GrotteDesFauxMonnayeurs - 0 - 1]
+  4.28%    0.5m   11.1m   2   -0.2m    0.4m    0.0m [5@GrotteDesFauxMonnayeurs - 4 - 5]
+  4.27%    0.8m   17.9m   2   -0.6m   -0.5m    0.1m [2@GrotteDesFauxMonnayeurs - 1 - 2]
+  4.00%    1.6m   39.2m   2   -0.8m    1.3m   -0.1m [15@GrotteDesFauxMonnayeurs - 14 - 15]
+  3.92%    1.8m   46.3m   2   -1.0m    1.5m    0.0m [17@GrotteDesFauxMonnayeurs - 16 - 17]
+  3.57%    0.6m   16.7m   2   -0.3m    0.5m    0.1m [9@GrotteDesFauxMonnayeurs - 8 - 9]
+  3.21%    0.8m   23.9m   2   -0.4m    0.7m   -0.0m [13@GrotteDesFauxMonnayeurs - 12 - 13]
+  2.88%    0.9m   31.1m   2   -0.4m    0.8m    0.0m [11@GrotteDesFauxMonnayeurs - 10 - 11]
+  2.01%    0.4m   18.0m   2   -0.1m    0.3m    0.0m [6@GrotteDesFauxMonnayeurs - 5 - 6]
+  1.41%    0.2m   11.5m   2    0.1m    0.1m    0.1m [3@GrotteDesFauxMonnayeurs - 2 - 3]
+  0.77%    0.1m   19.0m   2   -0.0m    0.1m   -0.0m [10@GrotteDesFauxMonnayeurs - 9 - 10]
+  0.36%    0.1m   21.6m   2   -0.0m    0.0m    0.1m [8@GrotteDesFauxMonnayeurs - 7 - 8]
+  0.29%    0.0m   16.4m   2   -0.0m    0.0m   -0.0m [18@GrotteDesFauxMonnayeurs - 17 - 18]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.288, 47.029) (6.288, 47.029)
+  [LAT-LONG â†’ LAT-LONG] AoU: [no] transformation: [axis order change (2D) + Null geographic offset from WGS 84 to WGS 84 + axis order change (2D)] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [LAT-LONG â†’ EPSG:27572] AoU: [yes] transformation: [axis order change (2D) + Inverse of NTF to WGS 84 (1) + Inverse of NTF (Paris) to NTF (1) + Lambert zone II] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=168 y=60 z=-320 step inv proj=cart ellps=clrk80ign step proj=pop v_3 step proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris] accuracy: [2.000 m]
+  [EPSG:4326 â†’ EPSG:27572] AoU: [yes] transformation: [axis order change (2D) + Inverse of NTF to WGS 84 (1) + Inverse of NTF (Paris) to NTF (1) + Lambert zone II] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=168 y=60 z=-320 step inv proj=cart ellps=clrk80ign step proj=pop v_3 step proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris] accuracy: [2.000 m]
+  [EPSG:27572 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+  [EPSG:27572 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+########## end of CRS transformations chosen by PROJ ###########

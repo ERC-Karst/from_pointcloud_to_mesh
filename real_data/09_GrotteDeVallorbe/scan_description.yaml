@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2023-11-22
+
+#... Cave attributes
+cave:
+    caveName: "GrotteDeVallorbe"
+    fullCaveName: "Grotte de Vallorbe"
+    country: "Switzerland"
+    region: "Canton of Vaud"
+    locality: "Vallorbe"
+    entrance: 
+        latitude: 
+          value:  46.69812 
+          format: "decimal degrees"
+        longitude: 
+          value: 6.34582
+          format: "decimal degrees"
+        elevation: 
+          value: 784
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance from Map Geo Admin (swisstopo service)"
+    geology:
+      lithology: "as yet unknown"
+      tectonics: "as yet unknown"
+    hydrology: "main resurgence of the Orbe river"
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine", "Celia Trunz"]
+scanDate: 2023.11.19
+remarks: "Gallery of Toboggan to the Piscine, semi-active passage."
+links: ""
+  

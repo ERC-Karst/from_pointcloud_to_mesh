@@ -1,0 +1,8 @@
+encoding  utf-8
+source GrotteDesFauxMonnayeurs.th 
+
+cs epsg:27572
+export model -o GrotteDesFauxMonnayeurs.3d 
+export model -o GrotteDesFauxMonnayeurs.kml 
+
+export database -o GrotteDesFauxMonnayeurs.sql

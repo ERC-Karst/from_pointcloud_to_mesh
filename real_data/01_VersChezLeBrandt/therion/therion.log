@@ -1,0 +1,96 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:21781
+meridian convergence (deg): 0.7111
+geomag declinations (deg):
+  2023.1.1  2.7303
+  2024.1.1  2.8976
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.65%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 43 stations, connect‚es par 61 vis‚es.
+ 5> Il y a 19 bouclages.
+ 6> Longueur totale de la topographie =  493.28m ( 493.28m ajust‚)
+ 7> Longueur totale en projection horizontale =  472.99m
+ 8> Longueur totale verticale =  109.21m
+ 9> Intervalle vertical = 49.66m (de 43 … 1160.24m jusqu'… 1 … 1110.58m)
+10> Intervalle Nord-Sud = 156.32m (de 43 … 198982.57m jusqu'… 2 … 198826.25m)
+11> Intervalle Est-Ouest = 132.21m (de 1 … 526560.64m jusqu'… 33 … 526428.44m)
+12>   22 1-noeuds.
+13>    2 3-noeuds.
+14>   10 4-noeuds.
+15>    7 5-noeuds.
+16>    1 6-noeud.
+17>    1 13-noeud.
+18> 
+######################### transcription ########################
+ 4> 43 : .@verschezlebrandt
+ 5> 19 : 11@verschezlebrandt
+ 9> 43 : .@verschezlebrandt -- 1 : 0@verschezlebrandt
+10> 43 : .@verschezlebrandt -- 2 : C1@verschezlebrandt
+11> 1 : 0@verschezlebrandt -- 33 : .@verschezlebrandt
+12> 22 : 13@verschezlebrandt
+13> 2 : C1@verschezlebrandt
+14> 10 : .@verschezlebrandt
+15> 7 : C2@verschezlebrandt
+16> 1 : 0@verschezlebrandt
+17> 1 : 0@verschezlebrandt
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing VersChezLeBrandt.3d ... done
+writing VersChezLeBrandt.sql ... done
+writing VersChezLeBrandt ... 
+processing projection plan ... done
+done
+writing VersChezLeBrandt.kml ... done
+writing xtherion file ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  1.50%    0.3m   19.5m   2   -0.1m   -0.3m   -0.1m [4@verschezlebrandt - 3 - 4]
+  1.01%    0.2m   22.7m   2   -0.2m   -0.1m   -0.0m [3@verschezlebrandt - 2 - 3]
+  0.96%    0.2m   24.0m   2   -0.2m   -0.1m   -0.0m [2@verschezlebrandt - 1 - 2]
+  0.92%    0.3m   32.9m   2   -0.2m   -0.2m   -0.1m [7@verschezlebrandt - 6 - 7]
+  0.81%    0.3m   31.1m   2   -0.0m   -0.2m   -0.1m [15@verschezlebrandt - 14 - 15]
+  0.81%    0.2m   19.8m   2   -0.1m   -0.1m   -0.0m [1@verschezlebrandt - 0 - 1]
+  0.80%    0.3m   34.6m   2   -0.2m   -0.2m   -0.1m [17@verschezlebrandt - 16 - 17]
+  0.72%    0.1m   17.1m   2   -0.0m   -0.1m   -0.0m [9@verschezlebrandt - 8 - 9]
+  0.72%    0.1m   17.7m   2   -0.1m   -0.1m   -0.0m [16@verschezlebrandt - 15 - 16]
+  0.70%    0.3m   36.8m   2   -0.2m   -0.1m   -0.1m [10@verschezlebrandt - 9 - 10]
+  0.61%    0.2m   26.8m   2   -0.2m    0.0m   -0.0m [8@verschezlebrandt - 7 - 8]
+  0.56%    0.1m   22.7m   2   -0.0m   -0.1m   -0.1m [12@verschezlebrandt - 11 - 12]
+  0.51%    0.1m   19.6m   2   -0.1m   -0.1m   -0.0m [14@verschezlebrandt - 13 - 14]
+  0.31%    0.1m   30.1m   2   -0.1m    0.0m   -0.1m [5@verschezlebrandt - 4 - 5]
+  0.31%    0.0m   14.3m   2    0.0m    0.0m    0.0m [19@verschezlebrandt - 18 - 19]
+  0.29%    0.0m   11.0m   2   -0.0m   -0.0m   -0.0m [18@verschezlebrandt - 17 - 18]
+  0.28%    0.1m   37.2m   2   -0.0m    0.0m   -0.1m [6@verschezlebrandt - 5 - 6]
+  0.27%    0.0m   14.6m   2    0.0m    0.0m    0.0m [20@verschezlebrandt - 19 - 20]
+  0.25%    0.0m   10.2m   2   -0.0m    0.0m    0.0m [13@verschezlebrandt - 12 - 13]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.472, 46.938) (6.472, 46.938)
+  [LAT-LONG â†’ LAT-LONG] AoU: [no] transformation: [axis order change (2D) + Null geographic offset from WGS 84 to WGS 84 + axis order change (2D)] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [LAT-LONG â†’ EPSG:21781] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903 to WGS 84 (2) + Swiss Oblique Mercator 1903M] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel] accuracy: [1.500 m]
+  [EPSG:4326 â†’ EPSG:21781] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903 to WGS 84 (2) + Swiss Oblique Mercator 1903M] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel] accuracy: [1.500 m]
+  [EPSG:21781 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+########## end of CRS transformations chosen by PROJ ###########

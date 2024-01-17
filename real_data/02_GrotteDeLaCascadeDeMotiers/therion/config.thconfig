@@ -1,0 +1,8 @@
+encoding  utf-8
+source GrotteDeLaCascadeDeMotiers.th 
+
+cs epsg:21781
+export model -o GrotteDeLaCascadeDeMotiers.3d -fmt survex
+export model -o GrotteDeLaCascadeDeMotiers.kml
+export model -o GrotteDeLaCascadeDeMotiers -fmt esri
+export database -o GrotteDeLaCascadeDeMotiers.sql

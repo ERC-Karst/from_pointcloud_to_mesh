@@ -1,0 +1,44 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-01-15
+
+#... Cave attributes
+cave:
+    caveName: "PetiteMineDeTravers"
+    fullCaveName: "Petite Mine de Travers"
+
+#... Initial CloudCompare processing parameters
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/08_PetiteMineDeTravers"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    therionFiles : "therion"
+    cropboxes : "process/CropBoxes.geojson"
+    inCloudName: "raw/PetiteMineDeTravers.las"
+    georefOutCloudName: "output/PetiteMineDeTravers_georef.las"
+    subsampledOutCloudName: "output/PetiteMineDeTravers_subsampled.las"
+    subsampledGeorefOutCloudName: "output/PetiteMineDeTravers_subsampled_georef.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    centreline: "CentrelineSimple.poly"
+    scanTargets: "georef/PetiteMineDeTravers_ScanTargets.txt"
+    therionTargets: "georef/PetiteMineDeTravers_StationCoords.txt"
+    log: "log.txt"
+
+
+alignment: 
+    skip_rows: 1
+    max_rows: 4
+    usecols: [1,2,3]
+    globalShift: [-542800, -199000, -700]
+    crs: "epsg:21781"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

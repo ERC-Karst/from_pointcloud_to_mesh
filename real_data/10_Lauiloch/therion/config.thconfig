@@ -1,0 +1,9 @@
+encoding  utf-8
+
+source Lauiloch.th
+cs epsg:21781
+export map -o Lauiloch -fmt esri
+export model -o Lauiloch -fmt esri
+export model -o Lauiloch.kml
+export database -o Lauiloch.sql
+export model -o Lauiloch.3d -fmt survex

@@ -1,0 +1,89 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:21781
+meridian convergence (deg): 0.6034
+geomag declinations (deg):
+  2023.1.1  2.7669
+  2024.1.1  2.9338
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.90%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 19 stations, connect‚es par 31 vis‚es.
+ 5> Il y a 13 bouclages.
+ 6> Longueur totale de la topographie =  103.16m ( 103.22m ajust‚)
+ 7> Longueur totale en projection horizontale =   97.76m
+ 8> Longueur totale verticale =   30.26m
+ 9> Intervalle vertical = 21.58m (de 13 … 774.84m jusqu'… 11 … 753.26m)
+10> Intervalle Nord-Sud = 53.47m (de 18 … 195257.88m jusqu'… 11 … 195204.41m)
+11> Intervalle Est-Ouest = 35.79m (de 6 … 537659.41m jusqu'… 19 … 537623.63m)
+12>    5 1-noeuds.
+13>    1 2-noeud.
+14>    1 3-noeud.
+15>    8 4-noeuds.
+16>    4 5-noeuds.
+17> 
+######################### transcription ########################
+ 4> 19 : sortie@GrotteDeLaCascadeDeMotiers
+ 5> 13 : 9@GrotteDeLaCascadeDeMotiers
+ 9> 13 : 9@GrotteDeLaCascadeDeMotiers -- 11 : 8@GrotteDeLaCascadeDeMotiers
+10> 18 : 12@GrotteDeLaCascadeDeMotiers -- 11 : 8@GrotteDeLaCascadeDeMotiers
+11> 6 : 4@GrotteDeLaCascadeDeMotiers -- 19 : sortie@GrotteDeLaCascadeDeMotiers
+12> 5 : 3@GrotteDeLaCascadeDeMotiers
+13> 1 : 0@GrotteDeLaCascadeDeMotiers
+14> 1 : 0@GrotteDeLaCascadeDeMotiers
+15> 8 : 5@GrotteDeLaCascadeDeMotiers
+16> 4 : 2@GrotteDeLaCascadeDeMotiers
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing GrotteDeLaCascadeDeMotiers.3d ... done
+writing GrotteDeLaCascadeDeMotiers.kml ... done
+writing GrotteDeLaCascadeDeMotiers ... 
+processing projection plan ... done
+done
+writing GrotteDeLaCascadeDeMotiers.sql ... done
+writing xtherion file ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  2.09%    0.3m   15.9m   2    0.3m    0.1m    0.0m [3@GrotteDeLaCascadeDeMotiers - 2 - 3]
+  1.94%    0.2m   11.7m   2    0.2m    0.0m    0.0m [0@GrotteDeLaCascadeDeMotiers - 1 - 0]
+  1.40%    0.1m    4.1m   2    0.0m   -0.0m    0.0m [10@GrotteDeLaCascadeDeMotiers - 9 - 10]
+  1.09%    0.2m   13.8m   2   -0.1m    0.1m    0.1m [1@GrotteDeLaCascadeDeMotiers - 2 - 1]
+  1.08%    0.1m    8.3m   2    0.1m    0.0m   -0.0m [3@GrotteDeLaCascadeDeMotiers - 4 - 3]
+  0.73%    0.1m   19.2m   2   -0.1m    0.1m    0.1m [6@GrotteDeLaCascadeDeMotiers - 7 - 6]
+  0.71%    0.1m   15.9m   2    0.1m    0.1m   -0.0m [2@GrotteDeLaCascadeDeMotiers - 3 - 2]
+  0.68%    0.1m   16.0m   2   -0.1m   -0.0m    0.1m [4@GrotteDeLaCascadeDeMotiers - 5 - 4]
+  0.64%    0.1m   11.3m   2   -0.0m   -0.1m    0.0m [sortie@GrotteDeLaCascadeDeMotiers - 12 - sortie]
+  0.57%    0.1m   26.4m   2   -0.0m   -0.1m   -0.1m [12@GrotteDeLaCascadeDeMotiers - 11 - 12]
+  0.50%    0.1m   18.2m   2   -0.1m   -0.1m    0.0m [11@GrotteDeLaCascadeDeMotiers - 10 - 11]
+  0.49%    0.1m   12.5m   2    0.1m   -0.0m    0.0m [5@GrotteDeLaCascadeDeMotiers - 6 - 5]
+  0.33%    0.0m   11.4m   2   -0.0m    0.0m   -0.0m [7@GrotteDeLaCascadeDeMotiers - 8 - 7]
+  0.31%    0.1m   22.4m   2   -0.0m   -0.0m   -0.1m [9@GrotteDeLaCascadeDeMotiers - 0 - 9]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.620, 46.905) (6.620, 46.905)
+  [LAT-LONG â†’ LAT-LONG] AoU: [no] transformation: [axis order change (2D) + Null geographic offset from WGS 84 to WGS 84 + axis order change (2D)] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [LAT-LONG â†’ EPSG:21781] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903 to WGS 84 (2) + Swiss Oblique Mercator 1903M] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel] accuracy: [1.500 m]
+  [EPSG:4326 â†’ EPSG:21781] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903 to WGS 84 (2) + Swiss Oblique Mercator 1903M] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel] accuracy: [1.500 m]
+  [EPSG:21781 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+  [EPSG:21781 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1903M + CH1903 to WGS 84 (2) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=600000 y_0=200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.500 m]
+########## end of CRS transformations chosen by PROJ ###########

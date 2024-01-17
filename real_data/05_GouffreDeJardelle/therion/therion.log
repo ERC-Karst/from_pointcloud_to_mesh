@@ -1,0 +1,68 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:27572
+meridian convergence (deg): -2.8416
+geomag declinations (deg):
+  2023.1.1  2.6715
+  2024.1.1  2.8392
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 1.49%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 18 stations, connect‚es par 18 vis‚es.
+ 5> Il y a 1 bouclage.
+ 6> Longueur totale de la topographie =  118.87m ( 118.93m ajust‚)
+ 7> Longueur totale en projection horizontale =  117.89m
+ 8> Longueur totale verticale =   10.74m
+ 9> Intervalle vertical = 3.02m (de 5 … 850.31m jusqu'… 9 … 847.29m)
+10> Intervalle Nord-Sud = 32.23m (de 7 … 2220361.54m jusqu'… 2 … 2220329.31m)
+11> Intervalle Est-Ouest = 43.82m (de 11 … 897113.82m jusqu'… 3 … 897070.00m)
+12>    2 1-noeuds.
+13>   14 2-noeuds.
+14>    2 3-noeuds.
+15> 
+######################### transcription ########################
+ 4> 18 : 10@GouffreDeJardelle -- 18 : 10@GouffreDeJardelle
+ 5> 1 : 0@GouffreDeJardelle
+ 9> 5 : c3@GouffreDeJardelle -- 9 : 4@GouffreDeJardelle
+10> 7 : c2@GouffreDeJardelle -- 2 : c1@GouffreDeJardelle
+11> 11 : c6@GouffreDeJardelle -- 3 : c8@GouffreDeJardelle
+12> 2 : c1@GouffreDeJardelle
+13> 14 : 8@GouffreDeJardelle
+14> 2 : c1@GouffreDeJardelle
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing GouffreDeJardelle.3d ... done
+writing GouffreDeJardelle.sql ... done
+writing xtherion file ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  1.49%    1.8m  117.6m  16    0.2m    1.7m   -0.1m [c1@GouffreDeJardelle - 10 - c5 - 9 - 8 - c7 - 6 - 5 - 4 - 3 - c2 - 2 - c3 - 1 - c8 - 0 - c1]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.239, 46.917) (6.239, 46.917)
+  [LAT-LONG â†’ LAT-LONG] AoU: [no] transformation: [axis order change (2D) + Null geographic offset from WGS 84 to WGS 84 + axis order change (2D)] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [LAT-LONG â†’ EPSG:27572] AoU: [yes] transformation: [axis order change (2D) + Inverse of NTF to WGS 84 (1) + Inverse of NTF (Paris) to NTF (1) + Lambert zone II] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=168 y=60 z=-320 step inv proj=cart ellps=clrk80ign step proj=pop v_3 step proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris] accuracy: [2.000 m]
+  [EPSG:4326 â†’ EPSG:27572] AoU: [yes] transformation: [axis order change (2D) + Inverse of NTF to WGS 84 (1) + Inverse of NTF (Paris) to NTF (1) + Lambert zone II] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=168 y=60 z=-320 step inv proj=cart ellps=clrk80ign step proj=pop v_3 step proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris] accuracy: [2.000 m]
+  [EPSG:27572 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+  [EPSG:27572 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Lambert zone II + NTF (Paris) to NTF (1) + NTF to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_1=46.8 lat_0=46.8 lon_0=0 k_0=0.99987742 x_0=600000 y_0=2200000 ellps=clrk80ign pm=paris step proj=push v_3 step proj=cart ellps=clrk80ign step proj=helmert x=-168 y=-60 z=320 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [2.000 m]
+########## end of CRS transformations chosen by PROJ ###########

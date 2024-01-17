@@ -1,0 +1,434 @@
+# 2024.01.16 created by TopoDroid v 6.1.78
+
+survey Lauiloch -title "Lauiloch"
+    # resurvey of entrance 
+
+  centerline
+    cs lat-long
+    fix 35 46.99169 8.71393 751
+    date 2024.01.13 
+    team "Marco Filipponi" insts
+    team "Philippe Renard" dog
+    team "Tanguy Racine" notes 
+    units length meters
+    units compass clino degrees
+    data normal from to length compass clino
+    extend left
+   flags surface
+    0 A 1.98 210.0 -6.7
+   flags not surface
+    extend right
+    0 1 5.61 186.4 -39.4
+    # extend auto
+    1 . 1.81 313.3 8.2
+    1 . 0.97 322.1 83.3
+    1 . 0.54 322.6 -87.5
+    extend left
+   flags duplicate
+    1 0 5.63 4.6 40.3
+   flags not duplicate
+    # extend auto
+    1 . 5.61 6.4 39.6
+    1 . 5.61 4.0 40.7
+    extend left
+    1 2 5.01 223.9 2.1
+    # extend auto
+    2 . 1.27 123.2 2.2
+    2 . 0.16 293.3 1.4
+    2 . 0.85 90.4 -79.1
+    2 . 0.71 135.8 80.7
+    extend left
+   flags duplicate
+    2 1 5.05 44.6 -2.3
+   flags not duplicate
+    2 3 1.83 186.6 -14.9
+    # extend auto
+    3 . 0.79 149.5 12.0
+    3 . 1.51 306.6 5.1
+    3 . 1.11 248.0 36.0
+    3 . 0.38 34.1 -49.8
+    extend right
+   flags duplicate
+    3 2 1.82 18.4 15.0
+   flags not duplicate
+    extend left
+    3 4 4.93 328.7 -56.6
+    # extend auto
+    4 . 1.72 202.5 9.3
+    4 . 0.29 5.1 -0.6
+    4 . 1.00 220.8 87.4
+    4 . 0.30 315.0 -71.0
+    4 . 7.66 148.3 56.3
+    extend right
+   flags duplicate
+    4 3 4.93 148.1 56.6
+   flags not duplicate
+    extend left
+    4 5 4.23 246.5 0.0
+    # extend auto
+    5 . 1.11 17.8 12.4
+    5 . 1.92 162.5 83.1
+    5 . 0.96 44.6 -63.9
+    extend right
+   flags duplicate
+    5 4 4.24 65.5 0.3
+   flags not duplicate
+    extend left
+    5 6 8.23 149.2 17.3
+    # extend auto
+    6 . 0.39 95.9 -4.3
+    6 . 0.84 282.3 54.0
+    6 . 1.31 341.8 -85.5
+    extend right
+   flags surface
+    6 B 1.91 282.6 -7.7
+   flags not surface
+    extend left
+   flags duplicate
+    6 5 8.23 328.9 -16.9
+   flags not duplicate
+    6 7 3.18 248.5 -1.1
+    # extend auto
+    7 . 0.16 211.5 0.3
+    7 . 0.91 357.3 1.7
+    7 . 2.22 15.3 -77.2
+    extend right
+   flags duplicate
+    7 6 3.18 68.9 1.8
+   flags not duplicate
+    7 8 4.14 296.8 -36.7
+    # extend auto
+    8 . 0.90 351.5 22.1
+    8 . 0.82 205.4 1.1
+    8 . 2.42 257.7 69.6
+    8 . 0.18 12.3 11.3
+    8 . 1.57 212.2 -80.8
+    extend left
+   flags duplicate
+    8 7 4.13 117.7 36.8
+   flags not duplicate
+    extend vertical
+    8 9 5.61 266.3 -44.5
+    # extend auto
+    9 . 0.20 191.8 -1.7
+    9 . 0.90 0.4 3.9
+    9 . 2.66 292.8 80.9
+    9 . 3.55 150.0 -84.9
+    9 . 2.05 294.3 0.7
+    extend right
+   flags duplicate
+    9 8 5.58 79.3 44.5
+   flags not duplicate
+    9 10 7.12 282.5 -84.9
+    # extend auto
+    10 . 0.28 42.3 7.8
+    10 . 0.53 228.9 -9.7
+    10 . 0.54 300.9 5.3
+    10 . 0.34 214.5 -70.5
+    10 . 4.76 116.8 84.3
+    10 . 2.37 129.8 36.2
+    extend left
+   flags duplicate
+    10 9 7.09 101.9 85.1
+   flags not duplicate
+    10 11 7.92 132.8 -23.6
+    # extend auto
+    11 . 2.05 7.6 18.7
+    11 . 0.53 177.8 26.0
+    11 . 1.65 47.2 79.7
+    11 . 0.35 305.7 -82.9
+    extend right
+   flags duplicate
+    11 10 7.89 313.0 23.7
+   flags not duplicate
+   flags surface
+    11 C 1.68 29.6 3.1
+   flags not surface
+    extend vertical
+    11 12 11.34 93.3 -4.6
+    # extend auto
+    12 . 0.95 34.7 19.4
+    12 . 0.66 187.6 81.9
+    12 . 2.10 219.9 -5.5
+    12 . 1.08 255.0 -88.0
+    extend vertical
+   flags duplicate
+    12 11 11.35 272.9 5.2
+   flags not duplicate
+    extend left
+    12 13 5.88 163.6 -11.6
+    # extend auto
+    13 . 0.67 149.5 -3.8
+    13 . 3.01 311.0 6.6
+    13 . 0.62 240.5 76.8
+    13 . 0.58 335.9 -86.1
+    extend right
+   flags duplicate
+    13 12 5.94 344.3 12.5
+   flags not duplicate
+    extend vertical
+    13 14 21.46 261.2 2.4
+    # extend auto
+    14 . 0.27 198.3 -4.3
+    14 . 2.35 2.4 14.8
+    14 . 1.57 207.3 86.0
+    14 . 0.34 297.1 -84.0
+    extend vertical
+   flags duplicate
+    14 13 21.49 82.1 -2.1
+   flags not duplicate
+    extend right
+    14 15 7.27 286.4 8.4
+    # extend auto
+    15 . 0.90 327.2 23.0
+    15 . 0.70 175.8 61.1
+    15 . 2.18 156.5 -7.1
+    15 . 0.80 174.4 -81.7
+    extend left
+   flags surface
+    15 D 2.28 153.6 -12.5
+   flags not surface
+   flags duplicate
+    15 14 7.29 106.6 -8.1
+   flags not duplicate
+    15 16 8.77 172.1 -13.3
+    # extend auto
+    16 . 2.65 56.6 1.8
+    16 . 0.37 235.5 11.6
+    16 . 0.87 81.2 68.5
+    16 . 0.68 45.3 -88.5
+    extend right
+   flags duplicate
+    16 15 8.79 352.2 13.6
+   flags not duplicate
+    extend left
+    16 17 18.83 135.1 -14.7
+    # extend auto
+    17 . 0.75 68.5 17.0
+    17 . 4.60 292.7 6.8
+    17 . 1.14 310.6 77.2
+    17 . 0.54 319.8 -81.2
+    extend right
+   flags duplicate
+    17 16 18.68 315.9 15.0
+   flags not duplicate
+    extend vertical
+    17 18 9.72 279.9 6.4
+    # extend auto
+    18 . 1.23 200.3 6.6
+    18 . 1.35 8.8 88.5
+    18 . 1.18 15.2 14.8
+    18 . 0.48 206.0 -79.1
+    extend vertical
+   flags duplicate
+    18 17 9.71 100.0 -6.1
+   flags not duplicate
+    extend right
+    18 19 15.95 287.4 12.2
+    # extend auto
+    19 . 0.69 241.0 7.6
+    19 . 0.63 47.2 57.9
+    19 . 3.04 35.3 20.1
+    19 . 0.35 298.6 -66.6
+    extend right
+   flags surface
+    19 E 3.07 41.4 6.8
+   flags not surface
+    # extend auto
+    19 . 3.07 43.4 6.5
+    extend left
+   flags duplicate
+    19 18 15.97 107.4 -11.6
+   flags not duplicate
+    extend right
+    19 20 8.26 311.9 17.7
+    # extend auto
+    20 . 2.33 208.0 -2.3
+    20 . 0.29 20.4 15.8
+    20 . 0.57 185.8 68.5
+    20 . 0.95 220.8 -73.7
+    extend left
+   flags duplicate
+    20 19 8.27 133.0 -17.2
+   flags not duplicate
+    extend vertical
+    20 21 9.88 279.1 15.1
+    # extend auto
+    21 . 1.29 202.2 -3.3
+    21 . 0.82 66.9 78.3
+    21 . 1.73 19.0 8.7
+    21 . 0.71 4.2 -74.4
+    extend left
+   flags duplicate
+    21 20 9.84 99.3 -14.8
+   flags not duplicate
+    extend right
+    21 22 6.70 298.1 29.7
+    # extend auto
+    22 . 1.81 141.5 -12.4
+    22 . 0.87 339.2 12.0
+    22 . 0.61 91.4 83.0
+    22 . 1.32 183.6 -86.8
+    extend left
+   flags duplicate
+    22 21 6.70 120.0 -29.6
+   flags not duplicate
+    # extend auto
+    22 . 6.68 118.1 -29.5
+    22 . 6.69 120.3 -29.7
+    extend left
+    22 23 7.04 216.5 -7.2
+    # extend auto
+    23 . 1.79 179.9 4.8
+    23 . 0.94 304.7 87.6
+    23 . 2.52 347.8 19.4
+    23 . 0.32 26.2 -84.2
+    extend right
+   flags duplicate
+    23 22 7.07 36.5 7.3
+   flags not duplicate
+    23 24 17.19 318.3 22.0
+    # extend auto
+    24 . 2.09 201.4 -2.0
+    24 . 0.59 10.3 -7.9
+    24 . 0.89 250.3 -80.3
+    extend left
+   flags duplicate
+    24 23 17.14 137.9 -21.6
+   flags not duplicate
+    extend right
+    24 25 11.24 281.0 13.1
+    # extend auto
+    25 . 1.01 189.3 -3.6
+    25 . 2.02 9.0 5.3
+    25 . 1.22 206.7 -85.0
+    25 . 0.31 62.5 59.2
+    extend left
+   flags duplicate
+    25 24 11.21 101.7 -12.8
+   flags not duplicate
+    # extend auto
+    25 . 1.83 335.5 -16.1
+    25 . 1.94 335.2 -16.0
+    extend right
+   flags surface
+    25 F 1.81 336.0 -16.3
+   flags not surface
+    25 26 14.77 312.8 12.8
+    # extend auto
+    26 . 1.03 253.1 1.5
+    26 . 2.96 54.3 20.2
+    26 . 0.93 40.8 80.3
+    26 . 0.21 293.4 -77.2
+    extend left
+   flags duplicate
+    26 25 14.77 132.4 -11.9
+   flags not duplicate
+    extend right
+    26 27 22.31 327.3 22.9
+    # extend auto
+    27 . 2.55 229.5 -16.0
+    27 . 0.91 35.9 8.8
+    27 . 0.24 152.6 84.7
+    27 . 1.36 255.0 -72.0
+    extend left
+   flags duplicate
+    27 26 22.38 149.7 -21.2
+   flags not duplicate
+    extend right
+    27 28 7.67 290.4 10.2
+    # extend auto
+    28 . 7.82 290.6 10.2
+    28 . 0.44 212.1 2.1
+    28 . 3.00 27.6 5.7
+    28 . 0.75 157.4 85.4
+    28 . 0.55 276.6 -70.0
+    extend right
+   flags surface
+    28 G 2.67 26.9 2.5
+   flags not surface
+    extend left
+   flags duplicate
+    28 27 7.86 110.4 -9.8
+   flags not duplicate
+    extend right
+    28 29 7.75 299.6 10.7
+    # extend auto
+    29 . 2.14 142.9 -15.7
+    29 . 2.01 324.9 25.3
+    29 . 0.77 160.0 62.2
+    29 . 0.79 154.8 -86.1
+    extend left
+   flags duplicate
+    29 28 7.73 120.1 -10.0
+   flags not duplicate
+    29 30 20.45 151.4 -17.4
+    # extend auto
+    30 . 1.96 61.1 -3.8
+    30 . 0.67 25.9 82.1
+    30 . 0.55 143.2 -17.9
+    30 . 4.58 320.7 13.3
+    30 . 1.11 338.2 85.3
+    30 . 0.83 335.0 -73.8
+    extend left
+   flags duplicate
+    30 29 20.49 331.1 18.2
+   flags not duplicate
+    extend right
+    30 31 6.03 287.8 13.7
+    # extend auto
+    31 . 2.90 155.5 -18.3
+    31 . 0.90 266.4 9.6
+    31 . 1.32 202.1 -84.5
+    31 . 0.24 182.9 66.3
+    extend left
+   flags duplicate
+    31 30 6.07 107.9 -13.3
+   flags not duplicate
+   flags surface
+    31 H 5.82 178.8 -22.7
+   flags not surface
+    31 32 10.36 164.0 -22.5
+    # extend auto
+    32 . 2.20 61.2 7.8
+    32 . 0.32 213.7 33.9
+    32 . 1.12 75.3 56.6
+    32 . 0.79 41.6 -66.3
+    extend right
+   flags duplicate
+    32 31 10.32 344.4 22.6
+   flags not duplicate
+    extend left
+    32 33 7.81 133.4 -11.5
+    # extend auto
+    33 . 1.17 12.0 -8.9
+    33 . 0.98 170.5 12.3
+    33 . 0.87 75.7 77.0
+    33 . 0.67 256.9 -83.4
+    extend right
+   flags duplicate
+    33 32 7.81 313.9 11.9
+   flags not duplicate
+    extend left
+    33 34 5.91 229.8 5.1
+    # extend auto
+    34 . 1.12 143.1 -12.0
+    34 . 2.39 10.7 0.8
+    34 . 1.00 331.4 -85.4
+    34 . 0.85 51.4 71.2
+    extend right
+   flags duplicate
+    34 33 5.84 50.9 -4.8
+   flags not duplicate
+    extend vertical
+    34 35 1.23 264.0 33.6
+    35 34 1.22 85.8 -34.2
+  endcenterline
+
+  # input "lauiloch-1p.th2"
+
+  # map m1p -projection plan
+  #   lauiloch-1p
+  # endmap
+
+endsurvey

@@ -1,0 +1,11 @@
+set xth(ctrl,cp,datlist) {}
+xth_cp_data_tree_insert 1 {} 0   "" "" "length: 103.16m (surface 0.00m, duplicated 103.57m)\nvertical range: 21.58m (from 9@GrotteDeLaCascadeDeMotiers at 774.84m to 8@GrotteDeLaCascadeDeMotiers at 753.26m)\nnorth-south range: 53.47m (from 12@GrotteDeLaCascadeDeMotiers at 195257.88m to 8@GrotteDeLaCascadeDeMotiers at 195204.41m)\neast-west range: 35.78m (from 4@GrotteDeLaCascadeDeMotiers at 537659.41m to sortie@GrotteDeLaCascadeDeMotiers at 537623.63m)\nnumber of shots: 32\nnumber of stations: 19"
+xth_cp_data_tree_insert 20 1 1 GrotteDeLaCascadeDeMotiers GrotteDeLaCascadeDeMotiers "Grotte de la cascade de Môtiers" "Grotte de la cascade de Motiers" "length: 103.16m (surface 0.00m, duplicated 103.57m)\nvertical range: 21.58m (from 9@GrotteDeLaCascadeDeMotiers at 774.84m to 8@GrotteDeLaCascadeDeMotiers at 753.26m)\nnorth-south range: 53.47m (from 12@GrotteDeLaCascadeDeMotiers at 195257.88m to 8@GrotteDeLaCascadeDeMotiers at 195204.41m)\neast-west range: 35.78m (from 4@GrotteDeLaCascadeDeMotiers at 537659.41m to sortie@GrotteDeLaCascadeDeMotiers at 537623.63m)\nnumber of shots: 32\nnumber of stations: 19"
+xth_cp_data_tree_create
+set xth(ctrl,cp,maplist) {}
+xth_cp_map_tree_insert projection 0 p1 {} 0 plan {} {} {}
+xth_cp_map_tree_create
+xth_cp_comp_stat 103 0
+set xth(th_exit_state) 2
+set xth(th_exit_number) 1694009119
+

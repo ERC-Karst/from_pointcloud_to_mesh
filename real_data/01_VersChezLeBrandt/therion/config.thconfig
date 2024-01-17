@@ -1,0 +1,7 @@
+encoding  utf-8
+source VersChezLeBrandt.th
+cs epsg:21781
+export model -o VersChezLeBrandt.3d -fmt survex
+export database -o VersChezLeBrandt.sql
+export model -o VersChezLeBrandt -fmt esri
+export model -o VersChezLeBrandt.kml
