@@ -34,6 +34,7 @@ alignment:
     usecols: [1,2,3]
     globalShift: [-516300, -172100, -800 ]
     crs: "epsg:21781"
+    elevation: "above sea level"
 
 subsampling: 
     spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.

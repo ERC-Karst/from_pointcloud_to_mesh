@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-01-17
+
+#... Cave attributes
+cave:
+    caveName: "RuptDuPuits"
+    fullCaveName: "Système du Rupt du Puits"
+    country: "France"
+    region: "Marne"
+    locality: "Trois-Fontaines-l'Abbaye"
+    entrance: 
+        latitude: 
+          value:  48.74694 
+          format: "decimal degrees"
+        longitude: 
+          value: 5.02194
+          format: "decimal degrees"
+        elevation: 
+          value: 160
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance from Wikipedia"
+    geology:
+      lithology: "limestone"
+      tectonics: "as yet unknown"
+    hydrology: "underground course of the river Saulx"
+
+
+#... Scanning procedure
+scannerType: "BLK360"
+processingSoftware: "LeicaRegister360"
+lighting: "no lighting available"
+scanOperators: ["Stéphane Jaillet", "Edytem"]
+scanDate: 2016.01.01
+remarks: "Cascade"
+links: ""
+  
