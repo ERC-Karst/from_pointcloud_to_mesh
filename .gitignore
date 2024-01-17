@@ -4,6 +4,7 @@
 *.jpeg 
 *.tif
 
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -47,7 +48,21 @@ ipython_config.py
 sample_data/SampleCave/process/
 sample_data/SampleCave/output/
 
-real_data/
+real_data/**/raw/
+real_data/**/output/
+real_data/**/blk2go_raw_data/
+real_data/**/process/
+real_data/**/blender/
+real_data/**/GIS/
+real_data/**/potree/
+real_data/**/literature/
+real_data/**/captures/
+
+*.shp
+*.shx
+*.dbf
+
 Storage/
 
 *realdata.ipynb
+!*.yaml
