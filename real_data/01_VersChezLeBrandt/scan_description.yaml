@@ -11,10 +11,10 @@ cave:
     region: "Neuchatel"
     entrance: 
         latitude: 
-            value: 46.93804
+            value: 46.937872 
             format: "decimal degrees"
         longitude: 
-            value: 6.47303
+            value: 6.472367
             format: "decimal degrees"
         elevation: 
             value: 1170

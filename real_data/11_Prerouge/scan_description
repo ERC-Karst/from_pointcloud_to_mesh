@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-01-18
+
+#... Cave attributes
+cave:
+    caveName: "Prerouge"
+    fullCaveName: "Grotte de Prérouge"
+    country: "France"
+    region: "Savoie"
+    locality: "Arith"
+    entrance: 
+        latitude: 
+          value: 45.72422
+          format: "decimal degrees"
+        longitude: 
+          value: 6.09381
+          format: "decimal degrees"
+        elevation: 
+          value: 580
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance from "
+    geology:
+      lithology: "limestone"
+      tectonics: "as yet unknown"
+    hydrology: "underground course of the river Saulx"
+
+
+#... Scanning procedure
+scannerType: "BLK360"
+processingSoftware: "LeicaRegister360"
+lighting: "no lighting available"
+scanOperators: ["Stéphane Jaillet", "Edytem"]
+scanDate: 2016.01.01
+remarks: "Cascade"
+links: "Heritages glaciaires wurmiens et enregistrements karstiques dans la bordure occidentale des Bauges."
+  

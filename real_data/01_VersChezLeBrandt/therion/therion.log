@@ -2,7 +2,7 @@ therion 6.1.8 (2023-06-14)
   - using Proj 9.2.1, compiled against 9.2.1
 initialization file: C:\Program Files (x86)\Therion/therion.ini
 reading ... done
-configuration file: config.thconfig
+configuration file: f:\ScanLeica\from_pointcloud_to_mesh\real_data\01_VersChezLeBrandt\therion\config.thconfig
 reading ... done
 reading source files ... done
 preprocessing database ... done
@@ -26,8 +26,8 @@ processing survey data ...
  7> Longueur totale en projection horizontale =  472.99m
  8> Longueur totale verticale =  109.21m
  9> Intervalle vertical = 49.66m (de 43 … 1160.24m jusqu'… 1 … 1110.58m)
-10> Intervalle Nord-Sud = 156.32m (de 43 … 198982.57m jusqu'… 2 … 198826.25m)
-11> Intervalle Est-Ouest = 132.21m (de 1 … 526560.64m jusqu'… 33 … 526428.44m)
+10> Intervalle Nord-Sud = 156.32m (de 43 … 198985.95m jusqu'… 2 … 198829.63m)
+11> Intervalle Est-Ouest = 132.21m (de 1 … 526557.65m jusqu'… 33 … 526425.44m)
 12>   22 1-noeuds.
 13>    2 3-noeuds.
 14>   10 4-noeuds.
@@ -59,8 +59,7 @@ writing VersChezLeBrandt ...
 processing projection plan ... done
 done
 writing VersChezLeBrandt.kml ... done
-writing xtherion file ... done
-compilation time: 0 sec
+compilation time: 1 sec
 
 
 ######################### loop errors ##########################

@@ -7,7 +7,8 @@ survey verschezlebrandt -title "verschezlebrandt"
   centerline
     date 2023.07.12 
     cs lat-long 
-    fix 20 46.9378419 6.4724069 1160 
+    
+    fix 20 46.937872 6.472367 1160 
     team "Tanguy Racine"
     team "Philippe Renard" 
     team "Jérémie Chappuis"

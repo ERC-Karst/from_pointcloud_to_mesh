@@ -19,7 +19,7 @@ paths:
     inCloudName: "raw/GrotteDeLaCascadeDeMotiers.las"
     Cut2DOutCloudName: "output/GrotteDeLaCascadeDeMotiers_Cut2D.las"
     subsampledOutCloudName: "output/GrotteDeLaCascadeDeMotiers_subsampled.las"
-    subsampledCut2DOutCloudName: "output/GrotteDeLaCascadeDeMotiers_subsampled_Cut2D.las"
+    subsampledGeorefOutCloudName: "output/GrotteDeLaCascadeDeMotiers_subsampled_Cut2D.las"
     globalShift: "georef/GlobalShift.txt"
     transformMatrix: "georef/TransMatrix.txt"
     centrelines: "process/centrelines"
@@ -40,6 +40,7 @@ alignment:
     usecols: [1,2,3]
     globalShift: [-537700, -195200, -800]
     crs: "epsg:21781"
+    elevation: "above sea level"
 
 subsampling: 
     spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
