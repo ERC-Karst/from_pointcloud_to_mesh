@@ -16,6 +16,29 @@ import json
 from yaml import load
 from yaml.loader import Loader
 
+def plot_cloud_centreline(ax, pointset, centreline, view="PLAN", decim = 10):
+    first_axis = 0
+    
+    if view == "PLAN":
+        second_axis = 1
+    elif view == "PROFILE N":
+        second_axis = 2
+    elif view == "PROFILE E":
+        second_axis = 2
+        first_axis = 1
+    else:
+        print("View keyword not recognised.\n Use: 'PLAN', 'PROFILE N' or 'PROFILE E'.\nreverting to basic plan view.")
+        second_axis = 1
+
+    ax.plot(centreline[:, first_axis], centreline[:, second_axis], color = "w", lw = 4)
+    ax.plot(centreline[:, first_axis], centreline[:, second_axis], color = "C1", lw = 2, label = "centreline")
+
+    ax.scatter(pointset[::decim, first_axis], pointset[::decim, second_axis], color = "dodgerblue", alpha = 0.05, edgecolor=None, s = 1)
+    ax.set_aspect("equal")
+
+    ax.legend()
+
+    return ax
 
 def plot_segmentation_scheme(root, ax):
     PROCESSING_FILEPATH = os.path.join(root, "params.yaml")
@@ -54,7 +77,7 @@ def plot_segmentation_scheme(root, ax):
         boxLine.setGlobalShift(*shift)
         cc_polylines.append(boxLine)
 
-    decimatedCloud = cc.loadPointCloud(os.path.join(root, p["paths"]["subsampledCut2DOutCloudName"]), cc.CC_SHIFT_MODE.XYZ, 0, *shift)
+    decimatedCloud = cc.loadPointCloud(os.path.join(root, p["paths"]["subsampledGeorefOutCloudName"]), cc.CC_SHIFT_MODE.XYZ, 0, *shift)
 
     for c, line in enumerate(cc_polylines):
         xi = line.getAssociatedCloud().toNpArray()[:,0]
@@ -118,3 +141,37 @@ def suggest_global_shift(targets):
     globalShift = np.round(centroid/100,0) * 100
 
     return globalShift  
+
+def reorder_points(points, ind):
+    """
+    reorders the array of points from an unordered output of a mesh / plane intersection.
+
+    ----------
+    
+    arguments:
+
+        points -> np.array: a numpy array with N target coordinates (N x 3 matrix)
+        ind -> int : the index of the starting point
+    ----------
+    
+    returns :
+
+        ordered_points -> np.array : a numpy array containing the reordered data (N x 3 matrix)
+    
+    """
+    points = list(points)
+    points_new = [ points.pop(ind) ]  # initialize a new list of points with the known first point
+    pcurr      = points_new[-1]       # initialize the current point (as the known point)
+    k = 0
+    while len(points)>0 and k <= 1e4:
+        d      = np.linalg.norm(np.array(points) - np.array(pcurr), axis=1)  # distances between pcurr and all other remaining points
+        ind    = d.argmin()                   # index of the closest point
+        points_new.append( points.pop(ind) )  # append the closest point to points_new
+        pcurr  = points_new[-1]               # update the current point
+        k+=1
+    if k == 1e4:
+        print("max iterations reached")
+
+    ordered_points = np.array(points_new)
+
+    return ordered_points
