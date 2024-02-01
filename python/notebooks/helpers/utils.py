@@ -18,9 +18,10 @@ from yaml.loader import Loader
 
 def plot_cloud_centreline(ax, pointset, centreline, view="PLAN", decim = 10):
     first_axis = 0
-    
+    third_axis = 2
     if view == "PLAN":
         second_axis = 1
+        
     elif view == "PROFILE N":
         second_axis = 2
     elif view == "PROFILE E":
@@ -31,9 +32,9 @@ def plot_cloud_centreline(ax, pointset, centreline, view="PLAN", decim = 10):
         second_axis = 1
 
     ax.plot(centreline[:, first_axis], centreline[:, second_axis], color = "w", lw = 4)
-    ax.plot(centreline[:, first_axis], centreline[:, second_axis], color = "C1", lw = 2, label = "centreline")
+    ax.plot(centreline[:, first_axis], centreline[:, second_axis], color = "C1", lw = 2, label = "centreline", marker = "o", ls = "--")
 
-    ax.scatter(pointset[::decim, first_axis], pointset[::decim, second_axis], color = "dodgerblue", alpha = 0.05, edgecolor=None, s = 1)
+    ax.scatter(pointset[::decim, first_axis], pointset[::decim, second_axis], c=pointset[::decim, third_axis], alpha = 0.05, edgecolor=None, s = 1)
     ax.set_aspect("equal")
 
     ax.legend()

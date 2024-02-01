@@ -63,7 +63,10 @@ class Section:
         # minimize the sum of square distances. 
         out = minimize(sumSquaredDistToEllipse, [1,1], Z_new)
 
-        self.fitted_ellipse = makeEllipse((0,0), out.x[0], out.x[1], 100, 0) @ np.linalg.inv(P) * X_std +X_mean
+        self.fitted_ellipse = makeEllipse((0,0), out.x[0], out.x[1], 100, 0) @ np.linalg.inv(P) * X_std + X_mean
+        semi_major = np.array((out.x[0], 0)) @ np.linalg.inv(P) * X_std + X_mean
+        semi_minor = np.array((0, out.x[1])) @ np.linalg.inv(P) * X_std + X_mean
+        self.ellipse_axes = (np.linalg.norm(semi_major), np.linalg.norm(semi_minor))
         # compute the average distance between shape and transformed / rescale ellipse. / scale by hydraulic radius-
         self.mean_dist_to_ellipse_scaled = np.mean(np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)) / self.hydraulic_radius
 
@@ -79,26 +82,56 @@ class Section:
         print(f"Mean scaled distance to hydraulic radius : {self.mean_scaled_rh_deviation:5.2f}\n")
 
 
-    def plot_basic(self):
+    def plot_basic(self, ax, maxdim =5, orientation = "horizontal"):
         """
         plots the section, and a barycentred disk with the section's hydraulic radius
         """
 
-        fig, ax = plt.subplots()
         thetai = np.linspace(-np.pi, np.pi, 100)
 
+        # centroid
         ax.scatter(0, 0)
-        ax.plot(self.points2d[:, 0], self.points2d[:, 1], zorder = 100, color = "k", label = "original")
+
+        # actual section
+        ax.plot(self.points2d[:, 0], self.points2d[:, 1], zorder = 50, color = "k", label = "original")
+        
+        # ellipse
         ax.plot(self.fitted_ellipse[:, 0], self.fitted_ellipse[:, 1], zorder = 100, color = "r", label = "fitted ellipse")
 
+        # circle of hydraulic diameter, centered
         ax.fill_between(np.cos(thetai)*self.hydraulic_diameter/2, 
                         np.sin(thetai)*self.hydraulic_diameter/2, 0, facecolor="dodgerblue", alpha = 0.5)
 
+        # plot convex hull
+        chull = self.convexhull
+        chull_wrapped = np.zeros((len(chull)+1, 2))
+        chull_wrapped[:-1] = chull
+        chull_wrapped[-1] = chull[0]
+        ax.plot(chull_wrapped[:,0], chull_wrapped[:, 1], zorder = -10, color = "C1")
+
+        # fix axes
         ax.set_xlabel("X (m)")
         ax.set_ylabel("Y (m)")
         ax.set_aspect("equal");
+
+        # info box
+        stats_str = f"""
+        Area: {self.area:18.1f} m$^2$
+        $R_h$: {self.hydraulic_radius:21.1f} m
+        circularity: {self.circularity:10.2f}
+        solidity: {self.solidity:14.2f}
+        scaled avg. dist. to ellipse: {self.mean_dist_to_ellipse_scaled:4.2f}
+        """
+        bbox = dict(boxstyle="square,pad=0.1", fc="None", ec="None")
+
+        if orientation == "horizontal":  
+            ax.annotate(stats_str,(0,0),(-1.2 * maxdim,maxdim *1.5),  bbox=bbox, fontsize = 14, va = "center")
+        else: 
+            ax.annotate(stats_str,(0,0),(maxdim *1.1, -0.5 * maxdim,),  bbox=bbox, fontsize = 14, va = "center")
+
         
         return ax
+        
 def computePolygonPerimeter(a):
     """
     calculates the perimeter of a closed polygon whose vertex i coordinates are given by x[i] and y[i]
