@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-02-02
+
+#... Cave attributes
+cave:
+    caveName: "Prerouge"
+    fullCaveName: "Prerouge"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/11_Prerouge"
+    rawPointClouds: "raw"
+    outputs: "output"
+    inCloudName: "raw/Prerouge-Chapelle-Edytem-2016.las"
+    georefOutCloudName: "raw/Prerouge-Chapelle-Edytem-2016.las"
+    georefCut2DOutCloudName: "raw/Prerouge-Chapelle-Edytem-2016.las"
+    subsampledOutCloudName: "output/Prerouge-Chapelle-Edytem-2016_subsampled.las"
+    subsampledCut2DOutCloudName: "output/Prerouge-Chapelle-Edytem-2016_subsampled.las"
+    subsampledGeorefOutCloudName: "output/Prerouge-Chapelle-Edytem-2016_subsampled.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    centrelines: "process/centrelines"
+    log: "log.txt"
+
+
+alignment: 
+    globalShift: [0, 0, 0]
+    crs: "None"
+    elevation: "None"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

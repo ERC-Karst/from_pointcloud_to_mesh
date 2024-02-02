@@ -68,7 +68,8 @@ class Section:
         semi_minor = np.array((0, out.x[1])) @ np.linalg.inv(P) * X_std + X_mean
         self.ellipse_axes = (np.linalg.norm(semi_major), np.linalg.norm(semi_minor))
         # compute the average distance between shape and transformed / rescale ellipse. / scale by hydraulic radius-
-        self.mean_dist_to_ellipse_scaled = np.mean(np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)) / self.hydraulic_radius
+        self.mean_dist_to_ellipse= np.mean(np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)) 
+        self.mean_dist_to_ellipse_scaled =  self.mean_dist_to_ellipse / self.hydraulic_radius
 
     
     def print_basic_stats(self):
