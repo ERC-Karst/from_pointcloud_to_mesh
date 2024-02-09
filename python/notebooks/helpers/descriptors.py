@@ -70,7 +70,8 @@ class Section:
         # compute the average distance between shape and transformed / rescale ellipse. / scale by hydraulic radius-
         self.mean_dist_to_ellipse= np.mean(np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)) 
         self.mean_dist_to_ellipse_scaled =  self.mean_dist_to_ellipse / self.hydraulic_radius
-
+        self.ellipse_area = computePolygonArea(self.fitted_ellipse)
+        self.ellipse_perimeter = computePolygonPerimeter(self.fitted_ellipse)
     
     def print_basic_stats(self):
         print("Basic stats for the chosen section")
@@ -83,7 +84,7 @@ class Section:
         print(f"Mean scaled distance to hydraulic radius : {self.mean_scaled_rh_deviation:5.2f}\n")
 
 
-    def plot_basic(self, ax, maxdim =5, orientation = "horizontal"):
+    def plot_basic(self, ax, maxdim =5, orientation = "horizontal", verbose = True):
         """
         plots the section, and a barycentred disk with the section's hydraulic radius
         """
@@ -115,22 +116,24 @@ class Section:
         ax.set_ylabel("Y (m)")
         ax.set_aspect("equal");
 
-        # info box
-        stats_str = f"""
-        Area: {self.area:18.1f} m$^2$
-        $R_h$: {self.hydraulic_radius:21.1f} m
-        circularity: {self.circularity:10.2f}
-        solidity: {self.solidity:14.2f}
-        scaled avg. dist. to ellipse: {self.mean_dist_to_ellipse_scaled:4.2f}
-        """
-        bbox = dict(boxstyle="square,pad=0.1", fc="None", ec="None")
-
-        if orientation == "horizontal":  
-            ax.annotate(stats_str,(0,0),(-1.2 * maxdim,maxdim *1.5),  bbox=bbox, fontsize = 14, va = "center")
-        else: 
-            ax.annotate(stats_str,(0,0),(maxdim *1.1, -0.5 * maxdim,),  bbox=bbox, fontsize = 14, va = "center")
-
+        if verbose == True:
+            # info box
+            stats_str = f"""
+            Area: {self.area:18.1f} m$^2$
+            Area of fitted ellipse: {self.ellipse_area:10.2f} m$^2$
+            $R_h$: {self.hydraulic_radius:21.1f} m
+            circularity: {self.circularity:10.2f}
+            solidity: {self.solidity:14.2f}
+            scaled avg. dist. to ellipse: {self.mean_dist_to_ellipse_scaled:4.2f}
+            """
+            bbox = dict(boxstyle="square,pad=0.1", fc="None", ec="None")
         
+            if orientation == "horizontal":  
+                ax.annotate(stats_str,(0,0),(-1.2 * maxdim,maxdim *1.5),  bbox=bbox, fontsize = 14, va = "center")
+            else: 
+                ax.annotate(stats_str,(0,0),(maxdim *1.1, -0.5 * maxdim,),  bbox=bbox, fontsize = 14, va = "center")
+        
+            
         return ax
         
 def computePolygonPerimeter(a):

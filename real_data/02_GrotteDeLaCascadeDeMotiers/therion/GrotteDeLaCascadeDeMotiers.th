@@ -10,7 +10,7 @@ survey GrotteDeLaCascadeDeMotiers -title "Grotte de la cascade de Môtiers"
     team "Robin Voland"
     team "Ludovic Schorrp"
     
-    fix sortie 46.90549 6.61993 767
+    fix sortie 46.90549 6.61993 758
 
     
     units length meters

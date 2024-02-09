@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-02-08
+
+#... Cave attributes
+cave:
+    caveName: "EventDePeyrejal"
+    fullCaveName: "Event de Peyrejal"
+    country: "France"
+    region: "Gard"
+    locality: "Courry"
+    entrance: 
+        latitude: 
+          value:   
+          format: "decimal degrees"
+        longitude: 
+          value: 
+          format: "decimal degrees"
+        elevation: 
+          value: 160
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance of the Event de Cotepatiere"
+    geology:
+      lithology: "limestone (Jurassic)"
+      tectonics: "as yet unknown"
+    hydrology: "underground course of the river Claysse"
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: ""
+scanOperators: ["Tanguy Racine", "Réseau des Karsts et métiers souterrains"]
+scanDate: 2024.02.05
+remarks: "Scanned from the entrance to the first siphon."
+links: ""
+  

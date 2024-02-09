@@ -1,0 +1,7 @@
+source EventDePeyrejal.th 
+
+export model -o EventDePeyrejal -fmt esri
+export map -o EventDePeyrejal -fmt esri
+
+export model -o EventDePeyrejal.3d -fmt survex
+export database -o EventDePeyrejal.sql

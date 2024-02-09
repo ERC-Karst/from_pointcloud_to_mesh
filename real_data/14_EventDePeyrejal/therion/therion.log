@@ -1,0 +1,86 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: .\config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:5698
+meridian convergence (deg): -0.8605
+geomag declinations (deg):
+  2024.1.1  2.3198
+  2025.1.1  2.4807
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.60%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright � 1990-2021 Olly Betts
+ 3> 
+ 4> Survey contains 10 survey stations, joined by 13 shots.
+ 5> There are 4 loops.
+ 6> Total length of survey shots =   67.79m (  67.79m adjusted)
+ 7> Total plan length of survey shots =   67.11m
+ 8> Total vertical length of survey shots =    6.77m
+ 9> Vertical range = 2.20m (from 5 at 171.59m to 3 at 169.39m)
+10> North-South range = 13.46m (from 5 at 6358715.45m to 6 at 6358701.98m)
+11> East-West range = 20.95m (from 9 at 794583.64m to 2 at 794562.69m)
+12>    5 1-nodes.
+13>    1 3-node.
+14>    2 4-nodes.
+15>    2 5-nodes.
+16> 
+######################### transcription ########################
+ 4> 10 : cible_F@event_de_peyrejal
+ 5> 4 : 1@event_de_peyrejal
+ 9> 5 : .@event_de_peyrejal -- 3 : cible_G@event_de_peyrejal
+10> 5 : .@event_de_peyrejal -- 6 : 2@event_de_peyrejal
+11> 9 : 4@event_de_peyrejal -- 2 : cible_E@event_de_peyrejal
+12> 5 : .@event_de_peyrejal
+13> 1 : 0@event_de_peyrejal
+14> 2 : cible_E@event_de_peyrejal
+15> 2 : cible_E@event_de_peyrejal
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing EventDePeyrejal ... 
+processing projection plan ... done
+done
+####################### metapost log file ########################
+This is MetaPost, version 2.01 (TeX Live 2021/W32TeX) (kpathsea version 6.3.3)  8 FEB 2024 15:26
+**data.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/mpost.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/plain.mp
+Preloading the plain mem file, version 1.005) ) (./data.mp [1] )
+1 output file written: data.1
+
+
+#################### end of metapost log file ####################
+writing EventDePeyrejal ... done
+writing EventDePeyrejal.3d ... done
+writing EventDePeyrejal.sql ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  0.71%    0.1m   16.9m   2    0.0m   -0.1m    0.1m [2@event_de_peyrejal - 3 - 2]
+  0.71%    0.0m    5.9m   2   -0.0m   -0.0m   -0.0m [3@event_de_peyrejal - 4 - 3]
+  0.50%    0.1m   14.2m   2    0.0m    0.1m    0.0m [1@event_de_peyrejal - 2 - 1]
+  0.47%    0.1m   18.1m   2    0.0m    0.1m   -0.0m [1@event_de_peyrejal - 0 - 1]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (4.186, 44.321) (4.186, 44.321)
+  [EPSG:4326 → EPSG:5698] AoU: [yes] transformation: [axis order change (2D) + Inverse of RGF93 v1 to WGS 84 (1) + Lambert-93] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80] accuracy: [1.000 m]
+  [EPSG:5698 → LONG-LAT] AoU: [yes] transformation: [Inverse of Lambert-93 + RGF93 v1 to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:5698 → LAT-LONG] AoU: [no] transformation: [Inverse of Lambert-93 + RGF93 v1 to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:5698 → EPSG:4326] AoU: [yes] transformation: [Inverse of Lambert-93 + RGF93 v1 to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:5698 → EPSG:5698] AoU: [yes] transformation: [Inverse of Lambert-93 + Lambert-93] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+########## end of CRS transformations chosen by PROJ ###########

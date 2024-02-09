@@ -1,0 +1,38 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024.01.17
+
+#... Cave attributes
+cave:
+    caveName: "CotepatiereCocaliere"
+    fullCaveName: "Event de Cotepatiere, Aven de la Cocaliere"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/15_CotepatiereCocaliere"
+    rawPointClouds: "raw"
+    outputs: "output"
+    processingFilepath: "process"
+    inCloudName: "raw/CotepatiereCocaliere.las"
+    georefOutCloudName: "output/CotepatiereCocaliere_georef.las"
+    subsampledGeorefOutCloudName: "output/CotepatiereCocaliere_subsampled_georef.las"
+    transformMatrix: "georef/TransMatrix.txt"
+    cropboxes: "process/cropped_clouds/CropBoxes.geojson"
+    globalShift: "georef/GlobalShift.txt"
+    centrelines: "process/centrelines"
+    log: "log.txt"
+
+#... Initial CloudCompare processing parameters
+alignment: 
+    globalShift: [-794600, -6358700, -200]
+    crs: "epsg:5698"
+    elevation: "above sea level"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+

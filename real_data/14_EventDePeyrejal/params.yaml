@@ -1,0 +1,44 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024.02.08
+
+#... Cave attributes
+cave:
+    caveName: "EventDePeyrejal"
+    fullCaveName: "Event de Peyrejal"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/14_EventDePeyrejal"
+    rawPointClouds: "raw"
+    outputs: "output"
+    therionFiles : "therion"
+    processingFilepath: "process"
+    inCloudName: "raw/EventDePeyrejal.las"
+    georefOutCloudName: "output/EventDePeyrejal_georef.las"
+    subsampledGeorefOutCloudName: "output/EventDePeyrejal_subsampled_georef.las"
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: "georef/TransMatrix.txt"
+    scanTargets: "georef/EventDePeyrejal_ScanTargets.txt"
+    therionTargets: "georef/EventDePeyrejal_StationCoords.txt"
+    centrelines: "process/centrelines"
+    cropboxes: "process/cropped_clouds/CropBoxes.geojson"
+    log: "log.txt"
+
+#... Initial CloudCompare processing parameters
+alignment: 
+    skip_rows: 1
+    max_rows: 4
+    usecols: [1,2,3]
+    globalShift: [-794600, -6538700, -200]
+    crs: "epsg:5698"
+    elevation: "above sea level"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 
+
+
