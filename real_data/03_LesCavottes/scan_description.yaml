@@ -21,11 +21,11 @@ cave:
           value: 455
           format: "metres"
         datum: "WGS84"
-   geology: 
+    geology: 
       lithology: "j3a"
       tectonics:
     speleogenesis:
-  hydrology: ""
+    hydrology: ""
 #... Scanning procedure
 scannerType: "BLK2GO"
 processingSoftware: "LeicaRegister360"

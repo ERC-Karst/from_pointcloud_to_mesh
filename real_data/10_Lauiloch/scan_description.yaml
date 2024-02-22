@@ -23,10 +23,15 @@ cave:
         datum: "WGS84"
         comment: "Entrance from Map Geo Admin (swisstopo service)"
     geology:
-      lithology: "Schrattenkalk"
+      lithology: "Unterer Schrattenkalk"
       tectonics: "Drusberg nappe"
     hydrology: "temporary overflow of the system"
-
+# dictionnaire de mots typiques
+# exploration speleo, copyright pour les cartes accès?
+# licence posée sur les données?
+licence: 
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+  type: "CC-BY-SA"
 
 #... Scanning procedure
 scannerType: "BLK2GO"

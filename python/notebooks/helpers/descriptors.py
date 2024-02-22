@@ -63,12 +63,16 @@ class Section:
         # minimize the sum of square distances. 
         out = minimize(sumSquaredDistToEllipse, [1,1], Z_new)
 
-        self.fitted_ellipse = makeEllipse((0,0), out.x[0], out.x[1], 100, 0) @ np.linalg.inv(P) * X_std + X_mean
-        semi_major = np.array((out.x[0], 0)) @ np.linalg.inv(P) * X_std + X_mean
-        semi_minor = np.array((0, out.x[1])) @ np.linalg.inv(P) * X_std + X_mean
-        self.ellipse_axes = (np.linalg.norm(semi_major), np.linalg.norm(semi_minor))
+        self.fitted_ellipse = makeEllipse((0,0), out.x[0], out.x[1], 500, 0) @ np.linalg.inv(P) * X_std + X_mean
+        semi_major = np.array((out.x[0], 0)) @ np.linalg.inv(P) #* X_std + X_mean
+        semi_minor = np.array((0, out.x[1])) @ np.linalg.inv(P) #* X_std + X_mean
+        self.ellipse_transform = np.linalg.inv(P) * X_std + X_mean
+        self.ellipse_axes = (out.x[0], out.x[1])
         # compute the average distance between shape and transformed / rescale ellipse. / scale by hydraulic radius-
-        self.mean_dist_to_ellipse= np.mean(np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)) 
+        self.dist_to_ellipse = np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)
+        self.dist_vectors_arguments= np.argmin(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)
+        self.dist_vectors = (np.expand_dims(self.fitted_ellipse, 1) - self.points2d)
+        self.mean_dist_to_ellipse = np.mean(self.dist_to_ellipse)
         self.mean_dist_to_ellipse_scaled =  self.mean_dist_to_ellipse / self.hydraulic_radius
         self.ellipse_area = computePolygonArea(self.fitted_ellipse)
         self.ellipse_perimeter = computePolygonPerimeter(self.fitted_ellipse)
@@ -81,7 +85,7 @@ class Section:
         print(f"Hydraulic diameter : {self.hydraulic_diameter:5.2f}m")
         print(f"Solidity : {self.solidity:5.2f}")
         print(f"Circularity : {self.circularity:5.2f}\n")
-        print(f"Mean scaled distance to hydraulic radius : {self.mean_scaled_rh_deviation:5.2f}\n")
+        print(f"Mean distance to best fit ellipse : {self.mean_dist_to_ellipse:5.2f}\n")
 
 
     def plot_basic(self, ax, maxdim =5, orientation = "horizontal", verbose = True):
@@ -102,14 +106,14 @@ class Section:
 
         # circle of hydraulic diameter, centered
         ax.fill_between(np.cos(thetai)*self.hydraulic_diameter/2, 
-                        np.sin(thetai)*self.hydraulic_diameter/2, 0, facecolor="dodgerblue", alpha = 0.5)
+                        np.sin(thetai)*self.hydraulic_diameter/2, 0, facecolor="dodgerblue", alpha = 0.5, label = "hydraulic diameter circle\non centroid")
 
         # plot convex hull
         chull = self.convexhull
         chull_wrapped = np.zeros((len(chull)+1, 2))
         chull_wrapped[:-1] = chull
         chull_wrapped[-1] = chull[0]
-        ax.plot(chull_wrapped[:,0], chull_wrapped[:, 1], zorder = -10, color = "C1")
+        ax.plot(chull_wrapped[:,0], chull_wrapped[:, 1], zorder = -10, color = "C1", label = "section convex hull")
 
         # fix axes
         ax.set_xlabel("X (m)")

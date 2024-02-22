@@ -20,11 +20,12 @@ cave:
             value: 1170
             format: "metres"
         datum: "WGS84"
-   geology: 
-      lithology: "Portlandian / Kimmeridgian  limestone and marl sequence"
-      tectonics:
+
+    geology: 
+        lithology: "Portlandian / Kimmeridgian  limestone and marl sequence"
+        tectonics: "south limb of anticline"
     speleogenesis: "Single bedding plane development at contact between limestone and underlying marls acting as local aquiclude"
-  hydrology: "Main karst inflitration zone in lower part of the cave (VCB1 station), draining a small catchment northeast of the cave. Tracer test to the Areuse spring in 1971. (130 km2): Meeks & Hunkeler 2015"
+    hydrology: "Main karst inflitration zone in lower part of the cave (VCB1 station), draining a small catchment northeast of the cave. Tracer test to the Areuse spring in 1971. (130 km2): Meeks & Hunkeler 2015"
 
 
 #... Scanning procedure

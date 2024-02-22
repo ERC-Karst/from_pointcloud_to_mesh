@@ -8,14 +8,14 @@ cave:
     caveName: "CotepatiereCocaliere"
     fullCaveName: "Event de Cotepatière, Aven de la Cocalière"
     country: "France"
-    region: "Gard"
-    locality: "Courry"
+    region: "Ardèche"
+    locality: "St André de Cluzères"
     entrance: 
         latitude: 
-          value:   
+          value:  44.320046
           format: "decimal degrees"
         longitude: 
-          value: 
+          value: 4.183853
           format: "decimal degrees"
         elevation: 
           value: 

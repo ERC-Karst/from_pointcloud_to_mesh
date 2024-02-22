@@ -8,14 +8,14 @@ cave:
     caveName: "EventDePeyrejal"
     fullCaveName: "Event de Peyrejal"
     country: "France"
-    region: "Gard"
-    locality: "Courry"
+    region: "Ardèche"
+    locality: "St André de Cluzères"
     entrance: 
         latitude: 
-          value:   
+          value:  44.320781
           format: "decimal degrees"
         longitude: 
-          value: 
+          value: 4.186723
           format: "decimal degrees"
         elevation: 
           value: 160
