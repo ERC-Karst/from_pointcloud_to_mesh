@@ -5,35 +5,35 @@ dateCreated: 2023-11-13
 
 #... Cave attributes
 cave:
-    caveName: "BaumeDeLongeaigue"
-    fullCaveName: "Baume de Longeaigue"
+    caveName: "PetiteMineDeTravers"
+    fullCaveName: "Petite Mine de Travers"
     country: "Switzerland"
     region: "Canton of Neuchatel"
-    locality: "Buttes"
+    locality: "Travers"
     entrance: 
         latitude: 
-          value:  46.87300074
+          value:  46.93964
           format: "decimal degrees"
         longitude: 
-          value: 6.51925089
+          value: 6.68790
           format: "decimal degrees"
         elevation: 
-          value: 917
+          value: 751.5
           format: "metres"
         datum: "WGS84"
-        comment: "upper entrance, coordinates from Cavernes 2018, P.-Y. Jeannin, p32"
+        comment: "Main entrance by small cabin, north of mine"
     geology:
-      lithology: "In the Buttes anticline"
-      tectonics: "northern limb of the Buttes anticline"
-    hydrology: "Areuse ? "
+      lithology: "Urgonien jaune <a completer>"
+      tectonics: "<a completer>"
+    hydrology: "N/A"
 
 
 #... Scanning procedure
 scannerType: "BLK2GO"
 processingSoftware: "LeicaRegister360"
 lighting: "Dedicated light provided by Meandre Technologies"
-scanOperators: ["Tanguy Racine", "Claudio Pastore"]
-scanDate: 2023.10.10
-remarks: "Grand toboggan to the bottom of Puits de la Perche"
-links: "https://www.cavernes.ch/images/pdf/cavernes2018.pdf"
+scanOperators: ["Tanguy Racine", "Loris Bernasconi", "Maurice Grünig", "Jean-Bernard Kureth", "Cécile Ravin", "Philippe Renard"]
+scanDate: [2023.10.10, 2024.03.04]
+remarks: "Scan of the entire mine carried in two sessions."
+links: "<a completer>"
   

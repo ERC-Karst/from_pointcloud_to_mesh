@@ -1,5 +1,8 @@
 import numpy as np
 from scipy.spatial import ConvexHull
+from polylabel import polylabel
+import time
+
 import matplotlib.pyplot as plt
 
 from scipy.optimize import minimize 
@@ -35,6 +38,7 @@ class Section:
         
         self.offset = np.mean(pts, axis = 0)
         self.points2d = pts - self.offset
+        self.centre_of_gravity = centre_of_gravity(self.points2d)
         self.perimeter = computePolygonPerimeter(self.points2d)
         self.area = computePolygonArea(self.points2d)
         self.convexhull = computeConvexHull(self.points2d)
@@ -44,38 +48,56 @@ class Section:
         self.solidity = self.area / self.convexhull_area
         self.circularity = 4 * np.pi * self.area / self.perimeter**2
         self.mean_scaled_rh_deviation = np.mean( 1 / (2 * self.hydraulic_diameter) * (np.linalg.norm(self.points2d, axis =1) - 1))
+        #self.inaccessible_pole, self.inscribed_circle_radius = polylabel([self.points2d.tolist()], with_distance=True, precision= 1e-3)
 
-    def fitEllipse(self):
+    def fitEllipse(self, with_minimize = False):
         # first part is PCA transform of the shape. 
         X = self.points2d
-        X_mean = X.mean(axis = 0)
-        X_std = X.std(axis = 0)
-        Z = (X - X_mean) / X_std
-        COV = Z.T @ Z
-        eigenvalues, eigenvectors = np.linalg.eig(COV)
-        idx = np.argsort(eigenvalues)
-        eigenvalues = eigenvalues[idx[::-1]]
-        eigenvectors = eigenvectors[:,idx[::-1]]
-        D = np.diag(eigenvalues)
-        P = eigenvectors
-        Z_new = np.dot(Z, P)
+        G = self.centre_of_gravity
+        Sigma = 1/ self.area *  X.T @ X
+        D, S = np.linalg.eig(Sigma)
+        self.aspect_ratio = D[0] / D[1]
+        idx = np.argsort(D)
+        D = np.diag(D)
+        X_prime = S.T @ X.T
+        _lambda = np.sqrt(self.area  / (np.sqrt(np.linalg.det(Sigma))*np.pi))
+        # determined ellipse
+        t = np.linspace(0,2*np.pi,500)
+        Y = np.vstack((np.cos(t), np.sin(t)))
+        self.determined_ellipse = (_lambda * S @ np.sqrt(D) @ Y).T + G
 
-        # minimize the sum of square distances. 
-        out = minimize(sumSquaredDistToEllipse, [1,1], Z_new)
+        if with_minimize == True:
+            # minimize the sum of square distances. 
+            out = minimize(objective_ellipse, [_lambda * np.sqrt(D[0,0]),_lambda * np.sqrt(D[1,1]), 0], X_prime.T, method = "Nelder-Mead")
+            Y2 = makeEllipse(*out.x)
+            self.fitted_ellipse = (S @ Y2.T).T + G
 
-        self.fitted_ellipse = makeEllipse((0,0), out.x[0], out.x[1], 500, 0) @ np.linalg.inv(P) * X_std + X_mean
-        semi_major = np.array((out.x[0], 0)) @ np.linalg.inv(P) #* X_std + X_mean
-        semi_minor = np.array((0, out.x[1])) @ np.linalg.inv(P) #* X_std + X_mean
-        self.ellipse_transform = np.linalg.inv(P) * X_std + X_mean
-        self.ellipse_axes = (out.x[0], out.x[1])
-        # compute the average distance between shape and transformed / rescale ellipse. / scale by hydraulic radius-
-        self.dist_to_ellipse = np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)
-        self.dist_vectors_arguments= np.argmin(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)
-        self.dist_vectors = (np.expand_dims(self.fitted_ellipse, 1) - self.points2d)
-        self.mean_dist_to_ellipse = np.mean(self.dist_to_ellipse)
-        self.mean_dist_to_ellipse_scaled =  self.mean_dist_to_ellipse / self.hydraulic_radius
-        self.ellipse_area = computePolygonArea(self.fitted_ellipse)
-        self.ellipse_perimeter = computePolygonPerimeter(self.fitted_ellipse)
+            self.ellipse_axes = (out.x[0], out.x[1])
+
+        
+            # compute the average distance between shape and transformed / rescale ellipse. / scale by hydraulic radius-
+            self.dist_to_ellipse = np.min(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)
+            self.average_directed_distance_to_ellipse = directed_distance(self.points2d, self.fitted_ellipse)
+    
+            self.dist_vectors_arguments= np.argmin(np.linalg.norm(np.expand_dims(self.fitted_ellipse, 1) - self.points2d, axis = 2).T, axis = 1)
+    
+            self.dist_vectors = (np.expand_dims(self.fitted_ellipse, 1) - self.points2d)
+    
+            self.vectors_to_ellipse = np.vstack([self.dist_vectors[self.dist_vectors_arguments[i], i] for i in range(len(self.dist_vectors_arguments))])
+    
+            self.outward = np.array([self.vectors_to_ellipse[i].dot(self.points2d[i]) > 0 for i in range(len(self.points2d))])
+    
+            # calculate the distance to centroid: 
+            centroid_dist = np.linalg.norm(X_prime, axis=1)
+            
+            thetai = np.arctan2(X_prime[:,1], X_prime[:,0])
+    
+            ellipse_boundary = np.linalg.norm(np.vstack((out.x[0]*np.cos(thetai), out.x[1]*np.sin(thetai))).T, axis = 1)
+    
+            self.mean_dist_to_ellipse = np.mean(self.dist_to_ellipse)
+            self.mean_dist_to_ellipse_scaled =  self.mean_dist_to_ellipse / self.hydraulic_radius
+        self.ellipse_area = computePolygonArea(self.determined_ellipse)
+        self.ellipse_perimeter = computePolygonPerimeter(self.determined_ellipse)
     
     def print_basic_stats(self):
         print("Basic stats for the chosen section")
@@ -102,11 +124,12 @@ class Section:
         ax.plot(self.points2d[:, 0], self.points2d[:, 1], zorder = 50, color = "k", label = "original")
         
         # ellipse
-        ax.plot(self.fitted_ellipse[:, 0], self.fitted_ellipse[:, 1], zorder = 100, color = "r", label = "fitted ellipse")
+        #ax.plot(self.fitted_ellipse[:, 0], self.fitted_ellipse[:, 1], zorder = 100, color = "r", label = "fitted ellipse")
+        ax.plot(self.determined_ellipse[:, 0], self.determined_ellipse[:, 1], zorder = 100, color = "g", label = "determined ellipse")
 
         # circle of hydraulic diameter, centered
-        ax.fill_between(np.cos(thetai)*self.hydraulic_diameter/2, 
-                        np.sin(thetai)*self.hydraulic_diameter/2, 0, facecolor="dodgerblue", alpha = 0.5, label = "hydraulic diameter circle\non centroid")
+        ax.plot(np.cos(thetai)*self.hydraulic_diameter/2, 
+                        np.sin(thetai)*self.hydraulic_diameter/2,  color="dodgerblue", label = "hydraulic diameter circle\non centroid")
 
         # plot convex hull
         chull = self.convexhull
@@ -209,23 +232,21 @@ def computeConvexHull(a):
 
     return hull_vertices
 
-def makeEllipse(xy, a, b, numpoints = 100, shear = 0):
-    centre = np.array(xy)
-    t = np.linspace(-np.pi, np.pi, numpoints)
-    # cartesian coordinates of the ellipse
-    ellipse_x = a* np.cos(t)
-    ellipse_y = b*np.sin(t)
-    ellipse = np.vstack([ellipse_x, ellipse_y]).T + centre
-    # define simple shear matrix
-    simple_shear = np.array([[1, shear],[0, 1]])
-    # apply if needed, by default, Identity matrix 
-    return ellipse @ simple_shear
+def makeEllipse(a, b, theta):
+    # define ellipse parametrically
+    t = np.linspace(-np.pi, np.pi, 500)
+    # calculate coordinates before rotation
+    xy = np.vstack([a*np.cos(t), b*np.sin(t)]).T
+    #rotation matrix
+    rot = np.array([[np.cos(theta),-np.sin(theta)],
+                      [np.sin(theta),np.cos(theta)]]).astype(np.float32)
+    # return rotated ellipse. 
+    return np.dot(xy, rot)
 
-def sumSquaredDistToEllipse(p, pts):
+def objective_ellipse(p, pts):
     """
     calculates the sum of squared distances between a given shape and an ellipse of given parameters p
     
-
     ----------
     
     arguments:
@@ -237,11 +258,57 @@ def sumSquaredDistToEllipse(p, pts):
 
         sum_squared_distances -> float : the area in input units squared 
     """
-    a, b = p
+    a, b, theta = p
     # find the nearest distance to a given point on an ellipse.
-    ell = makeEllipse((0,0), a, b, 100, 0)
+    ellipse = makeEllipse( a, b, theta)
 
-    abs_dist = np.min(np.linalg.norm(np.expand_dims(ell, 1) - pts, axis = 2).T, axis = 1)
-    sum_squared_distances = np.sum(abs_dist**2)
+    #abs_dist = np.min(np.linalg.norm(np.expand_dims(ell, 1) - pts, axis = 2).T, axis = 1)
+    #sum_squared_distances = np.sum(abs_dist**2)
+    return average_directed_distance(ellipse, pts)
     
-    return sum_squared_distances    
+
+def directed_distance(S1, S2):
+    S1toS2 = np.min(np.linalg.norm(np.expand_dims(S2, 1) - S1, axis = 2).T, axis = 1)
+    return np.mean(S1toS2)
+    
+def average_directed_distance(S1, S2):
+    S1toS2 = directed_distance(S1, S2)
+    S2toS1 = directed_distance(S2, S1)
+    return (S1toS2 + S2toS1) / 2
+
+
+def centre_of_gravity(ngon, is3d=False, verbose = False):
+    """
+    computes the centre of gravity of a 2d or 3d n-gon
+
+    ----------
+    
+    arguments:
+
+        points -> np.array: a numpy array with N target coordinates (N x 3 matrix)
+    ----------
+    
+    returns :
+
+        cog -> np.array : a numpy array containing the coordinates of the centre of gravity (1 x 2 matrix)
+    
+    """
+    n = len(ngon)
+    # where ngon is the path determining the section by consecutive pairs of coordinates. 
+    denominator = np.zeros(n-2)
+    numerator = np.zeros((n-2, 2))
+    
+    # determinant method (see: https://math.stackexchange.com/questions/90463/how-can-i-calculate-the-centroid-of-polygon)
+    u = ngon[1:-1] - ngon[0]
+    v = ngon[2:] - ngon[0]
+    
+    dets = u[:, 0]* v[:, 1] - u[:, 1]*v[:, 0]
+    centroids = (ngon[0]+ngon[1:-1]+ngon[2:]) / 3
+    numerator = np.sum(np.multiply(np.expand_dims(dets, -1), centroids), axis = 0) 
+    denominator = np.sum(dets)
+
+    cog = numerator / denominator
+    
+    if verbose == True:
+        print("estimated area",  np.abs(np.sum(u[:, 0]* v[:, 1] - u[:, 1]*v[:, 0]))/ 2)
+    return cog

@@ -1,0 +1,123 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: .\config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:5698
+meridian convergence (deg): -2.2924
+geomag declinations (deg):
+  2024.1.1  2.8104
+  2025.1.1  2.9747
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.84%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright � 1990-2021 Olly Betts
+ 3> 
+ 4> Survey contains 281 survey stations, joined by 305 shots.
+ 5> There are 25 loops.
+ 6> Total length of survey shots =  158.65m ( 158.60m adjusted)
+ 7> Total plan length of survey shots =  147.62m
+ 8> Total vertical length of survey shots =   45.34m
+ 9> Vertical range = 39.53m (from 274 at 1077.29m to 98 at 1037.76m)
+10> North-South range = 86.18m (from 271 at 6562020.75m to 1 at 6561934.57m)
+11> East-West range = 54.43m (from 114 at 943981.15m to 274 at 943926.72m)
+12>  248 1-nodes.
+13>    3 3-nodes.
+14>    1 5-node.
+15>    2 9-nodes.
+16>    9 10-nodes.
+17>    6 11-nodes.
+18>    4 12-nodes.
+19>    2 13-nodes.
+20>    1 14-node.
+21>    1 15-node.
+22>    1 17-node.
+23>    3 18-nodes.
+24> 
+######################### transcription ########################
+ 4> 281 : cible_C@Archamps
+ 5> 25 : .@Archamps
+ 9> 274 : 32@Archamps -- 98 : .@Archamps
+10> 271 : .@Archamps -- 1 : 0@Archamps
+11> 114 : 12@Archamps -- 274 : 32@Archamps
+12> 248 : .@Archamps
+13> 3 : 1@Archamps
+14> 1 : 0@Archamps
+15> 2 : cible_F@Archamps
+16> 9 : .@Archamps
+17> 6 : .@Archamps
+18> 4 : .@Archamps
+19> 2 : cible_F@Archamps
+20> 1 : 0@Archamps
+21> 1 : 0@Archamps
+22> 1 : 0@Archamps
+23> 3 : 1@Archamps
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing Archamps ... 
+processing projection plan ... done
+done
+####################### metapost log file ########################
+This is MetaPost, version 2.01 (TeX Live 2021/W32TeX) (kpathsea version 6.3.3)  26 FEB 2024 15:50
+**data.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/mpost.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/plain.mp
+Preloading the plain mem file, version 1.005) ) (./data.mp [1] )
+1 output file written: data.1
+
+
+#################### end of metapost log file ####################
+writing Archamps ... done
+writing Archamps.3d ... done
+writing Archamps.sql ... done
+compilation time: 1 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  1.43%    0.2m   11.7m   2    0.1m    0.1m    0.1m [29@Archamps - 28 - 29]
+  1.31%    0.1m    8.4m   2   -0.0m   -0.1m    0.0m [31@Archamps - 32 - 31]
+  1.27%    0.2m   14.8m   2    0.2m   -0.1m   -0.0m [30@Archamps - 31 - 30]
+  1.22%    0.0m    3.4m   2    0.0m    0.0m    0.0m [13@Archamps - 12 - 13]
+  1.20%    0.1m    9.8m   2   -0.1m    0.1m   -0.0m [2@Archamps - 1 - 2]
+  1.18%    0.2m   15.1m   2    0.1m    0.2m   -0.0m [25@Archamps - 24 - 25]
+  1.17%    0.2m   13.1m   2    0.1m    0.0m   -0.1m [27@Archamps - 26 - 27]
+  1.16%    0.2m   19.9m   2    0.1m    0.2m   -0.1m [22@Archamps - 21 - 22]
+  1.06%    0.0m    4.6m   2    0.0m    0.0m    0.0m [12@Archamps - 11 - 12]
+  1.05%    0.2m   14.4m   2    0.1m   -0.0m   -0.0m [30@Archamps - 29 - 30]
+  1.00%    0.1m   10.1m   2   -0.1m   -0.0m    0.0m [5@Archamps - 4 - 5]
+  0.91%    0.1m   12.7m   2    0.1m    0.1m   -0.1m [26@Archamps - 25 - 26]
+  0.83%    0.1m   10.5m   2   -0.1m    0.1m    0.0m [8@Archamps - 7 - 8]
+  0.81%    0.1m   17.1m   2   -0.0m    0.1m    0.1m [28@Archamps - 27 - 28]
+  0.77%    0.1m    9.1m   2   -0.0m    0.1m    0.0m [3@Archamps - 2 - 3]
+  0.74%    0.0m    6.4m   2   -0.0m    0.0m   -0.0m [10@Archamps - 9 - 10]
+  0.66%    0.1m   10.7m   2    0.0m    0.1m    0.0m [20@Archamps - 19 - 20]
+  0.55%    0.1m    9.6m   2   -0.0m    0.0m   -0.0m [6@Archamps - 5 - 6]
+  0.53%    0.0m    7.2m   2   -0.0m    0.0m    0.0m [9@Archamps - 8 - 9]
+  0.51%    0.0m    9.5m   2   -0.0m    0.0m   -0.0m [4@Archamps - 3 - 4]
+  0.36%    0.0m    8.5m   2   -0.0m   -0.0m   -0.0m [11@Archamps - 10 - 11]
+  0.36%    0.0m   13.1m   2   -0.0m    0.0m   -0.0m [24@Archamps - 23 - 24]
+  0.34%    0.0m   10.2m   2    0.0m   -0.0m   -0.0m [21@Archamps - 20 - 21]
+  0.25%    0.0m   16.4m   2   -0.0m   -0.0m   -0.0m [1@Archamps - 0 - 1]
+  0.22%    0.0m    9.1m   2   -0.0m    0.0m   -0.0m [7@Archamps - 6 - 7]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.159, 46.114) (6.159, 46.114)
+  [EPSG:4326 → EPSG:5698] AoU: [yes] transformation: [axis order change (2D) + Inverse of RGF93 v1 to WGS 84 (1) + Lambert-93] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80] accuracy: [1.000 m]
+  [EPSG:5698 → LONG-LAT] AoU: [yes] transformation: [Inverse of Lambert-93 + RGF93 v1 to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:5698 → LAT-LONG] AoU: [no] transformation: [Inverse of Lambert-93 + RGF93 v1 to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:5698 → EPSG:4326] AoU: [yes] transformation: [Inverse of Lambert-93 + RGF93 v1 to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=lcc lat_0=46.5 lon_0=3 lat_1=49 lat_2=44 x_0=700000 y_0=6600000 ellps=GRS80 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:5698 → EPSG:5698] AoU: [yes] transformation: [Inverse of Lambert-93 + Lambert-93] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+########## end of CRS transformations chosen by PROJ ###########

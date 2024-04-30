@@ -1,0 +1,39 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-04-08
+
+#... Cave attributes
+cave:
+    caveName: "Hoelloch"
+    fullCaveName: "Grotte d'Hoelloch"
+    country: "Switzerland"
+    region: "Schwyz"
+    locality: "Hoelloch"
+    entrance: 
+        latitude: 
+          value:  None
+          format: "decimal degrees"
+        longitude: 
+          value: None
+          format: "decimal degrees"
+        elevation: 
+          value: None
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance of Grotte d'Hoelloch"
+    geology:
+      lithology: "limestone (Schrattenkalk)"
+      tectonics: "Drüsberg and others- "
+    hydrology: ""
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "lighting provided by meandre Technologies bottom mount"
+scanOperators: ["Tanguy Racine", "Jérémie Chappuis", "Markus Flury", "Jürg Pulfer", "Robin Voland"]
+scanDate: 2024.03.03
+remarks: "Scanned in three parts, starting from Riesengang, then along the Seengang and finally the Keller-Aquarium towards the entrance"
+links: "QGIS AGH"
+  

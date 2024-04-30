@@ -14,12 +14,13 @@ paths:
     rawPointClouds: "raw"
     outputs: "output"
     processingFilepath: "process"
+    scanNames: ["GalerieSemiActive"]
     therionFiles : "therion"
-    cropboxes : "process/CropBoxes.geojson"
-    inCloudName: "raw/GrotteDeVallorbe.las"
-    georefOutCloudName: "output/GrotteDeVallorbe_georef.las"
-    subsampledOutCloudName: "output/GrotteDeVallorbe_subsampled.las"
-    subsampledGeorefOutCloudName: "output/GrotteDeVallorbe_subsampled_georef.las"
+    cropboxes : ["process/GalerieSemiActive_CropBoxes.geojson"]
+    inCloudName: ["raw/GrotteDeVallorbe.las"]
+    georefOutCloudName: ["GalerieSemiActive/output/GalerieSemiActive_georef.las"]
+    subsampledOutCloudName: ["GalerieSemiActive/output/GalerieSemiActive_subsampled.las"]
+    subsampledGeorefOutCloudName: ["GalerieSemiActive/output/GalerieSemiActive_subsampled_georef.las"]
     globalShift: "georef/GlobalShift.txt"
     transformMatrix: "georef/TransMatrix.txt"
     centrelines: "process/centrelines"

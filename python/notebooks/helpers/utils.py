@@ -1,6 +1,9 @@
 import numpy as np 
 import matplotlib.pyplot as plt
 import os 
+import networkx as nx
+import mistree as mist
+import itertools
 
 import cloudComPy as cc # cloud compare python interface.
 if cc.isPluginCanupo():
@@ -41,12 +44,13 @@ def plot_cloud_centreline(ax, pointset, centreline, view="PLAN", decim = 10):
 
     return ax
 
-def plot_segmentation_scheme(root, ax):
+def plot_segmentation_scheme(root, ax, scan= 0):
     PROCESSING_FILEPATH = os.path.join(root, "params.yaml")
 
     p = load(open(PROCESSING_FILEPATH), Loader)    
     # load the processing parameters
-    f  = open(os.path.join(root, p["paths"]["cropboxes"]))
+    fp = os.path.normpath(os.path.join(root, p["paths"]["cropboxes"][scan]))
+    f  = open(fp)
     data = json.load(f)
     shift = p['alignment']['globalShift']
     polylineZ = 2000
@@ -78,7 +82,7 @@ def plot_segmentation_scheme(root, ax):
         boxLine.setGlobalShift(*shift)
         cc_polylines.append(boxLine)
 
-    decimatedCloud = cc.loadPointCloud(os.path.join(root, p["paths"]["subsampledGeorefOutCloudName"]), cc.CC_SHIFT_MODE.XYZ, 0, *shift)
+    decimatedCloud = cc.loadPointCloud(os.path.join(root, p["paths"]["subsampledGeorefOutCloudName"][scan]), cc.CC_SHIFT_MODE.XYZ, 0, *shift)
 
     for c, line in enumerate(cc_polylines):
         xi = line.getAssociatedCloud().toNpArray()[:,0]
@@ -176,3 +180,46 @@ def reorder_points(points, ind):
     ordered_points = np.array(points_new)
 
     return ordered_points
+
+
+def reorder_MST(a, verbose = False):
+    """
+    reorders the array of points from an unordered output of a mesh / plane intersection.
+
+    ----------
+    
+    arguments:
+
+        points -> np.array: a numpy array with N target coordinates (N x 3 matrix)
+        ind -> int : the index of the starting point
+    ----------
+    
+    returns :
+
+        ordered_points -> np.array : a numpy array containing the reordered data (N x 3 matrix)
+    
+    """
+    
+    mst = mist.GetMST(x=a[:, 0], y=a[:, 1])
+    degree, edge_length, branch_length, branch_shape, edge_index, branch_index = mst.get_stats(include_index=True, k_neighbours= 10)
+    
+    full_graph = nx.graph.Graph(edge_index.T.tolist())
+    
+    # find the largest connected component. 
+    cc0 = next(nx.connected_components(full_graph))
+    cc0_graph = full_graph.subgraph(cc0)
+    cc0_degrees = cc0_graph.degree() #Dict with Node ID, Degree
+    cc0_nodes = cc0_graph.nodes()
+    # find all degree 1 nodes
+    deg1 = [key for key,value in dict(cc0_degrees).items() if value == 1]
+
+    # find all paths connecting pairs of degree 1 nodes
+    all_pairs = list(itertools.combinations(deg1, 2))
+
+    path_lengths = np.array([len(next(nx.simple_paths.all_simple_paths(cc0_graph,*pair))) for pair in all_pairs])
+    s, e = all_pairs[np.argmax(path_lengths)]
+    longest_path_nodes = next(nx.simple_paths.all_simple_paths(cc0_graph,s, e))
+    longest_path = cc0_graph.subgraph(longest_path_nodes)
+    reordered  = a[longest_path_nodes]
+
+    return reordered

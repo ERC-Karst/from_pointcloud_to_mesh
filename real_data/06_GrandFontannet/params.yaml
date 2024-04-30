@@ -15,11 +15,12 @@ paths:
     outputs: "output"
     processingFilepath: "process"
     therionFiles : "therion"
-    cropboxes : "process/CropBoxes.geojson"
+    scanNames: ["GrandFontannet"]
+    cropboxes : ["process/CropBoxes.geojson"]
     inCloudName: "raw/GrandFontannet.las"
-    Cut2DOutCloudName: "output/GrandFontannet_Cut2D.las"
-    subsampledOutCloudName: "output/GrandFontannet_subsampled.las"
-    subsampledCut2DOutCloudName: "output/GrandFontannet_subsampled_Cut2D.las"
+    georefOutCloudName: ["output/GrandFontannet_Cut2D.las"]
+    subsampledGeorefOutCloudName: ["output/GrandFontannet_subsampled.las"]
+    subsampledCut2DOutCloudName: ["output/GrandFontannet_subsampled_Cut2D.las"]
     globalShift: "GlobalShift.txt"
     transformMatrix: "TransMatrix.txt"
     centreline: "CentrelineSimple.poly"

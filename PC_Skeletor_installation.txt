@@ -1,0 +1,27 @@
+# Notes on installing pc-skeletor on Windows 11
+
+There is a bit of trouble shooting to be done and using the pip command does not seem to work at all.  
+You need first to download some compilation tools and add them to the path environment variable. 
+
+Open Anaconda prompt. 
+
+Then run the following code: 
+
+```
+git clone https://github.com/meyerls/pc-skeletor.git 
+
+cd pc-skeletor
+
+python setup.py build
+python setup.py install --user
+``` 
+
+If you get the error that you cannot import name "url_quote" from werkzeug.urls, then: 
+
+```
+pip install werkzeug==2.3.8
+```
+
+should set you up nicely. 
+
+Then you will need to copy some dlls in the same folder as the relevant pyd files, as explained here. 

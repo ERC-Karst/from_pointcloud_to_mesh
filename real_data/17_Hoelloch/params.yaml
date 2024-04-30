@@ -1,0 +1,53 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024.04.08
+
+#... Cave attributes
+cave:
+    caveName: "Hoelloch"
+    fullCaveName: "Grotte d'Hoelloch"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/17_Hoelloch"
+    rawPointClouds: "raw"
+    outputs: ["output/KellerAquarium", "output/Seengang", "output/Riesengang"]
+    therionFiles : "therion"
+    processingFilepath: "process"
+    scanNames: ["KellerAquarium", "Seengang", "Riesengang"]
+    inCloudName:    ["raw/Hoelloch_KellerAquarium.las", 
+                    "raw/Hoelloch_Seengang.las", 
+                    "raw/Hoelloch_Riesengang.las"
+                    ]
+    georefOutCloudName: ["output/KellerAquarium/Hoelloch_KellerAquarium_georef.las", 
+                        "output/Seengang/Hoelloch_Seengang_georef.las", 
+                        "output/Riesengang/Hoelloch_Riesengang_georef.las"
+                        ]
+    subsampledGeorefOutCloudName:   ["output/KellerAquarium/Hoelloch_KellerAquarium_georef_subsampled.las", 
+                                    "output/Seengang/Hoelloch_Seengang_georef_subsampled.las", 
+                                    "output/Riesengang/Hoelloch_Riesengang_georef_subsampled.las"
+                                    ]
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix:    ["georef/Hoelloch_KellerAquarium_TransMatrix.txt", 
+                        "georef/Hoelloch_Seengang_TransMatrix.txt", 
+                        "georef/Hoelloch_Riesengang_TransMatrix.txt"
+                        ]
+
+    centrelines: "process/centrelines"
+    cropboxes: ["process/cropped_clouds/Hoelloch_KellerAquarium_CropBoxes.geojson", 
+                "process/cropped_clouds/Hoelloch_Seengang_CropBoxes.geojson",
+                "process/cropped_clouds/Hoelloch_Riesengang_CropBoxes.geojson"
+                ]
+
+    log: "log.txt"
+
+#... Initial CloudCompare processing parameters
+alignment:
+    globalShift: [2073000,1203000,0]
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 

@@ -67,3 +67,6 @@ Storage/
 
 *realdata.ipynb
 !*.yaml
+
+*.nc
+*.poly

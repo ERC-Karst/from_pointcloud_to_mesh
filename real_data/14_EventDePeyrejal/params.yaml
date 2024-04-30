@@ -41,4 +41,11 @@ subsampling:
 onsave:    
     globalShift : true 
 
+ground:
+    csfparam: "relief"
+    clothSize: 0.05
+    maxIter: 500
+    threshold: 0.3
+
+
 

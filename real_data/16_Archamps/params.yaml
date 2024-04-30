@@ -1,0 +1,42 @@
+---
+documentTitle : "Cave LiDAR Processing parameters"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024.02.26
+
+#... Cave attributes
+cave:
+    caveName: "Archamps"
+    fullCaveName: "Grotte d'Archamps"
+
+#... Folder paths
+paths:
+    root: "F:/ScanLeica/from_pointcloud_to_mesh/real_data/16_Archamps"
+    rawPointClouds: "raw"
+    outputs: "output"
+    therionFiles : "therion"
+    processingFilepath: "process"
+    inCloudName: ["raw/Archamps_AvantEtroiture.las", "raw/Archamps_ApresEtroiture.las"]
+    georefOutCloudName: ["output/Archamps_AvantEtroiture_georef.las", "output/Archamps_ApresEtroiture_georef.las"]
+    subsampledGeorefOutCloudName: ["output/Archamps_AvantEtroiture_subsampled_georef.las","output/Archamps_ApresEtroiture_subsampled_georef.las"]
+    globalShift: "georef/GlobalShift.txt"
+    transformMatrix: ["georef/Archamps_AvantEtroiture_TransMatrix.txt", "georef/Archamps_ApresEtroiture_TransMatrix.txt"]
+    scanTargets: ["georef/Archamps_AvantEtroiture_ScanTargets.txt", "georef/Archamps_ApresEtroiture_ScanTargets.txt"]
+    therionTargets: ["georef/Archamps_AvantEtroiture_StationCoords.txt", "georef/Archamps_ApresEtroiture_StationCoords.txt"]
+    centrelines: "process/centrelines"
+    cropboxes: "process/cropped_clouds/CropBoxes.geojson"
+    log: "log.txt"
+
+#... Initial CloudCompare processing parameters
+alignment: 
+    skip_rows: [1, 1]
+    max_rows: [3,4]
+    usecols: [1,2,3]
+    globalShift: [-943800 , -6562000, -1100]
+    crs: "epsg:5698"
+    elevation: "above sea level"
+
+subsampling: 
+    spatialSamplingDistance: 0.05 # smallest distance between neighbouring points in processing.
+    
+onsave:    
+    globalShift : true 

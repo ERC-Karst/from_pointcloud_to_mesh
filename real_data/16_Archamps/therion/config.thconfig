@@ -1,0 +1,7 @@
+source Archamps.th 
+
+export model -o Archamps -fmt esri
+export map -o Archamps -fmt esri
+
+export model -o Archamps.3d -fmt survex
+export database -o Archamps.sql

@@ -14,11 +14,12 @@ paths:
     rawPointClouds: "raw"
     outputs: "output"
     processingFilepath: "process"
-    inCloudName: "raw/CotepatiereCocaliere.las"
-    georefOutCloudName: "output/CotepatiereCocaliere_georef.las"
-    subsampledGeorefOutCloudName: "output/CotepatiereCocaliere_subsampled_georef.las"
-    transformMatrix: "georef/TransMatrix.txt"
-    cropboxes: "process/cropped_clouds/CropBoxes.geojson"
+    scanNames: ["CotepatiereCocaliere"]
+    inCloudName: ["raw/CotepatiereCocaliere.las"]
+    georefOutCloudName: ["output/CotepatiereCocaliere_georef.las"]
+    subsampledGeorefOutCloudName: ["output/CotepatiereCocaliere_subsampled_georef.las"]
+    transformMatrix: ["georef/TransMatrix.txt"]
+    cropboxes: ["process/cropped_clouds/CotepatiereCocaliere_CropBoxes.geojson"]
     globalShift: "georef/GlobalShift.txt"
     centrelines: "process/centrelines"
     log: "log.txt"
