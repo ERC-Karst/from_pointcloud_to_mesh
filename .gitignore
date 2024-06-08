@@ -70,3 +70,7 @@ Storage/
 
 *.nc
 *.poly
+*.b2g
+*.e57
+*.zip
+*.ply
