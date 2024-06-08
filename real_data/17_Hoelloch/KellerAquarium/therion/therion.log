@@ -1,0 +1,150 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: f:\ScanLeica\from_pointcloud_to_mesh\real_data\17_Hoelloch\KellerAquarium\therion\config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:2056
+meridian convergence (deg): 5.0397
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> C:\Users\racinet\AppData\Local\Temp\th27448\data.svx:5: avertissement: Point fixe non utilis‚ ® 1 ¯
+ 4> C:\Users\racinet\AppData\Local\Temp\th27448\data.svx:6: avertissement: Point fixe non utilis‚ ® 2 ¯
+ 5> C:\Users\racinet\AppData\Local\Temp\th27448\data.svx:7: avertissement: Point fixe non utilis‚ ® 3 ¯
+ 6> C:\Users\racinet\AppData\Local\Temp\th27448\data.svx:8: avertissement: Point fixe non utilis‚ ® 4 ¯
+ 7> 
+ 8> La topographie contient 4 stations, connect‚es par 0 vis‚es.
+ 9> Il y a 0 bouclages.
+10> La topographie contient 4 composants connect‚s.
+11> Longueur totale de la topographie =    0.00m (   0.00m ajust‚)
+12> Longueur totale en projection horizontale =    0.00m
+13> Longueur totale verticale =    0.00m
+14>    4 0-noeuds.
+15> Il y a 4 avertissement(s).
+16> 
+######################### transcription ########################
+ 3> input:5 -- KellerAquarium.th [8]
+ 3> 1 : pc1@KellerAquarium
+ 4> input:6 -- KellerAquarium.th [9]
+ 4> 2 : pc2@KellerAquarium
+ 5> input:7 -- KellerAquarium.th [10]
+ 5> 3 : pc3@KellerAquarium
+ 6> input:8 -- KellerAquarium.th [11]
+ 6> 4 : pc4@KellerAquarium
+ 8> 4 : pc4@KellerAquarium
+10> 4 : pc4@KellerAquarium
+14> 4 : pc4@KellerAquarium
+15> 4 : pc4@KellerAquarium
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+processing projection plan ... done
+average distortion: 0.11%
+
+
+############### export maps & scraps selection #################
+S   679.40 Keller-1p@KellerAquarium ()
+########## end of export maps & scraps selection ###############
+writing KellerAquarium_Plan.pdf ...
+####################### metapost log file ########################
+This is MetaPost, version 2.01 (TeX Live 2021/W32TeX) (kpathsea version 6.3.3)  3 JUN 2024 13:59
+**data.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/mpost.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/plain.mp
+Preloading the plain mem file, version 1.005) ) (./data.mp
+{randomseed:=42}
+ [1] [2] [3] [4]
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+[15]
+Warning: patterncolor not supported in Therion [16] [17]
+[Warning: undefined symbol `l_survey_surface_MY']
+[Warning: undefined symbol `p_waterflow_intermittent_MY']
+[Warning: undefined symbol `p_waterflow_paleo_MY']
+[Warning: undefined symbol `l_waterflow_conjectural_MY']
+[Warning: undefined symbol `l_waterflow_intermittent_MY']
+[Warning: undefined symbol `l_wall_bedrock_MY']
+[Warning: undefined symbol `l_wall_clay_MY']
+[Warning: undefined symbol `l_wall_pebbles_MY']
+[Warning: undefined symbol `l_wall_presumed_MY']
+[Warning: undefined symbol `l_wall_sand_MY']
+[Warning: undefined symbol `l_wall_underlying_MY']
+[Warning: undefined symbol `l_wall_unsurveyed_MY']
+[Warning: undefined symbol `l_wall_pit_MY']
+[Warning: undefined symbol `l_wall_overlying_MY']
+[Warning: undefined symbol `l_wall_moonmilk_MY']
+[Warning: undefined symbol `l_wall_flowstone_MY']
+[Warning: undefined symbol `p_airdraught_summer_MY']
+[Warning: undefined symbol `p_airdraught_winter_MY'] [1] [2] [3] [4]
+(./mptextmp.mp) [5] (./mptextmp.mp) (./mptextmp.mp) (./mptextmp.mp)
+(./mptextmp.mp) (./mptextmp.mp) (./mptextmp.mp) (./mptextmp.mp) [6] [7] [8]
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] )
+ 
+Here is how much of MetaPost's memory you used:
+ 8660 strings using 199622 characters
+ 5427144 bytes of node memory
+ 1867 symbolic tokens
+ 11i,82n,16p,365b,5f stack positions out of 16i,98n,17p,390b,6f
+38 output files written: data-patt.1 .. data.21
+
+
+#################### end of metapost log file ####################
+converting scraps ... done
+making map ... done
+######################## pdftex log file #########################
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdftex 2021.6.19)  3 JUN 2024 13:59
+entering extended mode
+**data.tex
+(./data.tex (./th_enc.tex) (./th_texts.tex) (./th_resources.tex
+(c:/Program Files (x86)/Therion/texmf/tex/glyphtounicode.tex))
+(./th_fontdef.tex{c:/Program Files (x86)/Therion/texmf/fonts/pdftex.map})
+(./th_formdef.tex) (./th_pagedef.tex (./th_legend.tex)) (./th_pages.tex)
+ 70 numeric registers used out of 32768
+
+[1] ) 
+Here is how much of TeX's memory you used:
+ 295 strings out of 94604
+ 4036 string characters out of 1142524
+ 2910522 words of memory out of 7000000
+ 1949 multiletter control sequences out of 15000+50000
+ 19950 words of font info for 63 fonts, out of 1000000 for 2000
+ 1416 hyphenation exceptions out of 5000
+ 12i,5n,7p,337b,76s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/Program Files (x86)/Therion/texmf/fonts/type1/cmbx10.pfb><c:/Program F
+iles (x86)/Therion/texmf/fonts/type1/cmss10.pfb>
+Output written on data.pdf (1 page, 572717 bytes).
+PDF statistics:
+ 76 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+
+
+##################### end of pdftex log file #####################
+done
+compilation time: 4 sec
+
+
+###################### scrap distortions #######################
+ PROJECTION: plan
+ AVERAGE  MAXIMAL  SCRAP
+   0.11%    1.19%  Keller-1p@KellerAquarium
+################### end of scrap distortions ###################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (0.536, 46.779) (0.536, 46.779)
+  [EPSG:2056 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1995 + Ballpark geographic offset from CH1903+ to WGS 84 + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [-1.000 m]
+  [EPSG:2056 â†’ LAT-LONG] AoU: [no] transformation: [Inverse of Swiss Oblique Mercator 1995 + CH1903+ to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:2056 â†’ EPSG:2056] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1995 + Swiss Oblique Mercator 1995] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [EPSG:2056 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1995 + Ballpark geographic offset from CH1903+ to WGS 84 + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [-1.000 m]
+  [EPSG:4326 â†’ EPSG:2056] AoU: [yes] transformation: [axis order change (2D) + Ballpark geographic offset from WGS 84 to CH1903+ + Swiss Oblique Mercator 1995] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel] accuracy: [-1.000 m]
+########## end of CRS transformations chosen by PROJ ###########

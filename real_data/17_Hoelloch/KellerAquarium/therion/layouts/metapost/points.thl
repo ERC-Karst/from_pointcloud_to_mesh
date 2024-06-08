@@ -1,0 +1,383 @@
+layout custom_points
+
+	code metapost
+
+		## redefinitions of existing labels
+
+		def p_debris_MY (expr P,R,S,A)=
+        	U:=(.2u,.2u);
+        	T:=identity aligned A rotated R scaled S shifted P;
+        	pickup PenD;
+        	p:=(0.1u,0)--(0u,0u);
+        	k:= 5*(normaldeviate);
+        	thclean (-0.2u,-0.2u)--(0.2u,-0.2u)--(0.2u,0.2u)--(0.2u,-0.2u)--cycle;
+        	thdraw p rotated (45+k) shifted (-0.15u,-0.15u) withcolor(0.7,0.3,.2);
+        	thdraw p rotated (-40+k) shifted (-0.2u,0.2u) withcolor(0.7,0.3,.2);
+        	thdraw p rotated (10-k) shifted (-0.15u,0.03u) withcolor(0.7,0.3,.2);
+        	thdraw p rotated (-60+k) shifted (0u,0.12u) withcolor(0.7,0.3,.2);
+        	thdraw p rotated (70+k) shifted (0.1u,0.18u) withcolor(0.7,0.3,.2);
+        	thdraw p rotated (-42-k) shifted (0.18u,0.06u) withcolor(0.7,0.3,.2);
+        	thdraw p rotated (32+k) shifted (0.05u,-0.16u) withcolor(0.7,0.3,0.2);
+        	thdraw p rotated (82-k) shifted (0.02u,0.22u) withcolor(0.7,0.3,0.2);
+    	enddef;
+
+
+	    def p_waterflow_permanent_MY (expr P,R,S,A)=
+	    U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenD;
+	      thdraw (-.07u,.28u)--(.07u,.28u)--(0,0.43u)--cycle;
+	    thfill (-.07u,.28u)--(.07u,.28u)--(0,0.43u)--cycle;
+	    thdraw (-0.04u,0.29u)..(.04u,.2u)..(-0.05u,0.1u)..(.05u,0)..(-0.05u,-0.1u)..(0,-0.2u);
+	    enddef;
+
+	    def p_station_fixed_MY (expr pos)=
+	    T:=identity shifted pos;
+	    pickup PenD;
+	    pair z;
+	    z:=(0,.7u);
+	    thclean (-.05u,-.05u)..(-.05u,.05u)..(.05u,.05u)..(.05u,-.05u)..cycle;
+	    thfill (-.05u,-.05u)..(-.05u,.05u)..(.05u,.05u)..(.05u,-.05u)..cycle ;
+		enddef;
+
+	  	def p_station_temporary_MY (expr pos)=
+	    	T:=identity shifted pos;
+	    	pickup PenD;
+	    	pair z;
+	    	z:=(0,.7u);
+	    	thclean (-.05u,-.05u)..(-.05u,.05u)..(.05u,.05u)..(.05u,-.05u)..cycle;
+	    	thdraw (-.05u,-.05u)..(-.05u,.05u)..(.05u,.05u)..(.05u,-.05u)..cycle;
+		enddef;
+
+	    def p_airdraught_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenD;
+	      thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(0,.3u)--cycle;
+	      thdraw (-.1u,-.35u)--(0,-.28u)--(.1u,-0.35u);
+	      thdraw (-.1u,-.25u)--(0,-.18u)--(.1u,-.25u);
+	      thdraw (0,-.28u)--(0,0.15u);
+	    enddef;
+
+		def p_waterflow_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenD;
+	      thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(0,.3u)--cycle;
+	      thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(.12u,-.28u)--(-.12u,-.28u)--cycle withcolor(1,1,1);
+	      thdraw (0,-.28u)--(0,0.15u);
+	    enddef;
+
+	    def p_gradient_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenD;
+	      thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(0,.3u)--cycle;
+	      thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(.12u,-.28u)--(-.12u,-.28u)--cycle withcolor(1,1,1);
+	      thdraw (0,-.28u)--(0,0.15u);
+	    enddef;
+
+	    def p_pillar_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenC;
+	      thdraw (-.2u,-.2u)..(-.2u,.2u)..(.2u,.2u)..(.2u,-.2u)..cycle withcolor(1,0.5,0.1);
+	      thfill (-.1u,-.1u)..(-.1u,.1u)..(.1u,.1u)..(.1u,-.1u)..cycle withcolor(1,0.5,0.1);
+	    enddef;
+
+	    def p_stalagmite_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenC;
+	      thfill (-.1u,-.1u)..(-.1u,.1u)..(.1u,.1u)..(.1u,-.1u)..cycle withcolor(1,0.5,0.1);
+	    enddef;
+
+	    def p_stalactite_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenC;
+	      thdraw (-.1u,-.1u)..(-.1u,.1u)..(.1u,.1u)..(.1u,-.1u)..cycle withcolor(1,0.5,0.1);
+	    enddef;
+
+	    def p_snow_MY (expr P,R,S,A)=
+        	U:=(.2u,.2u);
+        	T:=identity aligned A rotated R scaled S shifted P;
+        	pickup PenD;
+       		 p := (0,0)--(0,.1*u);
+        	thdraw p withcolor(0,0.7,0.9);
+        	thdraw p rotated (60) withcolor(0,0.7,0.9);
+        	thdraw p rotated (120)withcolor(0,0.7,0.9);
+        	thdraw p rotated (180) withcolor(0,0.7,0.9);
+        	thdraw p rotated (240) withcolor(0,0.7,0.9);
+        	thdraw p rotated (300) withcolor(0,0.7,0.9);
+    	enddef;
+
+    	def p_anchor_MY (expr P,R,S,A)=
+  			U:=(.1u,.1u);
+  			T:=identity aligned A rotated R scaled S shifted P;
+  			q:= origin--(0,0.15u);
+  			pickup PenD;
+  			thdraw q rotated (45) shifted (-.1u,.1u);
+  			thdraw q rotated (135) shifted (-.1u,-.1u);
+  			thdraw q rotated (225) shifted (.1u,-.1u);
+  			thdraw q rotated (315) shifted (.1u,.1u);
+  			thdraw (-.1u,-.1u)..(-.1u,.1u)..(.1u,.1u)..(.1u,-.1u)..cycle;
+		enddef;
+
+	    # initialise the symbols here
+	    initsymbol("p_debris_MY")
+	    initsymbol("p_waterflow_permanent_MY");
+    	initsymbol("p_station_fixed_MY");
+    	initsymbol("p_station_temporary_MY");
+    	initsymbol("p_airdraught_MY");
+    	initsymbol("p_gradient_MY");
+    	initsymbol("p_pillar_MY");
+    	initsymbol("p_stalagmite_MY");
+    	initsymbol("p_stalactite_MY");
+    	initsymbol("p_snow_MY");
+    	initsymbol("p_anchor_MY");
+
+
+	    ## new definitions
+	    # a blue arrow for gradient on ice
+	    def p_u_gradient_ice (expr P,R,S,A)=
+	       U:=(.2u,.2u);
+	       T:=identity aligned A rotated R scaled S shifted P;
+	       pickup PenD;
+	       thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(0,.3u)--cycle withcolor (0,0.7,0.9);
+	       thfill (-.12u,.08u)--(0,.12u)--(.12u,.08u)--(.12u,-.28u)--(-.12u,-.28u)--cycle withcolor (1,1,1);
+	       thdraw (0,-.28u)--(0,0.15u) withcolor (0,0.7,0.9);
+	     enddef;
+
+	    # a sample point
+	    def p_u_sampled_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      thfill (-.1u,-.1u)..(-.1u,.1u)..(.1u,.1u)..(.1u,-.1u)..cycle withcolor(0,0.7,0.9);
+	    enddef;
+
+	    # black square wih second outline for loggers
+	    def p_u_logger_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      thdraw (-.3u,-.3u)--(-.3u,.3u)--(.3u,.3u)..(.3u,-.3u)--cycle;
+	      thfill (-.2u,-.2u)--(-.2u,.2u)--(.2u,.2u)..(.2u,-.2u)--cycle;
+	    enddef;
+
+	    # a straight blue arrow for drips
+	    def p_u_waterdrip_MY (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenD;
+
+	      thdraw (0u,0u)--(0,.15u) withcolor(0,0.1,0.7);
+	      thdraw (0,.3u)--(0,.45u) withcolor(0,0.1,0.7);
+	      thdraw (0,-.15u)--(0,-.3u) withcolor(0,0.1,0.7);
+	      thfill (-.18u,-.15u)--(0,-.45u)--(.18u,-.15u)--(0,-.22u)--cycle withcolor(0,0.1,0.7);
+	    enddef;
+
+	    # green grass
+	    def p_u_grass (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenC;
+	      thdraw (0.15u,0.1u)--(0,-0.2u)--(0,0.25u) withcolor (0.3,0.7,0.25);
+	      thdraw (0.13u,-0.2u)--(0,-0.2u)--(-0.17u,0.18u) withcolor (0.3,0.7,0.25);
+	    enddef;
+
+		def p_u_terminus (expr P,R,S,A) =
+			U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+		
+	      pickup PenB;
+		  	p := (1u,-0.67u)--(1.15u,-0.58u)--(1.u,-1u)--(0.85u,-0.58u)--(1u,-0.67u)--cycle;
+			path arrowone;
+			path arrowtwo;
+			path arrowthree;
+			pair horizflip;
+			pair vertiflip;
+			arrowone:= (0,0) -- (2u,0);
+			arrowthree:= (0,0.15u) -- (2u,0.15u);
+
+			arrowtwo:= (1u,0) -- (1u,-0.67u);
+			
+		begingroup
+		picture thetext; % make label either right, left, top or bottom aligned. 
+		
+		if known ATTR_text:
+			thetext := thTEX("\thframed{ \thtinysize\si " & ATTR_text & "}");
+			if known ATTR_side: 
+				side := scantokens(ATTR_side);
+				if side = 0:
+					horizflip := (-2u,0);
+					vertiflip := (0,0);
+					thfill (p shifted horizflip) shifted vertiflip;
+			thdraw (arrowone shifted horizflip) shifted vertiflip;
+			thdraw (arrowthree shifted horizflip) shifted vertiflip ;
+			thdraw (arrowtwo shifted horizflip) shifted vertiflip;
+					p_label.lrt(thetext, P,0,0);
+
+				elseif side = 1:
+					horizflip := (0.1u,0);
+					vertiflip := (0,0);
+					thfill (p shifted horizflip) shifted vertiflip;
+			thdraw (arrowone shifted horizflip) shifted vertiflip;
+			thdraw (arrowthree shifted horizflip) shifted vertiflip ;
+			thdraw (arrowtwo shifted horizflip) shifted vertiflip;
+					p_label.llft(thetext, P,0,0);
+				
+				elseif side = 10:
+					horizflip := (-1.9u,0);
+					vertiflip := (0,0);
+
+				thfill (p rotated 180 shifted (0.1u,0)) shifted (0,0.33u) ;
+				thdraw (arrowone shifted horizflip);
+				thdraw (arrowthree shifted horizflip);
+				thdraw (arrowtwo shifted horizflip)  shifted (0,0.85u) ;
+				p_label.urt(thetext, P,0,0);
+				
+				elseif side = 11:
+					horizflip := (0.1u,0);
+					vertiflip := (u,0);
+					thfill (p rotated 180 shifted (2.1u,0)) shifted (0,0.33u);
+				thdraw (arrowone shifted horizflip);
+				thdraw (arrowthree shifted horizflip);
+				thdraw (arrowtwo shifted horizflip)  shifted (0,0.85u);
+					p_label.ulft(thetext, P,0,0);
+
+				else: 
+					horizflip := (-2u,0);
+					vertiflip := (0,0);
+					thfill (p shifted horizflip) shifted vertiflip;
+			thdraw (arrowone shifted horizflip) shifted vertiflip;
+			thdraw (arrowthree shifted horizflip) shifted vertiflip ;
+			thdraw (arrowtwo shifted horizflip) shifted vertiflip;
+					p_label.lrt(thetext, P, 0,0);
+				fi;
+			fi;
+		fi;
+	endgroup
+	enddef;
+
+	def p_u_terminus_legend =
+		string ATTR_text;
+		ATTR_text:="EXPE";
+		p_u_terminus((0.,0.) inscale,0.0,1.0,(0,0))
+	enddef;
+
+	def p_altitude(expr pos)=
+    T:=identity shifted pos;
+    pickup PenD;
+    p:=fullcircle scaled .2u;
+    thclean p;
+  	enddef;
+
+	vardef p_label@#(expr txt,pos,rot,mode) =
+    if mode=1:
+      thdrawoptions(withcolor .8red + .1blue);
+      p_altitude(pos);
+      % append "m" to label
+      picture txtm;
+      txtm:=image(
+        draw txt;
+        interim labeloffset:=0;
+        label.urt(btex \thtinysize \bf \thaltitude m etex, lrcorner txt);
+      );
+      % give extra offset in case of l/r/t/b alignment
+      pair ctmp;
+      ctmp:=center thelabel@#("x", (0,0));
+      if (xpart ctmp * ypart ctmp)=0:
+        interim labeloffset:=(.4u);
+      else: % diagonal alignment
+        interim labeloffset:=(.2u);
+      fi;
+      % draw label
+      lab:=thelabel@#(txtm, pos);
+      draw lab _thop_; % use color
+      thdrawoptions();
+      bboxmargin:=0.8bp;
+      write_circ_bbox((bbox lab) smoothed 2);
+    else:
+      if mode=7: interim labeloffset:=(u/8) fi;
+      lab:=thelabel@#(txt, pos);
+      if mode>1: pickup PenD fi;
+      if mode=2: process_uplabel;
+      elseif mode=3: process_downlabel;
+      elseif mode=4: process_updownlabel;
+      elseif mode=5:thdrawoptions(withcolor .8red + .1blue);
+					process_circledlabel;
+      elseif mode=6: process_boxedlabel;
+      elseif mode=7: process_label(pos,rot);  % station name
+      elseif mode=8: process_filledlabel(pos, rot);
+      else: process_label(pos,rot); fi;
+    fi;
+  enddef;
+
+  def p_u_gradient_rock (expr P,R,S,A)=
+	      U:=(.2u,.2u);
+	      T:=identity aligned A rotated R scaled S shifted P;
+	      pickup PenD;
+	      thfill (-.12u,.12u)--(0,.35u)--(.12u,.12u)--(.12u,-.3u)--(-.12u,-.3u)--cycle withcolor(1,1,1);
+		  thfill (-.1u,.08u)--(0,.12u)--(.1u,.08u)--(0,.3u)--cycle withcolor (0.3,0.3,0.3);
+	      thdraw (0,-.28u)--(0,0.15u) withcolor (0.3,0.3,0.3);
+	    enddef;
+
+	def p_u_target (expr P,R,S,A)=
+		U:=(.2u,.2u);
+	    T:=identity aligned A rotated R scaled S shifted P;
+	    pickup PenD;
+		p:= (-0.1u,0.12u)--(-0.1u,-0.12u)--(0.12u,-0.12u)--(0.12u,0.12u)--cycle;
+		thclean p scaled 2 shifted (0.5u,-0.3u) ;
+		p:= (-0.1u,0)..(0,-0.1u)..(0.1u,0)..(0,0.1u)..cycle;
+		thclean p scaled 2.2; thdraw p scaled 2.2; thdraw p scaled 1.7;
+		
+		p:= (0.1u,0)--(-0.1u,0);
+		thdraw p scaled 2.5 rotated 90; thdraw p scaled 2.5;
+		
+
+		begingroup
+		if known ATTR_text:
+		picture thetext; % make label either right, left, top or bottom aligned. 
+		thetext := thTEX("\thframed{ \thsmallsize\si " & ATTR_text & "}");
+		p_label.c(thetext,P shifted  (0.1u,-0.1u),0,0);
+
+		process_label(P,R);
+		fi;
+
+		endgroup 
+	enddef;
+
+	    # initialise the symbols here
+	    initsymbol("p_u_gradient_rock");
+  
+	    # initialise the symbols here
+		initsymbol("p_water-flow_MY");
+
+	    initsymbol("p_u_gradient_ice");
+	    initsymbol("p_u_sampled_MY");
+	    initsymbol("p_u_logger_MY");
+	    initsymbol("p_u_waterdrip_MY");
+	    initsymbol("p_u_grass_MY");
+		initsymbol("p_u_terminus");
+		initsymbol("p_u_altitude_MY");
+		initsymbol("p_u_target");
+	endcode
+
+endlayout
+
+## add legend names for each new symbol definition
+
+text en "point u:gradient_ice"  "ice gradient"
+text en "point u:gradient_rock"  "bedrock gradient"
+text en "point u:sampled_MY"  "sampled"
+text en "point u:logger_MY"  "logger"
+text en "point u:waterdrip_MY" "water drips"
+text en "point u:grass_MY" "grass"
+
+text fr "point u:gradient_ice"  "pente (glace)"
+text fr "point u:gradient_rock"  "pente (roche)"
+text fr "point u:sampled_MY"  "échantillon"
+text fr "point u:logger"  "logger"
+text fr "point u:waterdrip_MY" "égouttement"
+text fr "point u:grass" "végétation"
+text fr "point u:terminus" "reprise d'exploration"

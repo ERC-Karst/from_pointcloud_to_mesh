@@ -1,0 +1,89 @@
+encoding  utf-8
+
+# input the custom point, line and area definitions
+input metapost/points.thl
+input metapost/lines.thl
+input metapost/areas.thl
+input metapost/scalebar_arrow.thl
+
+layout detailed-p
+
+  # copy the metapost definitions
+  copy custom_points
+  copy custom_lines
+  copy custom_areas
+  copy custom_arrow
+  copy custom_scalebar
+
+
+  ## general statements
+  scale 1 250
+  legend on
+  map-header -5 95 ne
+  statistics topo-length off
+  fonts-setup 6 7 12 14 22
+  symbol-hide point label
+
+
+  ## survey lines and stations
+  symbol-assign line survey MY
+  symbol-hide point passage-height
+  symbol-colour point station-name [70 0 0]
+
+  ## water and ice
+  symbol-assign area ice MY
+  symbol-assign area snow MY
+
+  symbol-colour area ice [0 70 90]
+  symbol-colour line border [0 70 90]
+
+  symbol-assign area water MY
+  symbol-assign area sump MY
+  symbol-colour point water-flow [0 57 100]
+  symbol-colour line water-flow [0 57 100]
+  symbol-colour point spring [0 57 100]
+  symbol-colour point sink [0 57 100]
+
+  symbol-assign point anchor MY
+  ## formations
+  symbol-assign point stalagmite MY
+  symbol-assign point stalactite MY
+  symbol-assign point pillar MY
+
+  symbol-colour point flowstone [85 45 10]
+  symbol-colour line wall:flowstone [85 45 10]
+  symbol-colour point flowstone [85 45 10]
+  symbol-colour point pillar [85 45 10]
+  symbol-colour point stalagmite [85 45 10]
+  symbol-colour point stalactite [85 45 10]
+  symbol-colour point stalagmites [85 45 10]
+ symbol-colour point stalactites [85 45 10]
+  symbol-colour point curtain [85 45 10]
+  symbol-colour point helictite [85 45 10]
+  symbol-colour point soda-straw [85 45 10]
+  symbol-colour point crystal [85 45 10]
+  symbol-colour point popcorn [85 45 10]
+
+  ## sedimentary fills
+  symbol-assign line rock-border MY
+  symbol-assign area clay MY
+  symbol-assign area sand MY
+  symbol-assign area pebbles MY
+
+  symbol-colour area clay [65 55 10]
+  symbol-colour line wall:clay [65 55 10]
+  #symbol-colour area sand [85 75 10]
+  symbol-assign point water-flow MY
+  symbol-assign line water-flow MY
+
+  ## misc
+  symbol-assign point gradient MY
+  symbol-assign line contour MY
+  symbol-assign line pit MY
+  symbol-assign line floor-step MY
+  symbol-assign line wall MY
+  symbol-assign point air-draught MY
+  symbol-assign point station:fixed MY
+  symbol-assign point station:temporary MY
+
+endlayout

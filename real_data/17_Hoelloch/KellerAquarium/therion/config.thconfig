@@ -1,0 +1,17 @@
+source KellerAquarium.th
+
+input layouts/detailed-p.thl
+
+
+layout local
+    copy detailed-p
+    scale 1 100 
+    color map-bg [80 80 80]
+    symbol-show point label
+    map-header 0 100 se
+    rotate 6
+endlayout
+
+cs epsg:2056
+
+export map -o KellerAquarium_Plan.pdf -projection plan  -layout local

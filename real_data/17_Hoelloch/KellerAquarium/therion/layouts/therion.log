@@ -1,0 +1,150 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: therion.ini
+reading ... done
+configuration file: .\symbology.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> Survey has no control points. Therefore I've fixed 1 at (0,0,0)
+ 4> 
+ 5> Survey contains 4 survey stations, joined by 3 shots.
+ 6> There are 0 loops.
+ 7> Total length of survey shots =    0.00m (   0.00m adjusted)
+ 8> Total plan length of survey shots =    0.00m
+ 9> Total vertical length of survey shots =    0.00m
+10> Vertical range = 1.00m (from 3 at 1.00m to 4 at 0.00m)
+11> North-South range = 100.00m (from 4 at 100.00m to 1 at 0.00m)
+12> East-West range = 0.00m (from 4 at 0.00m to 4 at 0.00m)
+13>    2 1-nodes.
+14>    2 2-nodes.
+15> 
+######################### transcription ########################
+ 3> 1 : 1@symbology
+ 5> 4 : 2@symbology -- 3 : 2a@symbology
+10> 3 : 2a@symbology -- 4 : 2@symbology
+11> 4 : 2@symbology -- 1 : 1@symbology
+12> 4 : 2@symbology -- 4 : 2@symbology
+13> 2 : 1a@symbology
+14> 2 : 1a@symbology
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+processing projection plan ... done
+average distortion: 0.00%
+
+
+############### export maps & scraps selection #################
+M     0.00 m-symbology-ice@symbology ()
+S     0.00 symbology-ice@symbology ()
+########## end of export maps & scraps selection ###############
+copying_fonts ...
+Arimo-Regular.ttf
+Arimo-Regular.ttf
+Arimo-Bold.ttf
+Arimo-Regular.ttf
+Arimo-Italic.ttf
+done.
+writing ../outputs/symbology_es.pdf ...
+generating TeX metrics ... done
+####################### metapost log file ########################
+This is MetaPost, version 2.01 (TeX Live 2021/W32TeX) (kpathsea version 6.3.3)  23 FEB 2024 17:42
+**data.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/mpost.mp
+(c:/Program Files (x86)/Therion/texmf/mpost/plain.mp
+Preloading the plain mem file, version 1.005) ) (./data.mp
+{randomseed:=42}
+ [1] [2] [3] [4]
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+[15]
+Warning: patterncolor not supported in Therion [16] [17]
+[Warning: undefined symbol `l_survey_surface_MY']
+[Warning: undefined symbol `p_waterflow_intermittent_MY']
+[Warning: undefined symbol `p_waterflow_paleo_MY']
+[Warning: undefined symbol `l_waterflow_conjectural_MY']
+[Warning: undefined symbol `l_waterflow_intermittent_MY']
+[Warning: undefined symbol `l_wall_bedrock_MY']
+[Warning: undefined symbol `l_wall_clay_MY']
+[Warning: undefined symbol `l_wall_pebbles_MY']
+[Warning: undefined symbol `l_wall_presumed_MY']
+[Warning: undefined symbol `l_wall_sand_MY']
+[Warning: undefined symbol `l_wall_underlying_MY']
+[Warning: undefined symbol `l_wall_unsurveyed_MY']
+[Warning: undefined symbol `l_wall_pit_MY']
+[Warning: undefined symbol `l_wall_overlying_MY']
+[Warning: undefined symbol `l_wall_moonmilk_MY']
+[Warning: undefined symbol `l_wall_flowstone_MY']
+[Warning: undefined symbol `p_airdraught_summer_MY']
+[Warning: undefined symbol `p_airdraught_winter_MY']
+[Warning: undefined symbol `l_survey_surface_UIS']
+[Warning: undefined symbol `p_station_natural_MY']
+[Warning: undefined symbol `p_station_painted_MY'] [1]
+[Warning: scrap outline intersects itself in scrap symbology-ice@symbology]
+[2] (./mptextmp.mp) [3] [4] (./mptextmp.mp) [5] (./mptextmp.mp) (./mptextmp.mp)
+(./mptextmp.mp) (./mptextmp.mp) (./mptextmp.mp) (./mptextmp.mp) (./mptextmp.mp)
+[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+[22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
+[37] [38] [39] [40] [41] (./mptextmp.mp) [42] [43] [44] [45] [46] [47] [48]
+[49] [50] [51] [52] )
+ 
+Here is how much of MetaPost's memory you used:
+ 2620 strings using 73722 characters
+ 3124856 bytes of node memory
+ 1879 symbolic tokens
+ 11i,82n,20p,312b,5f stack positions out of 16i,98n,22p,312b,6f
+69 output files written: data-patt.1 .. data.52
+
+
+#################### end of metapost log file ####################
+converting scraps ... done
+making map ... done
+generating TeX metrics ... done
+######################## pdftex log file #########################
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdftex 2021.6.19)  23 FEB 2024 17:42
+entering extended mode
+**data.tex
+(./data.tex (./th_enc.tex) (./th_texts.tex) (./th_resources.tex (./thfonts.map{
+c:/Program Files (x86)/Therion/texmf/fonts/pdftex.map})
+(c:/Program Files (x86)/Therion/texmf/tex/glyphtounicode.tex))
+(./th_fontdef.tex)
+(./th_formdef.tex) (./th_pagedef.tex (./th_legend.tex)) (./th_pages.tex)
+ 102 numeric registers used out of 32768
+
+[1] ) 
+Here is how much of TeX's memory you used:
+ 330 strings out of 94604
+ 4375 string characters out of 1142524
+ 95666 words of memory out of 5072394
+ 1979 multiletter control sequences out of 15000+50000
+ 17194 words of font info for 58 fonts, out of 1000000 for 2000
+ 1416 hyphenation exceptions out of 5000
+ 12i,5n,7p,417b,74s stack positions out of 5000i,500n,10000p,200000b,50000s
+{a_c362ak.enc}<Arimo-Bold.ttf><Arimo-Regular.ttf><Arimo-Italic.ttf>
+Output written on data.pdf (1 page, 73308 bytes).
+PDF statistics:
+ 144 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 371 words of extra memory for PDF output out of 10000 (max. 10000000)
+
+
+##################### end of pdftex log file #####################
+done
+compilation time: 7 sec
+
+
+###################### scrap distortions #######################
+ PROJECTION: plan
+ AVERAGE  MAXIMAL  SCRAP
+   0.00%    0.00%  symbology-ice@symbology
+################### end of scrap distortions ###################
