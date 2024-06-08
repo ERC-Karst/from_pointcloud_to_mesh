@@ -1,0 +1,92 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: f:\ScanLeica\from_pointcloud_to_mesh\real_data\18_GrotteDeLaSourde\therion\config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:2056
+meridian convergence (deg): 0.6049
+geomag declinations (deg):
+  2023.1.1  2.7664
+  2024.1.1  2.9333
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.82%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 92 stations, connect‚es par 103 vis‚es.
+ 5> Il y a 13 bouclages.
+ 6> La topographie contient 2 composants connect‚s.
+ 7> Longueur totale de la topographie =  149.97m ( 149.96m ajust‚)
+ 8> Longueur totale en projection horizontale =  145.10m
+ 9> Longueur totale verticale =   28.83m
+10> Intervalle vertical = 8.56m (de 15 … 777.61m jusqu'… 56 … 769.05m)
+11> Intervalle Nord-Sud = 27.41m (de 92 … 1195143.21m jusqu'… 52 … 1195115.80m)
+12> Intervalle Est-Ouest = 32.04m (de 85 … 2537505.40m jusqu'… 2 … 2537473.36m)
+13>   79 1-noeuds.
+14>    1 4-noeud.
+15>    1 6-noeud.
+16>    1 7-noeud.
+17>    2 8-noeuds.
+18>    1 10-noeud.
+19>    3 11-noeuds.
+20>    3 12-noeuds.
+21>    1 15-noeud.
+22> 
+######################### transcription ########################
+ 4> 92 : cible_A@GrotteDeLaSourde
+ 5> 13 : .@GrotteDeLaSourde
+ 6> 2 : .@GrotteDeLaSourde
+10> 15 : .@GrotteDeLaSourde -- 56 : .@GrotteDeLaSourde
+11> 92 : cible_A@GrotteDeLaSourde -- 52 : .@GrotteDeLaSourde
+12> 85 : .@GrotteDeLaSourde -- 2 : .@GrotteDeLaSourde
+13> 79 : 11@GrotteDeLaSourde
+14> 1 : 0@GrotteDeLaSourde
+15> 1 : 0@GrotteDeLaSourde
+16> 1 : 0@GrotteDeLaSourde
+17> 2 : .@GrotteDeLaSourde
+18> 1 : 0@GrotteDeLaSourde
+19> 3 : .@GrotteDeLaSourde
+20> 3 : .@GrotteDeLaSourde
+21> 1 : 0@GrotteDeLaSourde
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing sourde.3d ... done
+writing GrotteDeLaSourde.sql ... done
+compilation time: 1 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  2.84%    0.1m    2.3m   2    0.1m   -0.0m    0.0m [10@GrotteDeLaSourde - 11 - 10]
+  1.49%    0.2m   10.4m   2    0.1m   -0.1m    0.0m [7@GrotteDeLaSourde - 8 - 7]
+  1.10%    0.2m   21.2m   2    0.2m   -0.2m    0.1m [9@GrotteDeLaSourde - 10 - 9]
+  1.07%    0.0m    4.5m   2    0.0m   -0.0m   -0.0m [4@GrotteDeLaSourde - 5 - 4]
+  0.54%    0.1m   14.0m   2   -0.0m   -0.1m    0.0m [3@GrotteDeLaSourde - 7 - 3]
+  0.49%    0.0m    3.6m   2    0.0m    0.0m   -0.0m [1@GrotteDeLaSourde - 2 - 1]
+  0.47%    0.0m    9.4m   2    0.0m    0.0m    0.0m [3@GrotteDeLaSourde - 4 - 3]
+  0.44%    0.0m    9.7m   2   -0.0m   -0.0m    0.0m [2@GrotteDeLaSourde - 3 - 2]
+  0.43%    0.1m   17.2m   2    0.1m    0.0m    0.1m [5@GrotteDeLaSourde - 6 - 5]
+  0.40%    0.0m    5.2m   2   -0.0m   -0.0m    0.0m [8@GrotteDeLaSourde - 9 - 8]
+  0.39%    0.1m   21.4m   2    0.1m   -0.0m    0.0m [11@GrotteDeLaSourde - 12 - 11]
+  0.17%    0.0m   13.7m   2   -0.0m    0.0m    0.0m [0@GrotteDeLaSourde - 1 - 0]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (6.618, 46.904) (6.618, 46.904)
+  [EPSG:2056 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1995 + CH1903+ to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:2056 â†’ LAT-LONG] AoU: [no] transformation: [Inverse of Swiss Oblique Mercator 1995 + CH1903+ to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:2056 â†’ EPSG:2056] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1995 + Swiss Oblique Mercator 1995] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [EPSG:2056 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Swiss Oblique Mercator 1995 + CH1903+ to WGS 84 (1) + axis order change (2D)] definition: [proj=pipeline step inv proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=674.374 y=15.056 z=405.346 step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:4326 â†’ EPSG:2056] AoU: [yes] transformation: [axis order change (2D) + Inverse of CH1903+ to WGS 84 (1) + Swiss Oblique Mercator 1995] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step proj=helmert x=-674.374 y=-15.056 z=-405.346 step inv proj=cart ellps=bessel step proj=pop v_3 step proj=somerc lat_0=46.9524055555556 lon_0=7.43958333333333 k_0=1 x_0=2600000 y_0=1200000 ellps=bessel] accuracy: [1.000 m]
+########## end of CRS transformations chosen by PROJ ###########

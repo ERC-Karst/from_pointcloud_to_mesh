@@ -1,0 +1,44 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-05-03
+
+#... Cave attributes
+cave:
+    caveName: "PredjamskiSistem"
+    fullCaveName: "Predjamski Sistem"
+    country: "Slovenia"
+    region: "Bukovje"
+    locality: "Predjama"
+    entrance: 
+        latitude: 
+          value:  45.8156
+          format: "decimal degrees"
+        longitude: 
+          value: 14.12651
+          format: "decimal degrees"
+        elevation: 
+          value: 491
+          format: "metres"
+        datum: "WGS84"
+        comment: "Entrance from KatasterJam.si website, kataster number 734"
+    geology:
+      lithology: "Limestone"
+      tectonics: " xxxx"
+    hydrology: "ponor of Lovka river"
+# dictionnaire de mots typiques
+# exploration speleo, copyright pour les cartes accès?
+# licence posée sur les données?
+licence: 
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+  type: "CC-BY-SA"
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Jérémie Chappuis", "Franci Gabrovsek", "Celia Trunz", "Tanguy Racine", "Matija Perne", "Ilan D'Adrian"]
+scanDate: 2024.05.02
+remarks: "East passage, after the Crna Dvorana. Sediment floored branch and then active passage followed to upstream end."
+links: ""
+  

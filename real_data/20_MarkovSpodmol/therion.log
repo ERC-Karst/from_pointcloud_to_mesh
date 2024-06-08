@@ -1,0 +1,6 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+C:\Program Files (x86)\Therion\therion.exe: error -- can't open file for input -- config.thconfig
+Press ENTER to exit!

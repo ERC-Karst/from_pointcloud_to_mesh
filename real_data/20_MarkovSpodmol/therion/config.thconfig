@@ -1,0 +1,4 @@
+source MarkovSpodmol.th
+
+export model -o MarkovSpodmol.3d -fmt survex
+export database -o MarkovSpodmol.sql

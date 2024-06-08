@@ -1,0 +1,14 @@
+survey KellerAquarium 
+
+input KellerGeomorphologicalMap-Plan.th2
+
+
+centreline
+cs epsg:2056
+fix pc1 2073492.71499228 1204032.04410569 677.8
+fix pc2 2073491.59111755 1204030.00005853 678.2
+fix pc3 2073488.11413011 1204025.87684312 680.7
+fix pc4 2073487.63648336 1204022.6105822 680.9
+endcentreline
+
+endsurvey

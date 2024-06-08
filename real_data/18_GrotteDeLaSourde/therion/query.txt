@@ -1,0 +1,7 @@
+sqlite\sqlite3.exe
+.read F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\18_GrotteDeLaSourde\\therion\\GrotteDeLaSourde.sql
+.out  F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\18_GrotteDeLaSourde\\georef\\GrotteDeLaSourde_StationCoords.txt
+.mode csv
+.headers on
+SELECT s.NAME,s.X,s.Y,s.Z from STATION as s where s.NAME like 'cible%';
+.quit

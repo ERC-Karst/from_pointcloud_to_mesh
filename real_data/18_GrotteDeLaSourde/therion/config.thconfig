@@ -1,0 +1,4 @@
+source sourde.th
+
+export model -o sourde.3d -fmt survex
+export database -o GrotteDeLaSourde.sql

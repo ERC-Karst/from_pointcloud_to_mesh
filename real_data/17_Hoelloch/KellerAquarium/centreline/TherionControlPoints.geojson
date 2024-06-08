@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "TherionControlPoints",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "pc1", "Z": 677.8 }, "geometry": { "type": "Point", "coordinates": [ 2073492.714992278022692, 1204032.044105688808486 ] } },
+{ "type": "Feature", "properties": { "name": "pc2", "Z": 678.2 }, "geometry": { "type": "Point", "coordinates": [ 2073491.591117551084608, 1204030.000058531295508 ] } },
+{ "type": "Feature", "properties": { "name": "pc3", "Z": 680.7 }, "geometry": { "type": "Point", "coordinates": [ 2073488.114130114670843, 1204025.876843123231083 ] } },
+{ "type": "Feature", "properties": { "name": "pc4", "Z": 680.9 }, "geometry": { "type": "Point", "coordinates": [ 2073487.636483355425298, 1204022.610582195455208 ] } }
+]
+}

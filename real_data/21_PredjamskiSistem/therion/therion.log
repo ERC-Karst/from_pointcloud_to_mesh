@@ -1,0 +1,95 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: .\config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.47%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> Survey has no control points. Therefore I've fixed 1 at (0,0,0)
+ 4> 
+ 5> Survey contains 294 survey stations, joined by 314 shots.
+ 6> There are 22 loops.
+ 7> Survey has 2 connected components.
+ 8> Total length of survey shots =  402.26m ( 402.24m adjusted)
+ 9> Total plan length of survey shots =  402.03m
+10> Total vertical length of survey shots =    9.49m
+11> Vertical range = 20.13m (from 215 at 16.39m to 239 at -3.75m)
+12> North-South range = 134.16m (from 26 at 7.62m to 251 at -126.54m)
+13> East-West range = 268.47m (from 18 at 2.46m to 294 at -266.00m)
+14>  272 1-nodes.
+15>    1 12-node.
+16>    2 13-nodes.
+17>    4 14-nodes.
+18>    4 15-nodes.
+19>    3 16-nodes.
+20>    2 17-nodes.
+21>    2 18-nodes.
+22>    1 19-node.
+23>    2 20-nodes.
+24>    1 25-node.
+25> 
+######################### transcription ########################
+ 3> 1 : 0@Predjama
+ 5> 294 : .@Predjama
+ 6> 22 : .@Predjama
+ 7> 2 : 1@Predjama
+11> 215 : .@Predjama -- 239 : .@Predjama
+12> 26 : .@Predjama -- 251 : .@Predjama
+13> 18 : .@Predjama -- 294 : .@Predjama
+14> 272 : .@Predjama
+15> 1 : 0@Predjama
+16> 2 : 1@Predjama
+17> 4 : .@Predjama
+18> 4 : .@Predjama
+19> 3 : .@Predjama
+20> 2 : 1@Predjama
+21> 2 : 1@Predjama
+22> 1 : 0@Predjama
+23> 2 : 1@Predjama
+24> 1 : 0@Predjama
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing PredjamskiSistem.3d ... done
+writing PredjamskiSistem.sql ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  0.90%    0.2m   23.5m   2   -0.1m   -0.1m    0.1m [19@Predjama - 20 - 19]
+  0.86%    0.3m   31.0m   2    0.2m    0.1m    0.1m [6@Predjama - 7 - 6]
+  0.70%    0.2m   22.8m   2   -0.1m   -0.1m    0.1m [0@Predjama - 1 - 0]
+  0.56%    0.2m   41.1m   2    0.1m   -0.2m    0.1m [8@Predjama - 9 - 8]
+  0.56%    0.2m   39.4m   2   -0.0m   -0.1m    0.2m [17@Predjama - 18 - 17]
+  0.55%    0.1m   19.9m   2    0.1m   -0.1m    0.0m [16@Predjama - 17 - 16]
+  0.53%    0.2m   42.0m   2    0.1m   -0.2m    0.0m [13@Predjama - 14 - 13]
+  0.51%    0.2m   42.4m   2   -0.0m   -0.2m    0.1m [5@Predjama - 6 - 5]
+  0.47%    0.1m   22.8m   2    0.0m    0.1m    0.0m [1@Predjama - 0 - 1]
+  0.44%    0.2m   53.3m   2   -0.0m    0.0m    0.2m [18@Predjama - 19 - 18]
+  0.44%    0.2m   45.2m   2    0.1m   -0.1m    0.2m [7@Predjama - 8 - 7]
+  0.44%    0.2m   37.2m   2    0.0m   -0.1m    0.1m [12@Predjama - 13 - 12]
+  0.40%    0.2m   47.6m   2    0.2m   -0.0m    0.1m [4@Predjama - 5 - 4]
+  0.39%    0.1m   37.6m   2    0.1m   -0.0m    0.1m [10@Predjama - 11 - 10]
+  0.39%    0.2m   53.1m   2    0.1m   -0.1m    0.2m [14@Predjama - 15 - 14]
+  0.37%    0.1m   22.8m   2   -0.0m    0.0m    0.1m [1@Predjama - 0 - 1]
+  0.37%    0.2m   42.4m   2   -0.0m   -0.1m    0.1m [20@Predjama - 21 - 20]
+  0.36%    0.1m   40.1m   2   -0.0m    0.0m    0.1m [9@Predjama - 10 - 9]
+  0.34%    0.1m   24.8m   2   -0.0m    0.0m    0.1m [15@Predjama - 16 - 15]
+  0.33%    0.1m   19.9m   2   -0.0m   -0.1m    0.0m [2@Predjama - 3 - 2]
+  0.32%    0.1m   33.8m   2    0.0m   -0.0m    0.1m [3@Predjama - 4 - 3]
+  0.27%    0.1m   39.6m   2   -0.0m    0.0m    0.1m [11@Predjama - 12 - 11]
+  0.22%    0.0m   20.2m   2    0.0m    0.0m    0.0m [1@Predjama - 2 - 1]
+##################### end of loop errors #######################

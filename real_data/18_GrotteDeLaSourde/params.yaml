@@ -1,32 +1,31 @@
 ---
 documentTitle : "Cave LiDAR Processing parameters"
 documentAuthor: "Tanguy Racine"
-dateCreated: 2024-05-22
+dateCreated: 2023-08-02
 
 #... Cave attributes
 cave:
-    caveName: "GrotteDelaSourde"
+    caveName: "GrotteDeLaSourde"
     fullCaveName: "Grotte de Cascade de Motiers"
 
 #... Folder paths
 paths:
-    root: "F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\02_GrotteDelaSourde"
+    root: "F:\\ScanLeica\\from_pointcloud_to_mesh\\real_data\\02_GrotteDeLaSourde"
     rawPointClouds: "raw"
     outputs: "output"
     processingFilepath: "process"
     therionFiles : "therion"
     cropboxes : "process/cropped_clouds/CropBoxes.geojson"
-    inCloudName: "raw/GrotteDelaSourde.las"
-    Cut2DOutCloudName: "output/GrotteDelaSourde_Cut2D.las"
-    subsampledOutCloudName: "output/GrotteDelaSourde_subsampled.las"
-    subsampledGeorefOutCloudName: "output/GrotteDelaSourde_subsampled_Cut2D.las"
+    inCloudName: "raw/GrotteDeLaSourde.las"
+    georefoutCloudName: "output/GrotteDeLaSourde.las"
+    subsampledGeorefOutCloudName: "output/GrotteDeLaSourde_subsampled.las"
     globalShift: "georef/GlobalShift.txt"
     transformMatrix: "georef/TransMatrix.txt"
     centrelines: "process/centrelines"
-    scanTargets: "georef/GrotteDelaSourde_Targets.txt"
-    therionTargets: "georef/GrotteDelaSourde_StationCoords.txt"
+    scanTargets: "georef/GrotteDeLaSourde_Targets.txt"
+    therionTargets: "georef/GrotteDeLaSourde_StationCoords.txt"
     log: "log.txt"
-    rasterZ: "GrotteDelaSourdeRasterZ"
+    rasterZ: "GrotteDeLaSourdeRasterZ"
 
 #... Initial CloudCompare processing parameters
 entranceCropping: 
@@ -38,7 +37,7 @@ alignment:
     skiprows: 1
     max_rows: 4
     usecols: [1,2,3]
-    globalShift: [0, 0, 0]
+    globalShift: [-2537000, -1195000, -800.00]
     crs: "epsg:2056"
     elevation: "above sea level"
 
@@ -47,4 +46,13 @@ subsampling:
     
 onsave:    
     globalShift : true 
+
+#... Cloud Sectioning
+sectionParams:
+    chosenNodes: [34,172]
+    sectionSpacing: 10
+    sectionLength: 20
+    sectionAxis: 2
+    epsilon : 6
+    grow : 12
 

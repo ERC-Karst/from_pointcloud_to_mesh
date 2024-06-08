@@ -1,0 +1,6 @@
+source Lekinka.th
+cs epsg:3912
+
+export model -o Lekinka.3d -fmt survex
+export database -o Lekinka.sql
+export database -o Lekinka.csv

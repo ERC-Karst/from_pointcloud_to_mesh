@@ -1,0 +1,5 @@
+source PredjamskiSistem.th
+
+export model -o PredjamskiSistem.3d
+
+export database -o PredjamskiSistem.sql

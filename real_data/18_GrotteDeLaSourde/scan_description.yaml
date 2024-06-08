@@ -1,0 +1,37 @@
+---
+documentTitle : "Cave LiDAR Scan description"
+documentAuthor: "Tanguy Racine"
+dateCreated: 2024-05-22
+
+#... Cave attributes
+cave:
+    caveName: "GrotteDeLaCascadeDeMotiers"
+    fullCaveName: "Grotte de la Cascade de Motiers"
+    country: "Switzerland"
+    region: "Canton of Neuchâtel"
+    locality: "Môtiers, under Côte de Riau"
+    entrance: 
+        latitude: 
+          value:  46.90549 
+          format: "decimal degrees"
+        longitude: 
+          value: 6.61993
+          format: "decimal degrees"
+        elevation: 
+          value: 766.8
+          format: "metres"
+        datum: "WGS84"
+    geology: 
+      lithology: "Formation du Twannbach (Portlandien), Karst aquifer limited by the Argovian and Aquitanian formations."
+      tectonics: "within the Riaux syncline."
+
+
+#... Scanning procedure
+scannerType: "BLK2GO"
+processingSoftware: "LeicaRegister360"
+lighting: "Dedicated light provided by Meandre Technologies"
+scanOperators: ["Tanguy Racine", "Robin Voland", "Ludovic Schorrp"]
+scanDate: 2023.07.20
+remarks: "Main gallery surveyed from entrance inwards. Side branches surveyed as and when passed. Light and scanner separated in the middle of the scan, before climb under boulders."
+links: "https://martouf.ch/2011/05/plan-de-la-grotte-de-motiers/"
+  

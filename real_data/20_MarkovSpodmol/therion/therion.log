@@ -1,0 +1,129 @@
+therion 6.1.8 (2023-06-14)
+  - using Proj 9.2.1, compiled against 9.2.1
+initialization file: C:\Program Files (x86)\Therion/therion.ini
+reading ... done
+configuration file: f:\ScanLeica\from_pointcloud_to_mesh\real_data\20_MarkovSpodmol\therion\config.thconfig
+reading ... done
+reading source files ... done
+preprocessing database ... done
+output coordinate system: EPSG:3912
+meridian convergence (deg): 0.6418
+geomag declinations (deg):
+  2024.1.1  4.5161
+  2025.1.1  4.6617
+scanning centreline tree ... done
+searching for centerline loops ... done
+calculating station coordinates ... done
+average loop error: 0.72%
+processing survey data ... 
+####################### cavern log file ########################
+ 1> Survex 1.4.4
+ 2> Copyright ¸ 1990-2021 Olly Betts
+ 3> 
+ 4> La topographie contient 418 stations, connect‚es par 446 vis‚es.
+ 5> Il y a 29 bouclages.
+ 6> Longueur totale de la topographie =  398.82m ( 398.82m ajust‚)
+ 7> Longueur totale en projection horizontale =  397.65m
+ 8> Longueur totale verticale =   23.70m
+ 9> Intervalle vertical = 13.38m (de 334 … 562.62m jusqu'… 191 … 549.24m)
+10> Intervalle Nord-Sud = 209.44m (de 45 … 65991.03m jusqu'… 415 … 65781.59m)
+11> Intervalle Est-Ouest = 169.70m (de 302 … 430901.78m jusqu'… 12 … 430732.07m)
+12>  387 1-noeuds.
+13>    1 2-noeud.
+14>    1 7-noeud.
+15>    2 10-noeuds.
+16>    1 11-noeud.
+17>    4 13-noeuds.
+18>    4 14-noeuds.
+19>    2 15-noeuds.
+20>    3 16-noeuds.
+21>    1 17-noeud.
+22>    2 18-noeuds.
+23>    2 19-noeuds.
+24>    1 21-noeud.
+25>    2 22-noeuds.
+26>    2 23-noeuds.
+27>    1 24-noeud.
+28>    1 25-noeud.
+29>    1 28-noeud.
+30> 
+######################### transcription ########################
+ 4> 418 : .@markov_spodmol
+ 5> 29 : .@markov_spodmol
+ 9> 334 : .@markov_spodmol -- 191 : .@markov_spodmol
+10> 45 : 3@markov_spodmol -- 415 : .@markov_spodmol
+11> 302 : .@markov_spodmol -- 12 : .@markov_spodmol
+12> 387 : .@markov_spodmol
+13> 1 : 0@markov_spodmol
+14> 1 : 0@markov_spodmol
+15> 2 : cible_A@markov_spodmol
+16> 1 : 0@markov_spodmol
+17> 4 : .@markov_spodmol
+18> 4 : .@markov_spodmol
+19> 2 : cible_A@markov_spodmol
+20> 3 : .@markov_spodmol
+21> 1 : 0@markov_spodmol
+22> 2 : cible_A@markov_spodmol
+23> 2 : cible_A@markov_spodmol
+24> 1 : 0@markov_spodmol
+25> 2 : cible_A@markov_spodmol
+26> 2 : cible_A@markov_spodmol
+27> 1 : 0@markov_spodmol
+28> 1 : 0@markov_spodmol
+29> 1 : 0@markov_spodmol
+#################### end of cavern log file ####################
+done
+calculating basic statistics ... done
+processing extended elevation ... done
+processing references ... done
+selecting export objects ... done
+writing MarkovSpodmol.3d ... done
+writing MarkovSpodmol.sql ... done
+compilation time: 0 sec
+
+
+######################### loop errors ##########################
+REL-ERR ABS-ERR TOTAL-L STS X-ERROR Y-ERROR Z-ERROR STATIONS
+  1.61%    0.2m   12.5m   2   -0.2m   -0.0m    0.0m [9@markov_spodmol - 10 - 9]
+  1.26%    0.3m   27.5m   2    0.2m   -0.3m    0.1m [14@markov_spodmol - 13 - 14]
+  1.16%    0.3m   27.5m   2    0.2m   -0.2m    0.0m [14@markov_spodmol - 13 - 14]
+  1.14%    0.3m   26.4m   2    0.3m   -0.1m    0.1m [24@markov_spodmol - 25 - 24]
+  1.07%    0.3m   26.7m   2    0.1m   -0.2m    0.2m [1@markov_spodmol - 2 - 1]
+  1.07%    0.4m   35.5m   2   -0.3m    0.1m    0.2m [15@markov_spodmol - 16 - 15]
+  1.03%    0.3m   28.4m   2    0.1m   -0.2m    0.2m [19@markov_spodmol - 20 - 19]
+  0.91%    0.0m    4.2m   2   -0.0m   -0.0m   -0.0m [17@markov_spodmol - cible_G - 17]
+  0.90%    0.3m   35.2m   2   -0.2m   -0.2m    0.2m [3@markov_spodmol - 4 - 3]
+  0.86%    0.2m   17.5m   2    0.1m   -0.1m    0.1m [4@markov_spodmol - 5 - 4]
+  0.85%    0.2m   22.3m   2   -0.1m   -0.1m    0.0m [27@markov_spodmol - 28 - 27]
+  0.83%    0.2m   27.7m   2   -0.1m    0.2m   -0.1m [2@markov_spodmol - 3 - 2]
+  0.82%    0.2m   27.7m   2    0.2m   -0.0m    0.1m [26@markov_spodmol - 27 - 26]
+  0.80%    0.2m   23.7m   2   -0.0m   -0.1m    0.1m [8@markov_spodmol - 9 - 8]
+  0.79%    0.2m   21.9m   2   -0.0m    0.0m    0.2m [12@markov_spodmol - 13 - 12]
+  0.79%    0.2m   23.1m   2   -0.1m   -0.1m    0.1m [25@markov_spodmol - 26 - 25]
+  0.75%    0.3m   40.5m   2   -0.0m   -0.3m    0.1m [20@markov_spodmol - 21 - 20]
+  0.68%    0.2m   28.5m   2   -0.0m   -0.1m    0.1m [5@markov_spodmol - 6 - 5]
+  0.68%    0.2m   27.5m   2    0.1m   -0.1m    0.1m [13@markov_spodmol - 14 - 13]
+  0.66%    0.2m   35.3m   2   -0.2m    0.1m    0.1m [23@markov_spodmol - 24 - 23]
+  0.56%    0.2m   30.4m   2   -0.1m   -0.1m    0.1m [6@markov_spodmol - 7 - 6]
+  0.51%    0.1m   27.6m   2    0.1m   -0.1m    0.1m [22@markov_spodmol - 23 - 22]
+  0.51%    0.2m   31.3m   2   -0.0m   -0.1m    0.1m [0@markov_spodmol - 1 - 0]
+  0.50%    0.1m   29.6m   2   -0.1m   -0.1m    0.0m [11@markov_spodmol - 12 - 11]
+  0.47%    0.1m   25.4m   2    0.0m   -0.0m    0.1m [28@markov_spodmol - 29 - 28]
+  0.46%    0.1m   17.4m   2   -0.0m    0.0m    0.1m [7@markov_spodmol - 8 - 7]
+  0.37%    0.1m   34.0m   2    0.1m    0.0m    0.1m [10@markov_spodmol - 11 - 10]
+  0.36%    0.1m   41.2m   2    0.0m    0.0m    0.1m [18@markov_spodmol - 19 - 18]
+  0.36%    0.0m    5.6m   2    0.0m    0.0m    0.0m [13@markov_spodmol - cible_E - 13]
+  0.31%    0.0m    4.2m   2   -0.0m   -0.0m   -0.0m [cible_G@markov_spodmol - 17 - cible_G]
+  0.28%    0.1m   20.7m   2   -0.0m    0.0m    0.1m [14@markov_spodmol - 15 - 14]
+  0.27%    0.1m   35.6m   2    0.0m   -0.0m    0.1m [16@markov_spodmol - 17 - 16]
+  0.19%    0.0m   14.8m   2   -0.0m    0.0m    0.0m [21@markov_spodmol - 22 - 21]
+##################### end of loop errors #######################
+
+############# CRS transformations chosen by PROJ ###############
+  Area of Use (AoU): (14.105, 45.735) (14.105, 45.735)
+  [EPSG:3912 â†’ LONG-LAT] AoU: [yes] transformation: [Inverse of Slovene National Grid + MGI 1901 to WGS 84 (4) + axis order change (2D)] definition: [proj=pipeline step inv proj=tmerc lat_0=0 lon_0=15 k=0.9999 x_0=500000 y_0=-5000000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=551.7 y=162.9 z=467.9 rx=6.04 ry=1.96 rz=-11.38 s=-4.82 convention=position_vector step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:3912 â†’ LAT-LONG] AoU: [no] transformation: [Inverse of Slovene National Grid + MGI 1901 to WGS 84 (16) + axis order change (2D)] definition: [proj=pipeline step inv proj=tmerc lat_0=0 lon_0=15 k=0.9999 x_0=500000 y_0=-5000000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=476.08 y=125.947 z=417.81 rx=-4.610862 ry=-2.388137 rz=11.942335 s=9.896638 convention=coordinate_frame step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:3912 â†’ EPSG:3912] AoU: [yes] transformation: [Inverse of Slovene National Grid + Slovene National Grid] definition: [proj=noop ellps=GRS80] accuracy: [0.000 m]
+  [EPSG:3912 â†’ EPSG:4326] AoU: [yes] transformation: [Inverse of Slovene National Grid + MGI 1901 to WGS 84 (4) + axis order change (2D)] definition: [proj=pipeline step inv proj=tmerc lat_0=0 lon_0=15 k=0.9999 x_0=500000 y_0=-5000000 ellps=bessel step proj=push v_3 step proj=cart ellps=bessel step proj=helmert x=551.7 y=162.9 z=467.9 rx=6.04 ry=1.96 rz=-11.38 s=-4.82 convention=position_vector step inv proj=cart ellps=WGS84 step proj=pop v_3 step proj=unitconvert xy_in=rad xy_out=deg] accuracy: [1.000 m]
+  [EPSG:4326 â†’ EPSG:3912] AoU: [yes] transformation: [axis order change (2D) + Inverse of MGI 1901 to WGS 84 (4) + Slovene National Grid] definition: [proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=push v_3 step proj=cart ellps=WGS84 step inv proj=helmert x=551.7 y=162.9 z=467.9 rx=6.04 ry=1.96 rz=-11.38 s=-4.82 convention=position_vector step inv proj=cart ellps=bessel step proj=pop v_3 step proj=tmerc lat_0=0 lon_0=15 k=0.9999 x_0=500000 y_0=-5000000 ellps=bessel] accuracy: [1.000 m]
+########## end of CRS transformations chosen by PROJ ###########
